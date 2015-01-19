@@ -1,0 +1,264 @@
+\section{Basic Topology}
+
+\begin{enumerate}
+\item
+  Prove that the empty set is a subset of every set.
+  \par\smallskip
+  Let \(A\) be set.
+  If \(x\not\in A\), then \(x\not\in\varnothing\).
+  Since \(\varnothing\) is the empty set, \(x\not\in\varnothing\) is a given.
+  By contrapositive, if \(x\in\varnothing\), then \(x\in A\); therefore,
+  \(\varnothing\subset A\).
+\item
+  A complex number \(z\) is said to be \textit{algebraic} if there are integers
+  \(a_0,\ldots,a_n\), not all zero, such that
+  \[
+  a_0z^n + a_1z^{n - 1} + \cdots + a_{n - 1}z + a_n = 0.
+  \]
+  Prove that the set of all algebraic numbers is countable.
+  \textit{Hint: For every positive integer \(N\) there are only finitely many
+    equations with}
+  \[
+  n + \lvert a_0\rvert + \lvert a_1\rvert + \cdots + \lvert a_n\rvert = N.
+  \]
+  Let \(N\in\mathbb{Z}^+\) and \(A_N\) be the set of algebraic equations for a
+  given \(N\).
+  Since \(1\leq n\leq N\), each \(A_N\) is finite.
+  The set of algebraic numbers is \(\bigcup_{N\in\mathbb{Z}^+}A_n\).
+  The union of countable sets is countable so the set of algebraic numbers is
+  countable.
+\item
+  Prove that there exist real numbers which are not algebraic.
+  \par\smallskip
+  The set of algebraic numbers are countable.
+  Therefore, the set of algebraic real numbers would also be countable.
+  The real numbers are an uncountable set and the union of uncontable sets are
+  not contable. We have reached a contradiction so there are real numbers which
+  are not algebraic.
+\item
+  Is the set of all irrational real numbers countable?
+  \par\smallskip
+  No.
+  Let \(\mathbb{I}\) be the set of irrational numbers and \(\mathbb{Q}\) be the
+  set of rational numbers.
+  Then \(\mathbb{R} = \mathbb{I}\cup\mathbb{Q}\).
+  The set of rational numbers is countable.
+  % prove Q is countable
+  If \(\mathbb{I}\) were countable, then \(\mathbb{R}\) would be countable as
+  well.
+\item
+  Construct a bounded set of real numbers with exactly three limit points.
+\item
+  Let \(E'\) be the set of all limit points of a set \(E\).
+  Prove that \(E'\) is closed.
+  Prove that \(E\) and \(\bar{E}\) have the same limit points.
+  (Recall that \(\bar{E} = E\cup E'\).)
+  Do \(E\) and \(E'\) always have the same limit points?
+\item
+  Let \(A_1, A_2, \ldots\) be subsets of a metric space.
+  \begin{enumerate}[label = (\alph*)]
+  \item
+    If \(B_n = \bigcup_{i = 1}^nA_i\), prove that
+    \(\bar{B}_n = \bigcup_{i = 1}^n\bar{A}_i\) for \(n = 1, 2, \ldots\)
+  \item
+    If \(B_n = \bigcup_{i = 1}^nA_i\), prove that
+    \(\bar{B}\supset\bigcup_{i = 1}^n\bar{A}_i\).
+  \end{enumerate}
+\item
+  Is every point of every open set \(E\subset\mathbb{R}^2\) a limit point of
+  \(E\)?
+  Answer the same question for closed sets of \(\mathbb{R}^2\).
+\item
+  Let \(E^{\circ}\) denote the set of all interior points of a set \(E\).
+  \begin{enumerate}[label = (\alph*)]
+  \item
+    Prove that \(E^{\circ}\) is always open.
+  \item
+    Prove that \(E\) is open if and only if \(E^{\circ} = E\).
+  \item
+    If \(G\subset E\) and \(G\) is open, prove that \(G\subset E^{\circ}\).
+  \item
+    Prove that the complement of \(E^{\circ}\) is the closure of the
+    complement of \(E\).
+  \item
+    Do \(E\) and \(\bar{E}\) always have the same interiors?
+  \item
+    Do \(E\) and \(E^{\circ}\) always have the same closures?
+  \end{enumerate}
+\item
+  Let \(X\) be an infinite set.
+  For \(p\in X\) and \(q\in X\), define
+  \[
+  d(p, q) =
+  \begin{cases}
+    1, & \text{if } p\neq q\\
+    0, & \text{if } p = q
+  \end{cases}
+  \]
+  Prove that this a metric space.
+  Which subsets of the resulting metric space are open?
+  Which are closed? Which are compact?
+\item
+  For \(x\in\mathbb{R}\) and \(y\in\mathbb{R}\), define
+  \begin{align*}
+    d_1(x, y) & = (x - y)^2\\
+    d_2(x, y) & = \sqrt{\lvert x - y\rvert}\\
+    d_3(x, y) & = \lvert x^2 - y^2\rvert\\
+    d_4(x, y) & = \lvert x - 2y\rvert\\
+    d_5(x, y) & = \frac{\lvert x - y\rvert}{1 + \lvert x - y\rvert}
+  \end{align*}
+  Determine for each of these, whether it is a metric or not.
+\item
+  Let \(K\subset\mathbb{R}\) consist of \(0\) and the numbers \(1/n\) for
+  \(n = 1, 2, \ldots\)
+  Prove that \(K\) is compact directly from the definition (without using the
+  Heine-Borel theorem).
+\item
+  Construct a compact set of real numbers whose limit points form a countable
+  set.
+\item
+  Give an example of an open cover of the segment \((0, 1)\) which has no
+  finite subcover.
+\item
+  Show that Theorem \(2.36\) and its Corollary become false (in \(\mathbb{R}\),
+  for example) if the word "compact" is replaced by "closed" or by "bounded".
+\item
+  Regard \(\mathbb{Q}\), the set of all rational numbers, as a metric space,
+  with \(d(p, q) = \lvert p - q\rvert\).
+  Let \(E\) be the set of all \(p\in\mathbb{Q}\) such that \(2 < p^2 < 3\).
+  Show that \(E\) is closed and bounded in \(\mathbb{Q}\), but that \(E\) is
+  not compact.
+  Is \(E\) open in \(\mathbb{Q}\)?
+\item
+  Let \(E\) be the set of all \(x\in[0, 1]\) whose decimal expansion contains
+  only the digits \(4\) and \(7\).
+  Is \(E\) countable?
+  Is \(E\) dense in \([0, 1]\)?
+  Is \(E\) compact?
+  Is \(E\) perfect?
+\item
+  Is there a nonempty perfect set in \(\mathbb{R}\) which contains no rational
+  number?
+\item
+  \begin{enumerate}[label = (\alph*), ref = \theenumi{} (\alph*)]
+  \item
+    If \(A\) and \(B\) are disjoint closed sets in some metric space \(X\),
+    prove that they are separated.
+  \item
+    Prove the same for disjoint open sets.
+  \item
+    \label{19c}
+    Fix \(p\in X\), \(\delta > 0\), define \(A\) to be the set of all
+    \(q\in X\) for which \(d(p, q) < \delta\), define \(B\) similarly, with
+    \(>\) in place of \(<\).
+    Prove that \(A\) and \(B\) are separated.
+  \item
+    Prove that every connected metric space with at least two points is
+    uncountable.
+    \textit{Hint: Use \cref{19c}.}
+  \end{enumerate}
+\item
+  Are closures and interiors of connected sets always connected?
+  (Look at subsets of \(\mathbb{R}^2\).)
+\item
+  Let \(A\) and \(B\) be separated subsets of some \(\mathbb{R}^k\), suppose
+  \(\mathbf{a}\in A\), \(\mathbf{b}\in B\), and define
+  \[
+  \mathbf{p}(t) = (1 - t)\mathbf{a} + t\mathbf{b}
+  \]
+  for \(t\in\mathbb{R}\).
+  Put \(A_0 = \mathbf{p}^{-1}(A)\), \(B_0 = \mathbf{p}^{-1}(B)\).
+  (Thus \(t\in A_0\) if and only if \(\mathbf{p}(t)\in A\).)
+  \begin{enumerate}[label = (\alph*)]
+  \item
+    Prove that \(A_0\) and \(B_0\) are separated subsets of \(\mathbb{R}\).
+  \item
+    Prove that there exists \(t_0\in (0, 1)\) such that
+    \(\mathbf{p}(t_0)\not\in A\cup B\).
+  \item
+    Prove that every convex subset of \(\mathbf{R}^k\) is connected.
+  \end{enumerate}
+\item
+  A metric space is \textit{separable} if it contains a countable dense subset.
+  Show that \(\mathbb{R}^k\) is separable.
+  \textit{Hint: Consider the set of points which have only rational
+    coordinates}
+\item
+  A collection \(\{V_{\alpha}\}\) of open subsets of \(X\) is said to be a
+  \textit{base} for \(X\) if the following is true: For every \(x\in X\) and
+  every open set \(G\subset X\) such that \(x\in G\), we have
+  \(x\in V_{\alpha}\subset G\) for some \(\alpha\).
+  In other words, every open set in \(X\) is the union of a subcollection of
+  \(\{V_{\alpha}\}\).
+  Prove that every separable metric space has a \textit{countable} base.
+  \textit{Hint: Take all neighborhoods with rational radius and center in some
+    countable dense subset of \(X\).}
+\item
+  Let \(X\) be a metric space in which every infinite subset has a limit point.
+  Prove that \(X\) is separable.
+  \textit{Hint: Fix \(\delta > 0\), and pick \(x_1\in X\).}
+  Having chosen \(x_1,\ldots,x_j\in X\), choose \(x_{j + 1}\in X\), if
+  possible, so that \(d(x_i, x_{j + 1})\geq\delta\) for \(i = 1,\ldots,j\).
+  Show that this process must stop after a finite number of steps, and that
+  \(X\) can therefore be covered by finitely many neighborhoods of radius
+  \(\delta\).
+  Take \(\delta = 1/n\) \((n = 1,2,\ldots)\), and consider the centers of the
+  corresponding neighborhoods.
+\item
+  Prove that every compact metric space \(K\) has a countable base, and that
+  \(K\) is therefore separable.
+  \textit{Hint: For every positive integer \(n\), there are finitely many
+    neighborhoods of radius \(1/n\) whose union covers \(K\).}
+\item
+  Let \(X\) be a metric space in which every infinite subset has a limit point.
+  Prove that \(X\) is compact.
+  \textit{Hint: By exercise \(23\) and \(24\), \(X\) has a countable base.}
+  It follows that every open cover of \(X\) has a countable subcover
+  \(\{G_n\}\), \(n = 1,2,\ldots\)
+  If no finite subcollection of \(\{G_n\}\) covers \(X\), then the complement
+  \(F_n\) of \(G_1\cup\cdots\cup G_n\) is nonempty for each \(n\), but
+  \(\bigcap F_n\) is empty.
+  If \(E\) is a set which contains a point from each \(F_n\), consider a limit
+  point of \(E\), and obtain a contradiction.
+\item
+  Define a point \(p\) in a metric space \(X\) to be
+  \textit{condensation point} of a set \(E\subset X\) if every neighborhood of
+  \(p\) contains uncountably many points of \(E\).
+  Suppose \(E\subset\mathbb{R}^k\), \(E\) is uncountable, and let \(P\) be the
+  set of all condensation points of \(E\).
+  Prove that \(P\) is perfect and that at most countably many points of \(E\)
+  are not in \(P\).
+  In other words, show that \(P^c\cap E\) is at most countable.
+  \textit{Hint: Let \(\{V_n\}\) be a countable base of \(\mathbb{R}^k\), let
+    \(W\) be the union of those \(V_n\) for which \(E\cap V_n\) is at most
+    countable, and show that \(P = W^c\).}
+\item
+  Prove that every closed set in a separable metric space is the union of a
+  (possibly empty) perfect set and a set which is at most countable.
+  \textit{(Corollary: Every countable close set in \(\mathbb{R}^k\) has
+    isolated points.)
+    Hint: Use exercise \(27\).}
+\item
+  Prove that every open set in \(\mathbb{R}\) is the union of an at most
+  countable collection of disjoints segments.
+  \textit{Hint: Use exercise \(22\).}
+\item
+  Imitate the proof of Theorem \(2.43\) to obtain the following results:
+  \par\smallskip
+  If \(\mathbb{R}^k = \bigcup_{n = 1}^{\infty}F_n\), where each \(F_n\) is a
+  closed subset of \(\mathbb{R}^k\), then at least one \(F_n\) has a nonempty
+  interior.
+  \par\smallskip
+  \textit{Equivalent statement:} If \(G_n\) is a dense open subset
+  \(\mathbb{R}^k\), for \(n = 1,2,\ldots\) then
+  \(\bigcap_{n = 1}^{\infty}G_n\) is not empty (in fact, it is dense in
+  \(\mathbb{R}^k\)).
+  \par\smallskip
+  (This is a special case of Baire's theorem; see exercise \(22\), chapter
+  \(3\), for the general case.)
+\end{enumerate}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

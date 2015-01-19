@@ -1,0 +1,472 @@
+\section{The Real and Complex Numbers}
+
+\begin{enumerate}
+\item
+  If \(r\) is rational (\(r\neq 0\)) and \(x\) is irrational, prove that
+  \(r + x\) and \(rx\) are irrational.
+  \par\smallskip
+  We will prove that \(r + x\) is irrational by
+  \textit{reductio ad impossibilem}, contradiction.
+  That is, \(p\to q\) becomes \(p\wedge\neg q\).
+  Suppose \(r\) is rational (\(r\neq 0\)) and \(x\) is irrational and
+  \(r + x\) is rational.
+  Since \(r\) is rational, \(-r\) is rational and exist by the field axioms of
+  addition.
+  The sum of two rational numbers is rational by the closure property of
+  \(\mathbb{Q}\).
+  Then \(-r + (r + x) = (-r + r) + x = x\).
+  We have reached a contradiction since \(x\) is clearly irrational.
+  Therefore, \(r + x\) is irrational.
+  \par\smallskip
+  For the second statement, we will again use the argument of
+  \textit{reductio ad impossibilem}.
+  Since \(r\neq 0\) and rational, \(\frac{1}{r}\) is rational and exists by the
+  field axioms of multiplication.
+  The multiplication of two rational numbers is rational, again, by the
+  closure property of \(\mathbb{Q}\).
+  Then \(\frac{1}{r}(rx) = \bigl(\frac{1}{r}r\bigr)(x) = x\).
+  We have reached a contradiction since \(x\) is irrational.
+  That is, \(rx\) is irrational.
+\item
+  Prove that there is no rational number whose square is \(12\).
+  \par\smallskip
+  Suppose there is a rational number whose square is \(12\).
+  Let \(\frac{a}{b}\) be this rational number.
+  Then \(a^2 = 12b^2\).
+  By the Fundamental Theorem of Arithmetic, we can write \(a\), \(b\), and
+  \(12\) as a product of \textit{unique} primes.
+  Let \(p_i\) and \(q_i\) be prime numbers and
+  \(\alpha_i, \beta_i\in\mathbb{Z}^{\geq 0}\) for \(i = 1, 2, \ldots, n\).
+  Then \(a = p_1^{\alpha_1}\cdot p_2^{\alpha_2}\cdots p_n^{\alpha_n}\),
+  \(b = q_1^{\beta_1}\cdot q_2^{\beta_2}\cdots q_n^{\beta_n}\), and
+  \(12 = 2^2\cdot 3\).
+  We now have
+  \begin{align*}
+    (p_1^{\alpha_1}\cdot p_2^{\alpha_2}\cdots p_n^{\alpha_n})^2
+    &= 2^2\cdot 3(q_1^{\beta_1}\cdot q_2^{\beta_2}\cdots q_n^{\beta_n})^2\\
+    p_1^{2\alpha_1}\cdot p_2^{2\alpha_2}\cdots p_n^{2\alpha_n}
+    &= 2^2\cdot 3(q_1^{2\beta_1}\cdot q_2^{2\beta_2}\cdots q_n^{2\beta_n})
+      \eqnumtag\label{ch1prob2}
+  \end{align*}
+  Let \(p_k^{2\alpha_k}\) be \(3^{2\alpha_k}\) and \(q_m = 3^{2\beta_m}\).
+  Then by \cref{ch1prob2}
+  \begin{align*}
+    3^{2\alpha_k} &= 3\cdot 3^{2\beta_m}\\
+                  &= 3^{2\beta_m + 1}
+  \end{align*}
+  Therefore, \(2\alpha_k = 2\beta_m + 1\) which is a contradiction since an
+  even number can never be an odd number.
+  That is, there is no rational number whose square is \(12\).
+\item
+  Prove Proposition \(1.15\).
+  \par\smallskip
+  Proposition \(1.15\) states that the axioms for multiplication imply the
+  following statements.
+  \begin{enumerate}[label = (\alph*)]
+  \item
+    If \(x\neq 0\) and \(xy = xz\), then \(y = z\).
+    \par\smallskip
+    By the field axioms of multiplication, since \(x\neq 0\),
+    \[
+    y = 1\cdot y = \frac{1}{x}xy = \frac{1}{x}xz = \frac{1}{x}xz = z
+    \]
+    as was needed to be shown.
+  \item
+    If \(x\neq 0\) and \(xy = x\), then \(y = 1\).
+    \par\smallskip
+    Since \(x\neq 0\), we have
+    \[
+    y = 1\cdot y = \frac{1}{x}xy = \frac{1}{x}x = 1
+    \]
+    as was needed to shown.
+  \item
+    If \(x\neq 0\) and \(xy = 1\), then \(y = 1/x\).
+    \par\smallskip
+    Again, since we have that \(x\neq 0\),
+    \[
+    y = 1\cdot y = \frac{1}{x}xy = \frac{1}{x}\cdot 1 = \frac{1}{x}
+    \]
+    as was needed to be shown.
+  \item
+    If \(x\neq 0\), then \(1/(1/x) = x\)
+    \par\smallskip
+    Again, since we have that \(x\neq 0\),
+    \[
+    \frac{1}{1/x} = 1\cdot\frac{1}{1/x} = x\frac{1}{x}\frac{1}{1/x} =
+    x\frac{1}{x}x = x
+    \]
+    as was needed to be shown.
+  \end{enumerate}
+\item
+  Let \(E\) be a nonempty subset of an ordered set; suppose \(\alpha\) is a
+  lower bound of \(E\) and \(\beta\) is an upper bound of \(E\).
+  Prove that \(\alpha\leq\beta\).
+  \par\smallskip
+  Since \(E\neq\varnothing\), \(x\in E\).
+  Since \(\alpha\) is a lower bound, \(\alpha\leq x\), and since \(\beta\) is
+  an upper bound, \(\beta\geq x\).
+  By the transitivity property, \(\alpha\leq\beta\).
+\item
+  Let \(A\) be a nonempty set of real numbers which is bounded below.
+  Let \(-A\) be the set of all numbers \(-x\), where \(x\in A\).
+  Prove that
+  \[
+  \inf A = -\sup(-A).
+  \]
+  Since \(A\) is nonempty and bounded below, \(A = \{x:x\in A\}\) and
+  \(\inf(A) = \alpha\).
+  Now, \(-A = \{-x:x\in A\}\) is also nonempty.
+  Since \(\alpha\) is the infimum of \(A\), \(\alpha\leq x\) for all
+  \(x\in A\).
+  By multiplying by \(-1\), we get the following inequality
+  \[
+  \alpha\leq x\Rightarrow -\alpha\geq -x.
+  \]
+  That is, \(-\alpha\) is an upper bound of \(-A\).
+  Suppose \(-\gamma = \sup(-A)\) and \(\varepsilon > 0\).
+  Then \(-\gamma + \varepsilon\not\in -A\)
+  \[
+  -\alpha\geq -\gamma + \varepsilon\geq -\gamma\geq -x
+  \]
+  Again, by multiplying by negative one, we have
+  \[
+  \alpha\leq \gamma - \varepsilon\leq\gamma\leq x
+  \]
+  but \(\gamma - \varepsilon\notin A\) so \(\gamma\) is a lower bound of
+  \(A\) which would contradict the fact that \(\alpha\) is the greatest lower
+  bound of \(A\). 
+  In order for \(\gamma\) to be the lower bound, \(\gamma = \alpha\) since the
+  infimum is unique.
+  So \(-\alpha = \sup(-A)\).
+  Therefore, \(\alpha = \inf(A) = -\sup(-A) = -(-\alpha) = \alpha\).
+\item
+  Fix \(b > 1\).
+  \begin{enumerate}[label = (\alph*)]
+  \item
+    If \(m\), \(n\), \(p\), \(q\) are integers, \(n, q > 0\), and
+    \(r = m/n = p/q\), prove that
+    \[
+    (b^m)^{1/n} = (b^p)^{1/q}.
+    \]
+    Hence it makes sense to define \(b^r = (b^m)^{1/n}\).
+    \par\smallskip
+    Since \(n, q > 0\), \(nr = m = np/q\).
+    \[
+    (b^m)^{1/n} = (b^{np/q})^{1/n} = \bigl[(b^p)^{n/q}\bigr]^{1/n} =
+    (b^p)^{1/q} = b^{p/q} = b^r
+    \]
+  \item
+    Prove that \(b^{r + s} = b^rb^s\) if \(r\) and \(s\) are rational.
+    \par\smallskip
+    Let \(r = \frac{a}{b}\) and \(s = \frac{c}{d}\).
+    Then
+    \[
+    b^{r + s} = b^{(ad + bc)/(bd)} = (b^{ad + bc})^{1/(bd)} =
+    (b^a)^{1/b}(b^c)^{1/d} = b^rb^s
+    \]
+  \item
+    If \(x\) is real, define \(B(x)\) to be the set of all numbers \(b^t\),
+    where \(t\) is rational and \(t\leq x\).
+    Prove that
+    \[
+    b^r = \sup B(r)
+    \]
+    when \(r\) is rational.
+    Hence it makes sense to define
+    \[
+    b^x = \sup B(x)
+    \]
+    for every real \(x\).
+    \par\smallskip
+    From the statement \(b^r = \sup B(r)\), we see that \(b^r\in B(r)\).
+    Let \(b^t\in B(r)\).
+    Then \(b^r = b^tb^{r - t}\).
+    Since \(b > 1\), \(b^t1^{r - t}\leq b^tb^{r - t} = b^r\); therefore,
+    \(b^t\leq b^r\) for all \(b^t\in B(r)\) so \(b^r = \sup B(r)\).
+  \item
+    Prove that \(b^{x + y} = b^xb^y\) for all real \(x\) and \(y\).
+    \par\smallskip
+    
+  \end{enumerate}
+\item
+  Fix \(b > 1\), \(y > 0\), and prove that there is a unique real \(x\) such
+  that \(b^x = y\), by completing the following outline.
+  (This is called the logarithm of \(y\) to the base of \(b\).)
+  \begin{enumerate}[label = (\alph*)]
+  \item
+    For any positive integer \(n\), \(b^n - 1\geq n(b - 1)\).
+    \par\smallskip
+    From Theorem \(1.21\), we have that
+    \(b^n - a^n = (b - a)(b^{n - 1} + b^{n - 2}a + \cdots a^{n - 1})\).
+    Therefore, we now have
+    \begin{align*}
+      b^n - 1 & = (b - 1)(b^{n - 1} + b^{n - 2}1 + \cdots + ba^{n - 2} +
+                1^{n - 1})\\
+              & \geq (b - 1)(1^{n - 1} + 1^{n - 2}1 + \cdots + (1)1^{n - 2} +
+                1^{n - 1})\eqnumtag\label{ch1prob7a}\\
+              & = n(b - 1)1^{n - 1}\\
+              & = n(b - 1)
+    \end{align*}
+    where \cref{ch1prob7a} occurs from letting \(b = 1\), and since \(b > 1\),
+    we get the less than or equal to inequality.
+  \item
+    Hence \(b - 1\geq n(b^{1/n} - 1)\).
+    \par\smallskip
+    
+  \item
+    If \(t > 1\) and \(n > (b - 1)/(t - 1)\), then \(b^{1/n} < t\).
+  \item
+    If \(w\) is such that \(b^w < y\), then \(b^{w + 1/n} < y\) for
+    sufficiently large \(n\); to see this, apply part \((c)\) with
+    \(t = y\cdot b^{-w}\).
+  \item
+    If \(b^w > y\), then \(b^{w - 1/n} > y\) for sufficiently large \(n\).
+  \item
+    Let \(A\) be the set of all \(w\) such that \(b^w < y\), and show that
+    \(x = \sup(A)\) satisfies \(b^x = y\).
+  \item
+    Prove that \(x\) is unique.
+  \end{enumerate}
+\item
+  Prove that no order can be defined in the complex field that turns it into an
+  ordered field.
+  \textit{Hint: \(-1\) is a square}
+  \par\smallskip
+  Suppose that \(i > 0\).
+  Then \(i^2 = -1 \ngtr 0\).
+  Instead, let's suppose that \(i < 0\).
+  Then \(i^4 = 1 \nless 0\).
+  Therefore, \(\mathbb{C}\) is not ordered.
+\item
+  Suppose \(z = a + bi\), \(w = c + di\).
+  Define \(z < w\) if \(a < c\), and also \(a = c\) but \(b < d\).
+  Prove that this turns the set of all complex numbers into an ordered set.
+  (This type of relation is called a \textit{dictionary order}, or
+  \textit{lexicographic order}, for obvious reasons.)
+  Does this ordered set have the least upper bound property?
+  \par\smallskip
+  The Law of Trichotomy states that a real number is either positive,
+  negative, or zero.
+  In otherwords, if \(x,y\in\mathbb{R}\), then \(x < y\), \(x = y\), or
+  \(x > y\).
+  Let \(a,b,c,d\in\mathbb{R}\).
+  Then \(a < c\), \(a = c\), or \(a > c\).
+  If \(a < c\), then \(z < w\).
+  If \(a > c\), then \(z > w\).
+  For \(a = c\), we have either \(b < d\), \(b = d\), or \(b > d\).
+  If \(b < d\), then \(z < w\).
+  If \(b > d\), them \(z > w\).
+  Finally, if \(b = d\), then \(z = w\).
+  Let \(z,w,u\in\mathbb{C}\) and \(a,b,c,d,e,f\in\mathbb{R}\) such that
+  \(z\) and \(w\) are defined as above and \(u = e + if\).
+  We need to show the tansitive property.
+  That is, if \(z < w\) and \(w < u\), then \(z < u\).
+  Since \(z < w\) and \(w < u\), we have that either \(a < c\) or \(a = c\) and
+  \(b < d\) and \(c < e\) or \(c = e\) and \(d < f\).
+  If \(a < c\) and \(c < e\), then \(a < e\) and \(z < u\).
+  If \(a < c\), \(c = e\), and \(d < f\), then \(z < u\) since \(b < d < f\).
+  If \(a = c\), \(b < d\), and \(c < e\), then \(a = c < e\) so \(z < u\).
+  If \(a = c\), \(b < d\), \(c = e\), and \(d < f\), then \(a = c = e\) and
+  \(b < d < f\) so \(z < u\).
+  Thus, \(\mathbb{C}\) is an order set under the dictionary order.
+  Since \(\mathbb{C}\) is an order set under the dictionary order, we have by
+  the completeness axiom that \(\mathbb{C}\) with the dictionary order has the
+  least upper bound property.
+\item
+  Suppose \(z = a + bi\), \(w = u + iv\), and
+  \[
+  a = \Bigl(\frac{\lvert w\rvert + u}{2}\Bigr)^{1/2},\qquad
+  b = \Bigl(\frac{\lvert w\rvert - u}{2}\Bigr)^{1/2}.
+  \]
+  Prove that \(z^2 = w\) if \(v\geq 0\) and that \(\bar{z}^2 = w\) if
+  \(v\leq 0\).
+  Conclude that every complex number (with one exception!) has two complex
+  square roots.
+  \par\smallskip
+  We have that \(z^2 = a^2 - b^2 + 2abi\) so \(a^2 - b^2 = u\).
+  \begin{align*}
+    2ab & = 2\Bigl(\frac{\lvert w\rvert + u}{2}
+          \frac{\lvert w\rvert - u}{2}\Bigr)^{1/2}\\
+        & = \pm\sqrt{\lvert w\rvert^2 - u^2}\\
+        & = \pm v
+  \end{align*}
+  For \(v \geq 0\), \(z^2 = u + iv = w\).
+  Now, \(\bar{z}^2 = a^2 - b^2 - 2abi\), so again we have \(a^2 - b^2 = u\) and
+  \(-2ab = \mp v\).
+  If \(v \leq 0\), then \(\bar{z}^2 = u + iv = w\).
+  Therefore, all nonzero complex numbers have at least two complex square
+  roots.
+\item
+  If \(z\) is a complex number, prove that there exists an \(r\geq 0\) and a
+  complex number \(w\) with \(\lvert w\rvert = 1\) such that \(z = rw\).
+  Are \(w\) and \(r\) always uniquely determined by \(z\)?
+  \par\smallskip
+  Since \(\lvert w\rvert = 1\), we can write \(w\) as
+  \(w = \frac{z}{\lvert z\rvert}\).
+  Then let \(r = \lvert z\rvert\) so \(z = rw\) where \(w\) and \(r\) are
+  unique.
+  If \(z = 0\), then \(r = 0\) and \(w\in\mathbb{C}\) such that
+  \(\lvert w\rvert = 1\).
+  Therefore, \(w\) is not unique.
+\item
+  If \(z_1,\ldots, z_n\) are complex, prove that
+  \[
+  \lvert z_1 + z_2 + \cdots + z_n\rvert\leq\lvert z_1\rvert + \lvert z_2\rvert
+  + \cdots + \lvert z_n\rvert.
+  \]
+  First, we will show the triangle inequality is true for \(n = 2\) and use
+  induction for \(n\geq 2\) and \(n\in\mathbb{Z}^+\).
+  For \(n = 2\), we need to show
+  \(\lvert z_1 + z_2\rvert\leq\lvert z_1\rvert + \lvert z_2\rvert\).
+  \begin{align*}
+    \lvert z_1 + z_2\rvert^2 & = (z_1 + z_2)(\bar{z}_1 + \bar{z}_2)\\
+                             & = z_1\bar{z}_1 + z_1\bar{z}_2 + z_2\bar{z}_1 +
+                               z_2\bar{z}_2\\
+                             & \leq\lvert z_1\rvert^2 + 2\text{Re}(z_1z_2) +
+                               \lvert z_2\rvert^2\\
+                             & = \bigl(\lvert z_1\rvert + \lvert
+                               z_2\rvert\bigr)^2 
+  \end{align*}
+  Taking square roots of the left and right sides, we have the desired results.
+  Suppose this is true for \(k < n\).
+  Then
+  \[
+  \lvert z_1 + \cdots + z_k\rvert\leq\lvert z_1\rvert + \cdots +
+  \lvert z_k\rvert.
+  \]
+  Now, we need to show it is true for \(k + 1\).
+  \begin{align*}
+    \lvert z_1 + \cdots + z_{k + 1}\rvert
+    & = \lvert (z_1 + \cdots + z_k) + z_{k + 1}\rvert\\
+    & \leq\lvert z_1 + \cdots + z_k\rvert + \lvert z_{k + 1}\rvert\\
+    & \leq\lvert z_1\rvert + \cdots + \lvert z_{k + 1}\rvert
+  \end{align*}
+  Therefore, by the principle of mathematical induction, the \(n\) dimensional
+  triangle inequality is true.
+\item
+  If \(x, y\) are complex, prove that
+  \[
+  \bigl\lvert\lvert x\rvert - \lvert y\rvert\bigr\rvert\leq\lvert x - y\rvert.
+  \]
+  \par\smallskip
+  Let \(x = x + y - y\).
+  Then by the triangle inequality, we have
+  \begin{align*}
+    \lvert x + y - y\rvert
+    & \leq \lvert x - y\rvert + \lvert y\rvert\\
+    \lvert x\rvert & \leq \lvert x - y\rvert + \lvert y\rvert\\
+    \lvert x\rvert - \lvert y\rvert & \leq \lvert x - y\rvert
+  \end{align*}
+  Similarly, we could let \(y = y + x - x\) and conclude
+  \[
+  \lvert y\rvert - \lvert x\rvert\leq\lvert x - y\rvert.
+  \]
+  Thus,
+  \[
+  \bigl\lvert\lvert x\rvert - \lvert y\rvert\bigr\rvert\leq\lvert x - y\rvert.
+  \]
+\item
+  If \(z\) is a complex number such that \(\lvert z\rvert = 1\), that is, such
+  that \(z\bar{z} = 1\), compute
+  \[
+  \lvert 1 + z\rvert^2 + \lvert 1 - z\rvert^2.
+  \]
+  We have that \(\lvert z\rvert^2 = z\bar{z}\) so
+  \begin{align*}
+    \lvert 1 + z\rvert^2 + \lvert 1 - z\rvert^2
+    & = (1 + z)(1 - \bar{z}) + (1 - z)(1 - \bar{z})\\
+    & = 2 + z + \bar{z} + 2 - z - \bar{z}\\
+    & = 4
+  \end{align*}
+\item
+  Under what conditions does equality hold in the Schwarz inequality?
+  \par\smallskip
+  The Schwarz inequality (also known as the Cauchy-Schwarz inequality) is
+  \[
+  \Bigl\lvert\sum_j^n a_j\bar{b}_j\Bigr\rvert^2\leq\sum_j^n\lvert a_j\rvert^2
+  \sum_j^n\lvert b_j\rvert^2.
+  \]
+  Let \(A = \sum\lvert a_j\rvert^2\), \(B = \sum\lvert \bar{b}_j\rvert^2\), and
+  \(C = \sum\lvert a_j\bar{b}_j\rvert^2\).
+  From the proof in the book, we ahve \(0 = B(AB - \lvert C\rvert^2)\).
+  Therefore, equality holds if \(B = 0\) or \(AB - \lvert C\rvert^2 = 0\).
+\item
+  Suppose \(k\geq 3\), \(\mathbf{x},\mathbf{y}\in\mathbb{R}^k\),
+  \(\lvert\mathbf{x} - \mathbf{y}\rvert = d > 0\), and \(r > 0\).
+  Prove:
+  \begin{enumerate}[label = (\alph*)]
+  \item
+    If \(2r > d\), there are infinitely many \(\mathbf{z}\in\mathbb{R}^k\) such
+    that
+    \[
+    \lvert\mathbf{z} - \mathbf{x}\rvert = \lvert\mathbf{z} - \mathbf{y}\rvert
+    = r.
+    \]
+  \item
+    If \(2r = d\), there exactly one such \(\mathbf{z}\).
+  \item
+    If \(2r < d\), there is no such \(\mathbf{z}\)
+  \end{enumerate}
+  How must these statements be modified if \(k\) is \(2\) or \(1\)?
+\item
+  Prove that
+  \[
+  \lvert\mathbf{x} + \mathbf{y}\rvert^2 + \lvert\mathbf{x} - \mathbf{y}\rvert^2
+  = 2\lvert\mathbf{x}\rvert^2 + 2\lvert\mathbf{y}\rvert^2
+  \]
+  if \(\mathbf{x}\in\mathbb{R}^k\) and \(\mathbf{y}\in\mathbb{R}^k\).
+  Interpret this geometrically, as a statement about parallelograms.
+  \par\smallskip
+  We have that
+  \begin{align*}
+    \lvert\mathbf{x} + \mathbf{y}\rvert^2
+    & = (\mathbf{x} + \mathbf{y}) (\mathbf{x} + \mathbf{y})\\
+    & = \lvert\mathbf{x}\rvert^2 + 2\mathbf{x}\cdot\mathbf{y} +
+      \lvert\mathbf{y}\rvert^2\eqnumtag\label{ch1prob17a}\\
+    \lvert\mathbf{x} - \mathbf{y}\rvert^2
+    & = (\mathbf{x} - \mathbf{y}) (\mathbf{x} - \mathbf{y})\\
+    & = \lvert\mathbf{x}\rvert^2 - 2\mathbf{x}\cdot\mathbf{y} +
+      \lvert\mathbf{y}\rvert^2\eqnumtag\label{ch1prob17b}\\
+    \intertext{Then by adding \cref{ch1prob17a,ch1prob17b}, we have}
+    \lvert\mathbf{x} + \mathbf{y}\rvert^2 +
+    \lvert\mathbf{x} - \mathbf{y}\rvert^2
+    & = 2\lvert\mathbf{x}\rvert^2 + 2\lvert\mathbf{y}\rvert^2
+  \end{align*}
+  Then \(\mathbf{x} + \mathbf{y}\) is the longer diagonal of the parallelogram
+  and \(\mathbf{x} - \mathbf{y}\) is the shorter diagonal of the parallelogram
+  see \cref{ch1prob17}.
+  \begin{figure}[H]
+    \centering
+    \includestandalone[mode = image, width = 2in]{Tikz/ch1prob17}
+    \caption{The parallelogram for vectors \(\mathbf{x}\) and \(\mathbf{y}\).}
+    \label{ch1prob17}
+  \end{figure}
+  Then the sum of squares of the diagonals of a parallelogram are equal to the
+  sum of the squares of the sides of the parallelogram.
+\item
+  If \(k\geq 2\) and \(\mathbf{x}\in\mathbb{R}^k\), prove that there exists
+  \(\mathbf{y}\in\mathbb{R}^k\) such that \(\mathbf{y}\neq\mathbf{0}\) but
+  \(\mathbf{x}\cdot\mathbf{y} = 0\).
+  Is this also true if \(k = 1\)?
+  \par\smallskip
+  If \(\mathbf{x} = 0\), then the components of \(\mathbf{y}\) can be any real
+  numbers.
+  If \(\mathbf{x}\neq 0\), then
+  \(\mathbf{y} =
+  \begin{bmatrix} -x_k & -x_{k - 1} & \cdots & -x_1\end{bmatrix}^{\intercal}\).
+  For \(k = 1\), this is not true since for the multiplication of any two
+  nonzero real numbers is nonzero.
+\item
+  Suppose \(\mathbf{a}\in\mathbb{R}^k\), \(\mathbf{b}\in\mathbb{R}^k\).
+  Find \(\mathbf{c}\in\mathbb{R}^k\) and \(r > 0\) such that
+  \[
+  \lvert\mathbf{x} - \mathbf{a}\rvert = 2\lvert\mathbf{x} - \mathbf{b}\rvert
+  \]
+  if and only if \(\lvert\mathbf{x} - \mathbf{c}\rvert = r\).
+  (Solutions \(3\mathbf{c} = 4\mathbf{b} - \mathbf{a}\),
+  \(3r = 2\lvert\mathbf{b} - \mathbf{a}\rvert\).)
+\end{enumerate}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
