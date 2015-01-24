@@ -48,12 +48,38 @@
   well.
 \item
   Construct a bounded set of real numbers with exactly three limit points.
+  \par\smallskip
+  Let \(A_0 = \{1/n\mid n\in\mathbb{Z}^+\}\),
+  \(A_1 = \{1 + 1/n\mid n\in\mathbb{Z}^+\}\), and
+  \(A_2 = \{2 + 1/n\mid n\in\mathbb{Z}^+\}\).
+  Then the limit point of \(A_1\) is \(0\), the limit point of \(A_2\) is
+  \(1\), and the limit point of \(A_2\) is \(2\).
+  Let \(S = A_1\cup A_2\cup A_3\).
+  Now \(S\) is bounded below by zero and above by three with limit points
+  \(0,1,2\).
 \item
   Let \(E'\) be the set of all limit points of a set \(E\).
   Prove that \(E'\) is closed.
   Prove that \(E\) and \(\bar{E}\) have the same limit points.
   (Recall that \(\bar{E} = E\cup E'\).)
   Do \(E\) and \(E'\) always have the same limit points?
+  \par\smallskip
+  Let \(x\in X\setminus E'\) and \(x'\in E'\).
+  Then \(x\) is not a limit point of \(E\).
+  Let \(\epsilon > 0\) be given and \(y\in E\).
+  Set \(\epsilon = \min\bigl\{\lvert d(x,x') - d(x,y)\rvert,
+  \lvert d(y,x') - d(x,y)\rvert\bigr\}\).
+  Then \(N_{\epsilon}(x) = d(x,y) < \epsilon\) is a neighborhood of \(x\) that
+  contains \(y\neq x\) such that \(y\not\in E'\).
+  Therefore, \(x\) is an interior point of \(X\setminus E'\) so
+  \(X\setminus E'\) is open and its complement is closed, namely \(E'\).
+  Let \(x'\) be a limit point of \(E\).
+  Then \(x'\) is a limit point of \(\bar{E}\) since \(\bar{E} = E\cup E'\).
+  Now, let \(x'\) be a limit point of \(\bar{E}\).
+  Since \(x'\in\bar{E}\), we can construct a neighborhood of \(x'\) such that
+  for \(y\neq x'\) for \(y\in\bar{E}\).
+  If \(y\in E\), \(x'\) is a limit point of \(E\) and \(E'\).
+  Suppose \(y\in\bar{E}\setminus E\).
 \item
   Let \(A_1, A_2, \ldots\) be subsets of a metric space.
   \begin{enumerate}[label = (\alph*)]
