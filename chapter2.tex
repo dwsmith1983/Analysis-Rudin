@@ -1,4 +1,4 @@
-\section{Basic Topology}
+\chapter{Basic Topology}
 
 \begin{enumerate}
 \item
@@ -64,22 +64,31 @@
   (Recall that \(\bar{E} = E\cup E'\).)
   Do \(E\) and \(E'\) always have the same limit points?
   \par\smallskip
-  Let \(x\in X\setminus E'\) and \(x'\in E'\).
+  Let \(x\not\in E'\).
   Then \(x\) is not a limit point of \(E\).
-  Let \(\epsilon > 0\) be given and \(y\in E\).
-  Set \(\epsilon = \min\bigl\{\lvert d(x,x') - d(x,y)\rvert,
-  \lvert d(y,x') - d(x,y)\rvert\bigr\}\).
-  Then \(N_{\epsilon}(x) = d(x,y) < \epsilon\) is a neighborhood of \(x\) that
-  contains \(y\neq x\) such that \(y\not\in E'\).
-  Therefore, \(x\) is an interior point of \(X\setminus E'\) so
-  \(X\setminus E'\) is open and its complement is closed, namely \(E'\).
-  Let \(x'\) be a limit point of \(E\).
-  Then \(x'\) is a limit point of \(\bar{E}\) since \(\bar{E} = E\cup E'\).
-  Now, let \(x'\) be a limit point of \(\bar{E}\).
-  Since \(x'\in\bar{E}\), we can construct a neighborhood of \(x'\) such that
-  for \(y\neq x'\) for \(y\in\bar{E}\).
-  If \(y\in E\), \(x'\) is a limit point of \(E\) and \(E'\).
-  Suppose \(y\in\bar{E}\setminus E\).
+  Now \(x\) has a neighborhood which doesn't intersect with \(E'\) so the
+  complement of \(E'\) is open; therefore, \(E'\) is closed.
+  If \(x\) is a limit point of \(E\) then \(x\in E'\) so \(x\) is a limit point
+  of \(\bar{E}\).
+  Suppose \(x\) is a limit point of \(\bar{E}\).
+  Then \(x\in\bar{E}\) since \(\bar{E}\) is closed.
+  Thus, \(x\in E'\) or \(x\in E\).
+  If \(x\in E'\), then \(x\) is a limit point of \(E\) so suppose \(x\) is in
+  \(E\).
+  Then we have a neighborhood \(N_r(x)\) for \(r > 0\) such that
+  \(N\cap E = \{x\}\).
+  Since \(E'\) is closed, \(x\) isn't a limit point of \(E'\).
+  Let \(M_r(x)\) be a neighborhood of \(x\) such taht
+  \(M\cap E' = \varnothing\).
+  Let \(V = N\cap M\) so \(U\) is a neighborhood of \(x\).
+  Therefore, \(V\) is a neighborhood of \(x\).
+  Now
+  \(V\cap\bar{E} = (V\cap E)\cup (V\cap E') = \{x\}\cup\varnothing = \{x\}\) so
+  \(x\) is not a limit point of \(\bar{E}\) so \(x\in E'\) and is a limit point
+  of \(E\).
+  No.
+  Consider \(E = \{\frac{1}{n}\mid n\in\mathbb{Z}^+\}\).
+  Then \(E' = \{0\}\) and the limit point of \(E'\) is \(\varnothing\).
 \item
   Let \(A_1, A_2, \ldots\) be subsets of a metric space.
   \begin{enumerate}[label = (\alph*)]

@@ -2,12 +2,13 @@
  "RudinSolutions"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
-                     '(("article" "dvipsnames")))
+                     '(("scrbook" "dvipsnames")))
    (TeX-run-style-hooks
     "latex2e"
     "chapter1"
     "chapter2"
-    "article"
-    "art10"
+    "chapter3"
+    "scrbook"
+    "scrbook10"
     "rudin")))
 
