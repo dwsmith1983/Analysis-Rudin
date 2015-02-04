@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1422557110 "RudinSolutions.tex" "RudinSolutions.pdf" "RudinSolutions" 1422557111
+["pdflatex"] 1423025613 "RudinSolutions.tex" "RudinSolutions.pdf" "RudinSolutions" 1423025614
   "/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2014/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1136768653 4484 b828043cbd581d289d955903c1339981 ""
@@ -180,18 +180,18 @@
   "/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1422121904 1630127 3cc87c9887e228431f3227dc8ec682cf ""
   "/usr/local/texlive/2014/texmf-var/web2c/pdftex/pdflatex.fmt" 1421681540 3847283 c231c55bcd3060e9f37b978a4748ca24 ""
   "/usr/local/texlive/2014/texmf.cnf" 1409016898 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "RudinSolutions.aux" 1422557111 2360 f38643ba01a2e5e0c22b9330a21dad40 ""
-  "RudinSolutions.out" 1422557111 201 bd858fdde7541c4b96aa3bf680739725 ""
-  "RudinSolutions.tex" 1422505850 602 91d77b42a662eaedd40d4903c98d0547 ""
-  "RudinSolutions.toc" 1422557111 239 5ff9d46f315a5a319cbf1a5a9990c6c1 ""
+  "RudinSolutions.aux" 1423025614 2791 193819faafc685d00981beb053f5c8b7 ""
+  "RudinSolutions.out" 1423025614 201 bd858fdde7541c4b96aa3bf680739725 ""
+  "RudinSolutions.tex" 1422688431 603 6ae4e9056d8fe81fc021ccbbf9fc9198 ""
+  "RudinSolutions.toc" 1423025614 239 5ff9d46f315a5a319cbf1a5a9990c6c1 ""
   "Tikz/ch1prob17.pdf" 1419400624 15399 6aa33337d1f447c0bfaa9d5cf373d789 ""
   "chapter1.tex" 1422505882 18321 2d0b81ceea14671cd0766cbc5f0555a2 ""
   "chapter2.tex" 1422505873 12270 fc135a6ace7ce8f3267472fa6c4bc91e ""
-  "chapter3.tex" 1422557107 938 29eb68d6f614a7cbb65ded016c0ebef5 ""
+  "chapter3.tex" 1423025610 12168 6e33b254a58b42f6373bcdb606a21127 ""
   "rudin.sty" 1419400853 2246 638c82293300ec0fff93b1bdbd06a736 ""
   (generated)
-  "RudinSolutions.toc"
-  "RudinSolutions.log"
   "RudinSolutions.out"
-  "RudinSolutions.aux"
+  "RudinSolutions.log"
   "RudinSolutions.pdf"
+  "RudinSolutions.toc"
+  "RudinSolutions.aux"

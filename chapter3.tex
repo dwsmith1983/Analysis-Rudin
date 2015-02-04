@@ -73,11 +73,15 @@
   \]
   so \(s = 2, -1\).
   Thus, \(s_n < 2\) so \(\{s_n\}\) is bounded above by two.
-  Additionally, since \(s_1 = \sqrt{2}\), we have that \(\sqrt{2} < s_n < 2\).
+  Additionally, since \(s_1 = \sqrt{2}\), we have that
+  \(\sqrt{2}\leq s_n < 2\).
   The parabola is concave up and symmetrical about \(s = 1/2\).
   That is, \(s\) monotonically increases from \((1/2, \infty)\) so \(\{s_n\}\)
   monotonoically increases on \(\bigl[\sqrt{2}, 2\bigr)\).
-  Therefore, \(\{s_n\}\) converges and it converges to \(2\).
+  Theorem \(3.14\) states that monotonic sequences converge if and only if it
+  is bounded.
+  Therefore, since \(\{s_n\}\) is bounded and monotonic, \(\{s_n\}\) converges
+  and it converges to \(2\).
 \item
   Find the upper and lower limits of the sequence \(\{s_n\}\) defined by
   \[
@@ -102,6 +106,254 @@
   \lim_{n\to\infty}\sup b_n,
   \]
   provided the sum on the right is not of the form \(\infty - \infty\).
+  \par\smallskip
+  Let \(\lim_{n\to\infty}\sup a_n = a\), \(\lim_{n\to\infty}\sup b_n = b\), and
+  \(\lim_{n\to\infty}\sup (a_n + b_n) = c\) where \(a_n + b_n = c_n\).
+  Let \(\epsilon > 0\) be given.
+  Then there exist \(N_1,N_2\in\mathbb{Z}^+\) such that for \(n\geq N_1\) and
+  \(n\geq N_2\)
+  \begin{align*}
+    \lvert a_n - a\rvert & < \frac{\epsilon}{2}\\
+    \lvert b_n - b\rvert & < \frac{\epsilon}{2}
+  \end{align*}
+  Let \(N = \max\{N_1,N_2\}\).
+  Then when \(n\geq N\),
+  \begin{align*}
+    \lvert c_n - c\rvert & = \lvert a_n + b_n - (a + b)\rvert
+                           \eqnumtag\label{3.5.a}\\
+                         & \leq \lvert a_n - a\rvert + \lvert b_n - b\rvert
+                           \eqnumtag\label{3.5.b}\\
+                         & < \frac{\epsilon}{2} + \frac{\epsilon}{2}\\
+                         & = \epsilon
+  \end{align*}
+  From \cref{3.5.a,3.5.b}, we have that
+  \[
+  \lim\sup c_n\leq\lim\sup a_n + \lim\sup b_n,
+  \]
+  and since \(c_n = a_n + b_n\), the identity follows.
+\item
+  Investigate the behavior (convergence or divergence) of \(\sum a_n\) if
+  \begin{enumerate}[label = (\alph*)]
+  \item
+    \(a_n = \sqrt{n + 1} - \sqrt{n}\)
+    \par\smallskip
+    Let \(S_N\) be the \(N\)th partial sum.
+    Then
+    \[
+    S_N = \sum_{n = 0}^N\bigl(\sqrt{n + 1} - \sqrt{n}\bigr) =
+    1 + \sqrt{2} - 1 + \sqrt{3} - \sqrt{2} + \cdots + \sqrt{N} - \sqrt{N - 1}
+    + \sqrt{N + 1} - \sqrt{N}
+    \]
+    Therefore, the \(S_N = \sqrt{N + 1}\).
+    \[
+    \lim_{N\to\infty}S_N = \lim_{N\to\infty}\sqrt{N + 1} = \infty
+    \]
+    so the series doesn't converge.
+  \item
+    \(a_n = \frac{\sqrt{n + 1} - \sqrt{n}}{n}\)
+    \par\smallskip
+    Let's re-write the series by multiplying by the conjugate.
+    \[
+    \sum_{n = 1}^{\infty}\frac{\sqrt{n + 1} - \sqrt{n}}{n}
+    \frac{\sqrt{n + 1} + \sqrt{n}}{\sqrt{n + 1} + \sqrt{n}} =
+    \sum_{n = 1}^{\infty}\frac{1}{n\bigl(\sqrt{n + 1} + \sqrt{n}\bigr)}
+    \]
+    Now
+    \[
+    \sum_{n = 1}^{\infty}\frac{1}{n\bigl(\sqrt{n + 1} + \sqrt{n}\bigr)}\leq
+    \sum_{n = 1}^{\infty}\frac{1}{2n\sqrt{n}}
+    \]
+    By theorem \(3.28\), \(\sum\frac{1}{n^p}\) converges if \(p > 1\) and
+    diverges if \(p\leq 1\).
+    Therefore,
+    \[
+    \sum_{n = 1}^{\infty}\frac{1}{2n\sqrt{n}} < \infty
+    \]
+    since \(p = 3/2\) so
+    \[
+    \sum_{n = 1}^{\infty}\frac{1}{n\bigl(\sqrt{n + 1} + \sqrt{n}\bigr)} <
+    \infty.
+    \]
+  \item
+    \(a_n = \bigl(\sqrt[n]{n} - 1\bigr)^n\)
+    \par\smallskip
+    By the root test,
+    \[
+    \lim_{n\to\infty}\sqrt[n]{\lvert\sqrt[n]{n} - 1\rvert^n} =
+    \lim_{n\to\infty}\lvert\sqrt[n]{n} - 1\rvert.
+    \]
+    Let \(x_n = \sqrt[n]{n} - 1\).
+    Then
+    \[
+    n = (x_n - 1)^n = \sum_{k = 0}^n\binom{n}{k}x_n^k = 1 + nx_n +
+    \frac{n(n-1)}{2}x_n^2 + \cdots
+    \]
+    so \(\frac{n(n-1)}{2}x_n^2 < n\Rightarrow x_n^2 < \frac{2}{n - 1}
+    \Rightarrow x_n < \sqrt{\frac{2}{n - 1}}\).
+    \begin{align*}
+      \lim_{n\to\infty}\lvert\sqrt[n]{n} - 1\rvert
+      & = \lim_{n\to\infty}\lvert x_n\rvert\\
+      & < \lim_{n\to\infty}\sqrt{\frac{2}{n - 1}}\\
+      & = 0
+    \end{align*}
+    Since \(\sqrt{\frac{2}{n - 1}}\) converges and
+    \(x_n < \sqrt{\frac{2}{n - 1}}\), \(x_n\) converges.
+    By the root and comparison test,
+    \[
+    \sum_{n = 1}^{\infty}\bigl(\sqrt[n]{n} - 1\bigr)^n
+    \]
+    converges.
+  \item
+    \(a_n = \frac{1}{1 + z^n}\) for complex values of \(z\).
+    \[
+    \sum_{n = 0}^{\infty}\frac{1}{1 + z^n}\leq
+    \sum_{n = 0}^{\infty}\frac{1}{z^n}
+    \]
+    and \(\sum_{n = 0}^{\infty}\frac{1}{z^n}\) converges for
+    \(\bigl\lvert\frac{1}{z}\bigr\rvert < 1\).
+  \end{enumerate}
+\item
+  Prove that the convergence of \(\sum a_n\) implies the convergence of
+  \[
+  \sum\frac{\sqrt{a_n}}{n},
+  \]
+  if \(a_n\geq 0\).
+  \par\smallskip
+  For \(a_n\geq 1\), \(\sqrt{a_n}\leq a_n\).
+  By the comparison test,
+  \[
+  \sum\frac{\sqrt{a_n}}{n} < \sum a_n < \infty
+  \]
+  so for \(a_n\geq 1\), the series converges.
+  For \(0\leq a_n < 1\), \(a_n\leq\sqrt{a_n}\).
+  We can write all rationals and irrational numbers in \([0,1)\) as \(b/n\)
+  for \(b\in\mathbb{R}^{\geq 0}\).
+  Then
+  \[
+  \sum\frac{\sqrt{a_n}}{n} = \frac{\sqrt{b}}{n\sqrt{n}} < \infty
+  \]
+  since \(p = 3/2 > 1\) so the series converges.
+\item
+  If \(\sum a_n\) converges, and if \(\{b_n\}\) is monotonic and bounded, prove that \(\sum a_nb_n\) converges.
+  \par\smallskip
+  By theorem \(3.14\), we know that monotonic bounded sequences converge.
+  Let \(\{b_n\}\to M\) for some number \(M < \infty\) or
+  \(\lvert b_n\rvert\leq M\).
+  Since \(\sum a_n\) converges, for a given \(\epsilon > 0\) and \(k\geq N\),
+  \(m\geq k\geq N\) implies that
+  \[
+  \Bigl\lvert\sum_{n = k}^ma_n\Bigr\rvert\leq\sum_{n = k}^m\lvert a_n\rvert\leq
+  \epsilon.
+  \]
+  Take \(\epsilon = \frac{\epsilon}{M}\).
+  Then
+  \[
+  \Bigl\lvert\sum a_nb_n\Bigr\rvert\leq\sum\lvert a_n\rvert\lvert b_n\rvert\leq
+  \sum\lvert a_n\rvert M.
+  \]
+  Since \(\sum\lvert a_n\rvert\leq\epsilon/M\), the result follows; that is,
+  \[
+  \sum\lvert a_n\rvert M\leq\epsilon
+  \]
+  so \(\sum a_nb_n\) converges.
+\item
+  Find the radius of convergence of each of the following power series:
+  \begin{enumerate}[label = (\alph*)]
+  \item
+    \(\sum n^3z^n\)
+    \par\smallskip
+    Here will use the ratio test.
+    \[
+    \limsup_{n\to\infty}\Bigl\lvert\frac{(n + 1)^3z^{n + 1}}{n^3z^n}\Bigr\rvert
+    = \lvert z\rvert\limsup_{n\to\infty}\Bigl\lvert\frac{n + 1}{n}\Bigr\rvert^3
+    = \lvert z\rvert\limsup_{n\to\infty}\Bigl\lvert\frac{n}{n}\Bigr\rvert^3 =
+    \lvert z\rvert
+    \]
+    Then \(\limsup = \alpha\) and \(R = \frac{1}{\alpha}\) so \(R = 1\) and
+    \(\lvert z\rvert < 1\) for convergence.
+  \item
+    \(\sum\frac{2^n}{n!}z^n\)
+    \par\smallskip
+    Again, we use the ratio test.
+    \[
+    \limsup_{n\to\infty}\Bigl\lvert
+    \frac{2^{n + 1}z^{n + 1}n!}{2^nz^n(n + 1)!}\Bigr\rvert =
+    2\lvert z\rvert\limsup_{n\to\infty}\Bigl\lvert\frac{1}{n + 1}\Bigr\rvert =
+    0
+    \]
+    Thus, \(R = \infty\).
+  \item
+    \(\sum\frac{2^n}{n^2}z^n\)
+    \par\smallskip
+    Following the same test, we have
+    \[
+    \limsup_{n\to\infty}\Bigl\lvert
+    \frac{2^{n + 1}z^{n + 1}n^2}{2^nz^n(n + 1)^2}\Bigr\rvert =
+    2\lvert z\rvert\limsup_{n\to\infty}\Bigl\lvert\frac{n}{n}\Bigr\rvert^2 =
+    2\lvert z\rvert
+    \]
+    so \(R = 1/2\) and \(\lvert z\rvert < 1/2\) for convergence.
+  \item
+    \(\sum\frac{n^3}{3^n}z^n\)
+    \[
+    \limsup_{n\to\infty}\Bigl\lvert
+    \frac{(n + 1)^3z^{n + 1}3^n}{3^{n + 1}z^nn^3}\Bigr\rvert =
+    \frac{\lvert z\rvert}{3}
+    \limsup_{n\to\infty}\Bigl\lvert\frac{n}{n}\Bigr\rvert^3 =
+    \frac{\lvert z\rvert}{3}
+    \]
+    so \(R = 3\) and \(\lvert z\rvert < 3\) for convergence.
+  \end{enumerate}
+\item
+  Suppose the the coefficients of the power series \(\sum a_nz^n\) are
+  integers, infinitely many of which are distinct from zero.
+  Prove that the radius of convergence is at most \(1\).
+  \par\smallskip
+\item
+  Suppose \(a_n > 0\), \(s_n = a_1 + \cdots + a_n\), and \(\sum a_n\) diverges.
+  \begin{enumerate}[label = (\alph*)]
+  \item
+    Prove that \(\sum\frac{a_n}{1 + a_n}\) diverges.
+  \item
+    Prove that
+    \[
+    \frac{a_{N + 1}}{s_{N + 1}} + \cdots + \frac{a_{N + k}}{s_{N + k}}\geq 1
+    - \frac{s_N}{s_{N + k}}
+    \]
+    and deduce that \(\sum\frac{a_n}{s_n}\) diverges.
+  \item
+    Prove that
+    \[
+    \frac{a_n}{s_n^2}\leq \frac{1}{s_{n - 1}} - \frac{1}{s_n}
+    \]
+    and deduce that \(\sum\frac{a_n}{s_n^2}\) converges.
+  \item
+    What can be said about
+    \[
+    \sum\frac{a_n}{1 + na_n}\quad\text{and}\quad\sum\frac{a_n}{1 + n^2a_n}
+    \mbox{?}
+    \]
+  \end{enumerate}
+\item
+  Suppose \(a_n > 0\) and \(\sum a_n\) converges.
+  Put
+  \[
+  r_n = \sum_{m = n}^{\infty}a_m.
+  \]
+  \begin{enumerate}[label = (\alph*)]
+  \item
+    Prove that
+    \[
+    \frac{a_m}{r_m} + \cdots + \frac{a_n}{r_n} > 1 - \frac{r_n}{r_m}
+    \]
+    if \(m < n\), and deduce that \(\sum\frac{a_n}{r_n}\) diverges.
+  \item
+    Prove that
+    \[
+    \frac{a_n}{\sqrt{r_n}} < 2\bigl(\sqrt{r_n} - \sqrt{r_{n + 1}}\bigr)
+    \]
+    and deduce that \(\sum\frac{a_n}{\sqrt{r_n}}\) converges.
+  \end{enumerate}
 \end{enumerate}
 %%% Local Variables:
 %%% mode: latex

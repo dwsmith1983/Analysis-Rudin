@@ -1,10 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.19)  29 JAN 2015 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.19)  3 FEB 2015 23:53
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**\input RudinSolutions.tex
+**RudinSolutions.tex
 (./RudinSolutions.tex
+LaTeX2e <2014/05/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/koma-script/scrbook.cls
 Document Class: scrbook 2015/01/14 v3.15 KOMA-Script document class (book)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -1203,7 +1205,7 @@ Chapter 2.
 ]
 Chapter 3.
 [15]
-Overfull \hbox (2.88992pt too wide) in paragraph at lines 86--90
+Overfull \hbox (2.88992pt too wide) in paragraph at lines 90--94
 \T1/ppl/m/n/10.95 (-10) Let's de-ter-mine a few of the terms. Then $\U/zeur/m/n
 /10.95 s[] \U/zeus/m/n/10.95 ½ f\OT1/ppl/m/n/10.95 (-10) 0, 1\U/zeur/m/n/10.95 
 =\OT1/ppl/m/n/10.95 (-10) 4, 3\U/zeur/m/n/10.95 =\OT1/ppl/m/n/10.95 (-10) 8, 7\
@@ -1214,9 +1216,9 @@ T1/ppl/m/n/10.95 (-10) 4, 7\U/zeur/m/n/10.95 =\OT1/ppl/m/n/10.95 (-10) 8, 15\U/
 zeur/m/n/10.95 =\OT1/ppl/m/n/10.95 (-10) 16, []\U/zeus/m/n/10.95 g$
  []
 
-)
+[16] [17] [18])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
- [16]
+ [19]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
  (./RudinSolutions.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 34.
@@ -1226,13 +1228,13 @@ Package rerunfilecheck Info: File `RudinSolutions.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 34.
  ) 
 Here is how much of TeX's memory you used:
- 20275 strings out of 493109
- 315095 string characters out of 6135010
+ 20313 strings out of 493109
+ 315398 string characters out of 6135010
  497119 words of memory out of 5000000
- 23182 multiletter control sequences out of 15000+600000
- 40519 words of font info for 144 fonts, out of 8000000 for 9000
+ 23186 multiletter control sequences out of 15000+600000
+ 40827 words of font info for 148 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,12n,118p,388b,2223s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 83i,12n,118p,381b,2223s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
@@ -1252,10 +1254,10 @@ bm7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/
 local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/t
 exlive/2014/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on RudinSolutions.pdf (16 pages, 184217 bytes).
+Output written on RudinSolutions.pdf (19 pages, 197414 bytes).
 PDF statistics:
- 313 PDF objects out of 1000 (max. 8388607)
- 271 compressed objects within 3 object streams
- 119 named destinations out of 1000 (max. 500000)
+ 360 PDF objects out of 1000 (max. 8388607)
+ 314 compressed objects within 4 object streams
+ 147 named destinations out of 1000 (max. 500000)
  19486 words of extra memory for PDF output out of 20736 (max. 10000000)
 
