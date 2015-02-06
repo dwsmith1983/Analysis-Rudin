@@ -7,7 +7,6 @@
 \linespread{1.025}% Palatino needs more leading
 %\usepackage[scaled]{helvet}% ss //  http://ctan.org/pkg/helvet
 %\usepackage{courier}% tt // http://ctan.org/pkg/courier
-\usepackage[sc,osf]{mathpazo}
 \usepackage[euler-digits,small]{eulervm}  %  http://ctan.org/pkg/eulervm
 % a better implementation of the euler package (not in gwTeX)
 \normalfont%

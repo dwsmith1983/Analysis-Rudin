@@ -391,80 +391,86 @@
   From the proof in the book, we ahve \(0 = B(AB - \lvert C\rvert^2)\).
   Therefore, equality holds if \(B = 0\) or \(AB - \lvert C\rvert^2 = 0\).
 \item
-  Suppose \(k\geq 3\), \(\mathbf{x},\mathbf{y}\in\mathbb{R}^k\),
-  \(\lvert\mathbf{x} - \mathbf{y}\rvert = d > 0\), and \(r > 0\).
+  Suppose \(k\geq 3\), \(\mathbold{x},\mathbold{y}\in\mathbb{R}^k\),
+  \(\lvert\mathbold{x} - \mathbold{y}\rvert = d > 0\), and \(r > 0\).
   Prove:
   \begin{enumerate}[label = (\alph*)]
   \item
-    If \(2r > d\), there are infinitely many \(\mathbf{z}\in\mathbb{R}^k\) such
-    that
+    If \(2r > d\), there are infinitely many \(\mathbold{z}\in\mathbb{R}^k\)
+    such that
     \[
-    \lvert\mathbf{z} - \mathbf{x}\rvert = \lvert\mathbf{z} - \mathbf{y}\rvert
-    = r.
+    \lvert\mathbold{z} - \mathbold{x}\rvert =
+    \lvert\mathbold{z} - \mathbold{y}\rvert = r.
     \]
   \item
-    If \(2r = d\), there exactly one such \(\mathbf{z}\).
+    If \(2r = d\), there exactly one such \(\mathbold{z}\).
   \item
-    If \(2r < d\), there is no such \(\mathbf{z}\)
+    If \(2r < d\), there is no such \(\mathbold{z}\)
   \end{enumerate}
   How must these statements be modified if \(k\) is \(2\) or \(1\)?
 \item
   Prove that
   \[
-  \lvert\mathbf{x} + \mathbf{y}\rvert^2 + \lvert\mathbf{x} - \mathbf{y}\rvert^2
-  = 2\lvert\mathbf{x}\rvert^2 + 2\lvert\mathbf{y}\rvert^2
+  \lvert\mathbold{x} + \mathbold{y}\rvert^2 + \lvert\mathbold{x} -
+  \mathbold{y}\rvert^2 =
+  2\lvert\mathbold{x}\rvert^2 + 2\lvert\mathbold{y}\rvert^2
   \]
-  if \(\mathbf{x}\in\mathbb{R}^k\) and \(\mathbf{y}\in\mathbb{R}^k\).
+  if \(\mathbold{x}\in\mathbb{R}^k\) and \(\mathbold{y}\in\mathbb{R}^k\).
   Interpret this geometrically, as a statement about parallelograms.
   \par\smallskip
   We have that
   \begin{align*}
-    \lvert\mathbf{x} + \mathbf{y}\rvert^2
-    & = (\mathbf{x} + \mathbf{y}) (\mathbf{x} + \mathbf{y})\\
-    & = \lvert\mathbf{x}\rvert^2 + 2\mathbf{x}\cdot\mathbf{y} +
-      \lvert\mathbf{y}\rvert^2\eqnumtag\label{ch1prob17a}\\
-    \lvert\mathbf{x} - \mathbf{y}\rvert^2
-    & = (\mathbf{x} - \mathbf{y}) (\mathbf{x} - \mathbf{y})\\
-    & = \lvert\mathbf{x}\rvert^2 - 2\mathbf{x}\cdot\mathbf{y} +
-      \lvert\mathbf{y}\rvert^2\eqnumtag\label{ch1prob17b}\\
+    \lvert\mathbold{x} + \mathbold{y}\rvert^2
+    & = (\mathbold{x} + \mathbold{y}) (\mathbold{x} + \mathbold{y})\\
+    & = \lvert\mathbold{x}\rvert^2 + 2\mathbold{x}\cdot\mathbold{y} +
+      \lvert\mathbold{y}\rvert^2\eqnumtag\label{ch1prob17a}\\
+    \lvert\mathbold{x} - \mathbold{y}\rvert^2
+    & = (\mathbold{x} - \mathbold{y}) (\mathbold{x} - \mathbold{y})\\
+    & = \lvert\mathbold{x}\rvert^2 - 2\mathbold{x}\cdot\mathbold{y} +
+      \lvert\mathbold{y}\rvert^2\eqnumtag\label{ch1prob17b}\\
     \intertext{Then by adding \cref{ch1prob17a,ch1prob17b}, we have}
-    \lvert\mathbf{x} + \mathbf{y}\rvert^2 +
-    \lvert\mathbf{x} - \mathbf{y}\rvert^2
-    & = 2\lvert\mathbf{x}\rvert^2 + 2\lvert\mathbf{y}\rvert^2
+    \lvert\mathbold{x} + \mathbold{y}\rvert^2 +
+    \lvert\mathbold{x} - \mathbold{y}\rvert^2
+    & = 2\lvert\mathbold{x}\rvert^2 + 2\lvert\mathbold{y}\rvert^2
   \end{align*}
-  Then \(\mathbf{x} + \mathbf{y}\) is the longer diagonal of the parallelogram
-  and \(\mathbf{x} - \mathbf{y}\) is the shorter diagonal of the parallelogram
-  see \cref{ch1prob17}.
+  Then \(\mathbold{x} + \mathbold{y}\) is the longer diagonal of the
+  parallelogram and \(\mathbold{x} - \mathbold{y}\) is the shorter diagonal of
+  the parallelogram see \cref{ch1prob17}.
   \begin{figure}[H]
     \centering
     \includestandalone[mode = image, width = 2in]{Tikz/ch1prob17}
-    \caption{The parallelogram for vectors \(\mathbf{x}\) and \(\mathbf{y}\).}
+    \caption{The parallelogram for vectors \(\mathbold{x}\) and
+      \(\mathbold{y}\).}
     \label{ch1prob17}
   \end{figure}
   Then the sum of squares of the diagonals of a parallelogram are equal to the
   sum of the squares of the sides of the parallelogram.
 \item
-  If \(k\geq 2\) and \(\mathbf{x}\in\mathbb{R}^k\), prove that there exists
-  \(\mathbf{y}\in\mathbb{R}^k\) such that \(\mathbf{y}\neq\mathbf{0}\) but
-  \(\mathbf{x}\cdot\mathbf{y} = 0\).
+  If \(k\geq 2\) and \(\mathbold{x}\in\mathbb{R}^k\), prove that there exists
+  \(\mathbold{y}\in\mathbb{R}^k\) such that \(\mathbold{y}\neq\mathbold{0}\)
+  but \(\mathbold{x}\cdot\mathbold{y} = 0\).
   Is this also true if \(k = 1\)?
   \par\smallskip
-  If \(\mathbf{x} = 0\), then the components of \(\mathbf{y}\) can be any real
-  numbers.
-  If \(\mathbf{x}\neq 0\), then
-  \(\mathbf{y} =
-  \begin{bmatrix} -x_k & -x_{k - 1} & \cdots & -x_1\end{bmatrix}^{\intercal}\).
+  If \(\mathbold{x} = 0\), then the components of \(\mathbold{y}\) can be any
+  real numbers.
+  If \(\mathbold{x}\neq 0\), then
+  \[
+  \mathbold{y} =
+  \begin{bmatrix}
+    -x_k & -x_{k - 1} & \cdots & -x_1
+  \end{bmatrix}^{\intercal}.
+  \]
   For \(k = 1\), this is not true since for the multiplication of any two
   nonzero real numbers is nonzero.
 \item
-  Suppose \(\mathbf{a}\in\mathbb{R}^k\), \(\mathbf{b}\in\mathbb{R}^k\).
-  Find \(\mathbf{c}\in\mathbb{R}^k\) and \(r > 0\) such that
+  Suppose \(\mathbold{a}\in\mathbb{R}^k\), \(\mathbold{b}\in\mathbb{R}^k\).
+  Find \(\mathbold{c}\in\mathbb{R}^k\) and \(r > 0\) such that
   \[
-  \lvert\mathbf{x} - \mathbf{a}\rvert = 2\lvert\mathbf{x} - \mathbf{b}\rvert
+  \lvert\mathbold{x} - \mathbold{a}\rvert = 2\lvert\mathbold{x} - \mathbold{b}\rvert
   \]
-  if and only if \(\lvert\mathbf{x} - \mathbf{c}\rvert = r\).
-  (Solutions \(3\mathbf{c} = 4\mathbf{b} - \mathbf{a}\),
-  \(3r = 2\lvert\mathbf{b} - \mathbf{a}\rvert\).)
+  if and only if \(\lvert\mathbold{x} - \mathbold{c}\rvert = r\).
+  (Solutions \(3\mathbold{c} = 4\mathbold{b} - \mathbold{a}\),
+  \(3r = 2\lvert\mathbold{b} - \mathbold{a}\rvert\).)
 \end{enumerate}
 %%% Local Variables:
 %%% mode: latex

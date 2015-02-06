@@ -234,7 +234,8 @@
   \]
   since \(p = 3/2 > 1\) so the series converges.
 \item
-  If \(\sum a_n\) converges, and if \(\{b_n\}\) is monotonic and bounded, prove that \(\sum a_nb_n\) converges.
+  If \(\sum a_n\) converges, and if \(\{b_n\}\) is monotonic and bounded,
+  prove that \(\sum a_nb_n\) converges.
   \par\smallskip
   By theorem \(3.14\), we know that monotonic bounded sequences converge.
   Let \(\{b_n\}\to M\) for some number \(M < \infty\) or
@@ -314,6 +315,19 @@
   \begin{enumerate}[label = (\alph*)]
   \item
     Prove that \(\sum\frac{a_n}{1 + a_n}\) diverges.
+    \par\smallskip
+    Theorem \(3.23\) states that if \(\sum a_n\) converges, then
+    \(\lim_{n\to\infty}a_n = 0\).
+    Since \(\sum a_n\) doesn't converge, there exist no \(M\) such that
+    \(a_n\leq M\) for \(M\in\mathbb{R}\).
+    Then
+    \[
+    \lim_{n\to\infty}\frac{a_n}{1 + a_n}\geq
+    \lim_{n\to\infty}\frac{M}{1 + M} = 1
+    \]
+    for some \(M\gg 10^8\).
+    Therefore, the limit is greater than or equal to one so
+    \(\sum\frac{a_n}{1 + a_n}\) doesn't converge.
   \item
     Prove that
     \[
@@ -321,6 +335,29 @@
     - \frac{s_N}{s_{N + k}}
     \]
     and deduce that \(\sum\frac{a_n}{s_n}\) diverges.
+    \par\smallskip
+    Each partial sum \(s_N\) increase so
+    \[
+    \frac{a_{N + 1}}{s_{N + 1}} + \cdots + \frac{a_{N + k}}{s_{N + k}}\geq
+    \frac{1}{s_{N + k}}(a_{N + 1} + \cdots + a_{N + k})  =
+    1 - \frac{s_N}{s_{N + k}}
+    \]
+    since \(a_{N + 1} + \cdots + a_{N + k} = s_{N + k} - s_N\).
+    Now,
+    \[
+    \sum\frac{a_n}{s_n} = \frac{a_1}{a_1} + \frac{a_2}{a_1 + a_2} + \cdots
+    + \frac{a_n}{\sum a_n} + \cdots
+    \]
+    If \(0 < a_n < 1\), then every term after the first is
+    \(\frac{a_n}{\sum a_n}\geq a_n\).
+    Since \(\sum a_n\) diverges and \(\sum\frac{a_n}{s_n} > \sum a_n\),
+    \(\sum\frac{a_n}{s_n}\) diverges.
+    Suppose \(a_n\geq 1\).
+    Then
+    \[
+    \sum \frac{a_n}{n}\leq\sum a_n
+    \]
+    and \(\sum\frac{1}{n^p}\) diverges for \(p\leq 1\) so the series diverges.
   \item
     Prove that
     \[
