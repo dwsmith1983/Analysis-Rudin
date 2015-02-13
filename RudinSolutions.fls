@@ -352,6 +352,15 @@ INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/vf/public/mathpazo/zplmr7t.vf
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/palatino/pplr9o.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/eulervm/zeurm5.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/eulervm/zeusm5.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/eulervm/zeuex10.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/eulervm/zeurb5.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/mathpazo/fplmbb.tfm
 INPUT RudinSolutions.aux
 INPUT ./RudinSolutions.out
 INPUT ./RudinSolutions.out
