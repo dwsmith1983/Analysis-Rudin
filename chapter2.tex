@@ -32,8 +32,8 @@
   \par\smallskip
   The set of algebraic numbers are countable.
   Therefore, the set of algebraic real numbers would also be countable.
-  The real numbers are an uncountable set and the union of uncontable sets are
-  not contable. We have reached a contradiction so there are real numbers which
+  The real numbers are an uncountable set and the union of uncountable sets are
+  not countable. We have reached a contradiction so there are real numbers which
   are not algebraic.
 \item
   Is the set of all irrational real numbers countable?
@@ -78,7 +78,7 @@
   Then we have a neighborhood \(N_r(x)\) for \(r > 0\) such that
   \(N\cap E = \{x\}\).
   Since \(E'\) is closed, \(x\) isn't a limit point of \(E'\).
-  Let \(M_r(x)\) be a neighborhood of \(x\) such taht
+  Let \(M_r(x)\) be a neighborhood of \(x\) such that
   \(M\cap E' = \varnothing\).
   Let \(V = N\cap M\) so \(U\) is a neighborhood of \(x\).
   Therefore, \(V\) is a neighborhood of \(x\).
@@ -91,27 +91,85 @@
   Then \(E' = \{0\}\) and the limit point of \(E'\) is \(\varnothing\).
 \item
   Let \(A_1, A_2, \ldots\) be subsets of a metric space.
-  \begin{enumerate}[label = (\alph*)]
+  \begin{enumerate}[label = (\alph*), ref = \theenumi{} (\alph*)]
   \item
+    \label{1.7.a}
     If \(B_n = \bigcup_{i = 1}^nA_i\), prove that
     \(\bar{B}_n = \bigcup_{i = 1}^n\bar{A}_i\) for \(n = 1, 2, \ldots\)
+    \par\smallskip
+    For \(n = 2\), \(\bar{B} = \overline{A_1\cup A_2} =
+    \bar{A}_1\cup \bar{A}_2\).
+    Suppose \(x\in\overline{A_1 \cup A_2}\).
+    Then \(x\in A_1\cup A_1'\cup A_2\cup A_2'\) since \(\bar{E} = E\cup E'\).
+    Therefore, \(x\in\bar{A}_1\cup\bar{A}_2\) so
+    \(\overline{A_1\cup A_2}\subseteq\bar{A}_1\cup \bar{A}_2\).
+    Suppose \(x\in\bar{A}_1\cup \bar{A}_2\).
+    Then \(x\in A_1\cup A_2\cup (A_1\cup A_2)' = \overline{A_1\cup A_2}\).
+    Thus, we have that
+    \(\bar{A}_1\cup \bar{A}_2\subseteq\overline{A_1\cup A_2}\) and that
+    \(\bar{A}_1\cup \bar{A}_2 = \overline{A_1\cup A_2}\).
+    Now we can show the closure of the union of \(n\) subsets is the union of
+    closure of the subsets.
+    \begin{align*}
+      \bar{B}_n & = \overline{\bigcup_{i = 1}^nA_i}\\
+                & = \overline{A_1\cup\bigcup_{i = 2}^nA_i}\\
+                & = \bar{A}_1\cup\bigcup_{i = 2}^n\bar{A}_i\\
+                & = \bigcup_{i = 1}^n\bar{A}_i
+    \end{align*}
   \item
-    If \(B_n = \bigcup_{i = 1}^nA_i\), prove that
-    \(\bar{B}\supset\bigcup_{i = 1}^n\bar{A}_i\).
+    If \(B_n = \bigcup_{i = 1}^{\infty}A_i\), prove that
+    \(\bar{B}\supset\bigcup_{i = 1}^{\infty}\bar{A}_i\).
+    \par\smallskip
+    From the premise, we have that \(B_n\subseteq\bigcup_{i = 1}^{\infty}A_i\)
+    and \(B_n\supseteq\bigcup_{i = 1}^{\infty}A_i\).
   \end{enumerate}
 \item
   Is every point of every open set \(E\subset\mathbb{R}^2\) a limit point of
   \(E\)?
   Answer the same question for closed sets of \(\mathbb{R}^2\).
+  \par\smallskip
+  Let \(x\in E\).
+  Let \(\epsilon > 0\) be given.
+  Let \(N_{\epsilon}(x)\) be a neighborhood about \(x\) of radius \(\epsilon\).
+  Now \(N\cap E\subset\mathbb{R}^2\) and the intersection of a finite number of
+  open sets is open.
+  Therefore, \(N\cap E\) open neighborhood about \(x\).
+  Thus, \(x\) is a limit point of \(E\).
+  \par\smallskip
+  Let the closed set \(E\) consist of only the point \(p = (0, 0)\).
+  Every open neighborhood of \(p\) contains no points of \(E\) except \(p\).
+  Thus, \(p\) is not a limit point of \(E\).
 \item
   Let \(E^{\circ}\) denote the set of all interior points of a set \(E\).
   \begin{enumerate}[label = (\alph*)]
   \item
     Prove that \(E^{\circ}\) is always open.
+    \par\smallskip
+    Let \(x\in E^{\circ}\) and \(\epsilon > 0\).
+    There exists \(y\in E\) such that \(d(x,y) < \epsilon\).
+    Let \(r = \epsilon - d(x,y) > 0\).
+    If \(d(z,y) < r = \epsilon - d(x,y)\), then \(d(z,y) + d(x,y) < \epsilon\).
+    By the triangle inequality, \(d(x,z)\leq d(z,y) + d(x,y) < \epsilon\).
+    Therefore, \(z\in E\).
+    Now, \(y\in E^{\circ}\) if there is a neighborhood of \(y\) such that
+    \(N_{\delta}(y)\subset E\).
+    Let \(\delta < \epsilon/2\).
+    Then \(N_{\delta}(y) = d(x,y)\subset E\).
+    Thus, \(y\) is interior point and \(E^{\circ}\) is always open.
   \item
     Prove that \(E\) is open if and only if \(E^{\circ} = E\).
+    \par\smallskip
+    Suppose \(E\) is open.
+    By definition, \(E\) is open if every point of \(E\) is an interior point
+    of \(E\) or \(E = E^{\circ}\).
+    Suppose \(E = E^{\circ}\).
+    Then every point of \(E\) is an interior point of \(E\) so it follows that
+    \(E\) is open by definition.
   \item
     If \(G\subset E\) and \(G\) is open, prove that \(G\subset E^{\circ}\).
+    \par\smallskip
+    Since \(G\) is open, \(G = G^{\circ}\).
+    Therefore, \(G = G^{\circ}\subseteq E^{\circ}\subset E\).
   \item
     Prove that the complement of \(E^{\circ}\) is the closure of the
     complement of \(E\).
@@ -133,6 +191,19 @@
   Prove that this a metric space.
   Which subsets of the resulting metric space are open?
   Which are closed? Which are compact?
+  \par\smallskip
+  By definition, the separation and coincidence axioms are satisfied.
+  That is,
+  \[
+  d(p, q)\geq 0
+  \]
+  for \(p\neq q\) and zero when \(p = q\).
+  For \(p\neq q\), \(d(p,q) = 1 = d(q,p)\), and when \(p = q\),
+  \(d(p,q) = d(p,p) = 0\).
+  Thus, symmetry is satisfied \(d(p,q) = d(q,p)\).
+  For the triangle inequality, if \(p = q = r\), then we have
+  \(d(p,q)\leq d(p,r) + d(q,r)\Rightarrow 0\leq 0\).
+  If \(p\neq q\neq r\), then \(1\leq 2\), and if \(p = q\), then \(0\leq 2\).
 \item
   For \(x\in\mathbb{R}\) and \(y\in\mathbb{R}\), define
   \begin{align*}
@@ -143,9 +214,85 @@
     d_5(x, y) & = \frac{\lvert x - y\rvert}{1 + \lvert x - y\rvert}
   \end{align*}
   Determine for each of these, whether it is a metric or not.
+  \par\smallskip
+  For \(d_1\), note that squaring is \(\geq 0\) for all \(x,y\in\mathbb{R}\)
+  and only when \(x = y\Rightarrow (x - x)^2 = 0\).
+  For symmetry, it is easy to show that
+  \((x - y)^2 = [(-1)(y - x)]^2 = (y - x)^2\).
+  For the triangle inequality, assume that \(x\neq y\neq z\) because if they
+  are we have \(0\leq 0\) and the identity holds.
+  \begin{align*}
+    d_1(x, z) & \leq d_1(x, y) + d_1(z, y)\\
+    x^2 - 2xz + z^2 & \leq x^2 - 2xy + 2y^2 -2yz + z^2\\
+    y(x + z) & \leq y^2 + xz
+  \end{align*}
+  Take \(y = 0\).
+  Then \(0\leq xz\).
+  As long as either \(x\) or \(y\) are different signs \(\pm\), the inequality
+  doesn't hold.
+  For instance, let \(y = 0\), \(x = -1\), and \(z = 2\).
+  \[
+  9\not\leq 1 + 4 = 5
+  \]
+  Therefore, \(d_1\) is not a metric.
+  For \(d_2\), \(\lvert x - y\rvert\geq 0\) and \(\lvert x - y\rvert = 0\) iff
+  \(x = y\).
+  Therefore, \(d_2(x,y) = \sqrt{\lvert x - y\rvert}\geq 0\) and zero iff
+  \(x = y\).
+  \[
+  d_2(x, y) = \sqrt{\lvert x - y\rvert} = \sqrt{\lvert (-1)(y - x)\rvert} =
+  \sqrt{\lvert y - x\rvert} = d_2(y, x)
+  \]
+  For the triangle inequality, it is vacuously true when \(x = y = z\).
+  \begin{align*}
+    d_2(x, z) & \leq d_2(x, y) + d_2(y, z)\\
+    \lvert x - z\rvert & \leq \lvert x - y\rvert + \lvert y - z\rvert +
+                         2\sqrt{\lvert x - y\rvert}\sqrt{\lvert y - z\rvert}
+  \end{align*}
+  By the triangle inequality, we can write \(\lvert x - z\rvert\) as
+  \[
+  \lvert x - z\rvert = \lvert x - y + y - z\rvert\leq\lvert x - y\rvert +
+  \lvert y - z\rvert
+  \]
+  Since \(2\sqrt{\lvert x - y\rvert}\sqrt{\lvert y - z\rvert} > 0\) for
+  \(x\neq y\neq z\), \(d_2(x,z)\leq d_2(x,y) + d_2(y,z)\) and \(d_2\) is a
+  metric.
+  \(d_3\) is not a metric since \(\lvert x^2 - y^2\rvert = 0\) if \(x = -y\) or
+  \(y = -x\).
+  For example, let \(x = 1\) and \(y = -1\).
+  Then \(\lvert 1 - (-1)^2\rvert = 0\).
+  \(d_4\) is not metric since \(\lvert x - 2x\rvert = \lvert -x\rvert =
+  \lvert x\rvert\) which is only zero when \(x = 0\).
+  Therefore, for all \(x,y\in\mathbb{R}\), \(x = y\) doesn't yield zero.
+  For \(d_5\), we have already established that \(\lvert x - y\rvert\geq 0\)
+  and zero iff \(x = y\).
+  Since the numerator is \(\lvert x - y\lvert\),
+  \[
+  \frac{\lvert x - y\rvert}{1 + \lvert x - y\rvert}\geq 0
+  \]
+  and zero iff \(x = y\).
+  \begin{align*}
+    d_5(x, y) & = \frac{\lvert x - y\rvert}{1 + \lvert x - y\rvert}\\
+              & = \frac{\lvert (-1)(y - x)\rvert}
+                {1 + \lvert (-1)(y - x)\rvert}\\
+              & = \frac{\lvert y - x\rvert}{1 + \lvert y - x\rvert}\\
+              & = d_5(y, x)
+  \end{align*}
+  For the triangle inequality, we will multiple through by
+  \((1 + \lvert x - z\rvert)(1 + \lvert x - y\rvert)(1 + \lvert y - z\rvert)\).
+  After simplifying, we will be left with
+  \[
+  \lvert x - z\rvert\leq\lvert x - y\rvert + \lvert y - z\rvert +
+  2\lvert x - y\rvert\lvert y - z\rvert + \lvert x - y\rvert\lvert y - z\rvert
+  \lvert x - z\rvert
+  \]
+  By the triangle inequality, we have that
+  \(\lvert x - z\rvert\leq\lvert x - y\rvert + \lvert y - z\rvert\).
+  Since the other terms are strictly greater than or equal to zero with
+  equality only when \(x = y = z\), we can see that \(d_5\) is a metric.
 \item
   Let \(K\subset\mathbb{R}\) consist of \(0\) and the numbers \(1/n\) for
-  \(n = 1, 2, \ldots\)
+  \(n = 1,2,\ldots\)
   Prove that \(K\) is compact directly from the definition (without using the
   Heine-Borel theorem).
 \item

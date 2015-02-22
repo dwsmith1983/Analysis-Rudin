@@ -341,11 +341,11 @@ INPUT chapter2.tex
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/vf/public/eulervm/zeusm7.vf
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/amsfonts/euler/eusm7.tfm
-INPUT chapter3.tex
-INPUT chapter3.tex
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/vf/public/eulervm/zeuex10.vf
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/amsfonts/euler/euex10.tfm
+INPUT chapter3.tex
+INPUT chapter3.tex
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/vf/public/mathpazo/zplmr7t.vf
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
