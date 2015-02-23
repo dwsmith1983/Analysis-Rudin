@@ -2,7 +2,7 @@
  "RudinSolutions"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
-                     '(("scrbook" "dvipsnames")))
+                     '(("scrbook" "dvipsnames" "svgnames" "x11names")))
    (TeX-run-style-hooks
     "latex2e"
     "chapter1"

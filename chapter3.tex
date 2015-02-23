@@ -595,11 +595,51 @@
     Prove that \(\lim s_n = \sigma\), by completing the following outline:
     \par\smallskip
     If \(m < n\), then
+    \par\smallskip
+    {\color{NavyBlue}
+      we have that
+      \begin{align*}
+        \sigma_n - \sigma_m
+        & = \frac{s_0 + \cdots + s_n}{n + 1} -
+          \frac{s_0 + \cdots + s_m}{m + 1}\\
+        & = (s_0 + \cdots + s_n)\frac{m - n}{(n + 1)(m + 1)} +
+          \frac{1}{m + 1}\sum_{i = m + 1}^ns_i\\
+        & = \frac{m - n}{m + 1}\sigma_n + \frac{1}{m + 1}
+          \sum_{i = m + 1}^ns_i\\
+        \intertext{Let's multiple through by \(\frac{m + 1}{m - n}\).}
+        (\sigma_n - \sigma_m)\frac{m + 1}{m - n}
+        & = \sigma_n - \frac{1}{n - m}\sum_{i = m + 1}^ns_i\\
+        -\sigma_n & = (\sigma_n - \sigma_m)\frac{m + 1}{n - m} -
+                    \frac{1}{n - m}\sum_{i = m + 1}^ns_i
+      \end{align*}
+      Finally, we just need to add \(s_n\) to both sides.
+      Note that \(\sum_{i = m + 1}^n1 = 1\) so take
+      \(s_n = \sum_{i = m + 1}^ns_n\).
+      Then we obtain the desired result.
+    }
     \[
     s_n - \sigma_n = \frac{m + 1}{n - m}(\sigma_n - \sigma_m) +
-    \smashoperator{\sum_{i = m + 1}^n}(s_n - s_i).
+    \frac{1}{n - m}\sum_{i = m + 1}^n(s_n - s_i).
     \]
     For these \(i\),
+    \par\smallskip
+    {\color{NavyBlue}
+      we have
+      \begin{align*}
+        \lvert s_n - s_i\rvert
+        & = \lvert a_n + a_{n - 1} + \cdots + a_{i + 1}\rvert\\
+        & \leq \lvert a_n\rvert + \cdots + \lvert a_{i + 1}\rvert\\
+        \intertext{By the hypothesis, \(\lvert na_n\rvert\leq M\) so
+        \(\lvert a_n\rvert\leq M/n\).}
+        & \leq \frac{M}{n} + \cdots + \frac{M}{i + 1}\\
+        & = M\Bigl(\frac{1}{n} + \cdots + \frac{1}{i + 1}\Bigr)\\
+        \intertext{Now, \(i + 1\) is the smallest indices so
+        \(\frac{1}{i + 1}\) is the largest fraction and we have \(n - i\)
+        fractions.}
+        & \leq \frac{M(n - i)}{i + 1}
+      \end{align*}
+      Plugging in \(i = m + 1\), we achieve the desired results.
+    }
     \[
     \lvert s_n - s_i\rvert\leq\frac{(n - i)M}{i + 1}\leq
     \frac{(n - m - 1)M}{m + 2}.
@@ -624,6 +664,25 @@
   Show that Theorems \(3.22,3.23,3.25(a),3.33,3.34,3.42,3.45,3.47\), and
   \(3.55\) are true in this more general setting.
   (Only slight modifications are required in any of the proofs.)
+  \par\smallskip
+  Theorem \(3.22\): \(\sum\mathbold{a}_n\) converges if and only if for every
+  \(\epsilon > 0\) there is an integer \(N\) such that
+  \[
+  \Bigl\lvert\sum_{k = n}^m\mathbold{a}_k\Bigr\rvert\leq\epsilon
+  \]
+  if \(m\geq n\geq N\).
+  \par\smallskip
+  For \(\lvert a_i - b_i\rvert\leq\lvert\mathbold{a} - \mathbold{b}\rvert\leq
+  \sum_{i = 1}^k\lvert a_i - b_i\rvert\), the sequence \(\{\mathbold{a}_n\}\)
+  converges if and only if each subsequence \(\{a_{n_j}\}\) converges for
+  \(j = 1,\ldots,k\).
+  That is, the sequences converge if they are Cauchy; therefore, the vector
+  sequence is Cauchy.
+  \par\smallskip
+  Theorem \(3.23\): If \(\sum\mathbold{a}_n\) converges, then
+  \(\lim_{n\to\infty}\mathbold{a}_n = \mathbold{0}\).
+  \par\smallskip
+  
 \item
   \label{3.16}
   Fix a positive number \(\alpha\).
