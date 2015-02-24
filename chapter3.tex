@@ -466,8 +466,8 @@
       & = 2\lim_{N\to\infty}\bigl(\sqrt{r_1} - \sqrt{r_{N + 1}}\bigr)\\
       & = 2\sqrt{r_1} - \lim_{N\to\infty}
         \biggl(\sum_{m = N + 1}^{\infty}a_m\biggr)^{1/2}\\
-      %& = 2\sqrt{r_1} - 
-      %  \biggl(\lim_{N\to\infty}\sum_{m = N + 1}^{\infty}a_m\biggr)^{1/2}\\
+        % & = 2\sqrt{r_1} - 
+        % \biggl(\lim_{N\to\infty}\sum_{m = N + 1}^{\infty}a_m\biggr)^{1/2}\\
       \intertext{Since \(\sum a_n\) converges, \(\sum_{m = N + 1}^{\infty}a_n\)
       can be made less than \(\epsilon > 0\).}
       & = 2\sqrt{r_1}
@@ -665,8 +665,8 @@
   \(3.55\) are true in this more general setting.
   (Only slight modifications are required in any of the proofs.)
   \par\smallskip
-  Theorem \(3.22\): \(\sum\mathbold{a}_n\) converges if and only if for every
-  \(\epsilon > 0\) there is an integer \(N\) such that
+  \textbf{Theorem} \(\mathbold{3.22}\): \(\sum\mathbold{a}_n\) converges if
+  and only if for every \(\epsilon > 0\) there is an integer \(N\) such that
   \[
   \Bigl\lvert\sum_{k = n}^m\mathbold{a}_k\Bigr\rvert\leq\epsilon
   \]
@@ -679,10 +679,99 @@
   That is, the sequences converge if they are Cauchy; therefore, the vector
   sequence is Cauchy.
   \par\smallskip
-  Theorem \(3.23\): If \(\sum\mathbold{a}_n\) converges, then
+  \textbf{Theorem} \(\mathbold{3.23}\): If \(\sum\mathbold{a}_n\) converges,
+  then \(\lim_{n\to\infty}\mathbold{a}_n = \mathbold{0}\).
+  \par\smallskip
+  From theorem \(3.22\), we have that \(\sum\mathbold{a}_n\) converges if each
+  \(\{a_{n_j}\}\) converges for \(j = 1,\ldots,k\).
+  Thus, \(a_{n_j}\to 0\) for each \(j\) so \(\mathbold{a}_n\to 0\) or
   \(\lim_{n\to\infty}\mathbold{a}_n = \mathbold{0}\).
   \par\smallskip
-  
+  \textbf{Theorem} \(\mathbold{3.25(a)}\): If
+  \(\lvert\mathbold{a}_n\rvert\leq c_n\) for \(n\geq N_0\), where \(N_0\) is
+  some fixed integer, and if \(\sum c_n\) converges, then
+  \(\sum\mathbold{a}_n\) converges.
+  \par\smallskip
+  By the hypothesis, \(a_{n_j}\) converges for each \(j\), and since each
+  subsequences converges, \(\sum\mathbold{a}_n\) converges.
+  \par\smallskip
+  \textbf{Theorem} \(\mathbold{3.33}\): Given \(\sum\mathbold{a}_n\), put
+  \(\alpha = \limsup_{n\to\infty}\sqrt[n]{\lvert\mathbold{a}_n\vert}\).
+  Then
+  \begin{enumerate}[label = (\alph*)]
+  \item
+    if \(\alpha < 1\), \(\sum\mathbold{a}_n\) converges;
+    \par\smallskip
+    From the previous theorems, we have that
+    \(\sqrt[n]{\lvert a_{n_j}\rvert}\leq\sqrt[n]{\lvert\mathbold{a}_n\rvert}\).
+    Now, if \(\alpha < 1\), then each subsequence converges; therefore,
+    \(\sum\mathbold{a}_n\) converges.
+  \item
+    if \(\alpha > 1\), \(\sum\mathbold{a}_n\) diverges; and
+    \par\smallskip
+    When \(\alpha > 1\), \(\lvert\mathbold{a}_n\rvert > 1\) for infinitely
+    many \(n\).
+    Therefore, the series diverges.
+  \item
+    if \(\alpha = 1\), the test gives no information.
+  \end{enumerate}
+  \textbf{Theorem} \(\mathbold{3.34}\): The series \(\sum\mathbold{a}_n\)
+  \begin{enumerate}[label = (\alph*)]
+  \item
+    converges if \(\limsup_{n\to\infty}\frac{\lvert\mathbold{a}_{n + 1}\rvert}
+    {\lvert\mathbold{a}_n\rvert} < 1\),
+    \par\smallskip
+    The limes superior inequality means that for some \(\epsilon > 0\) and
+    constant \(M\), \(\lvert\mathbold{a}_n\rvert M\epsilon ^n\).
+    Thus, \(\sum\mathbold{a}_n\) converges absolutely so series converges by
+    theorem \(3.25\).
+  \item
+    diverges if \(\frac{\lvert\mathbold{a}_{n + 1}\rvert}
+    {\lvert\mathbold{a}_n\rvert}\geq 1\) for \(n\leq n_0\), whenever \(n_0\) is
+    some fixed integer.
+    \par\smallskip
+    From the inequality, we get that \(\mathbold{a}_n\) doesn't go to zero.
+    Therefore, the series doesn't converge.
+  \end{enumerate}
+  \textbf{Theorem} \(\mathbold{3.42}\): Suppose
+  \begin{enumerate}[label = (\alph*)]
+  \item
+    the partial sum \(\mathbold{A}_n\) of \(\sum\mathbold{a}_n\) form a bounded
+    sequence;
+  \item
+    \(b_0\geq b_1\geq b_2\geq\cdots\);
+  \item
+    \(\lim_{n\to\infty}b_n = 0\)
+  \end{enumerate}
+  Then \(\sum b_n\mathbold{a}_n\) converges.
+  \par\smallskip
+  Choose \(M\) such that \(\lvert\mathbold{A}_n\rvert\leq M\) for all \(n\).
+  Given \(\epsilon > 0\), there is an integer \(N\) such that
+  \(b_N\leq\frac{\epsilon}{2M}\).
+  For \(N\leq p\leq q\), we have
+  \begin{align*}
+    \Bigl\lvert\sum_{n = p}^q\mathbold{a}_nb_n\Bigr\rvert
+    & = \Bigl\lvert\sum_{n = p}^{q - 1}\mathbold{A}_n(b_n - b_{n + 1}) +
+      \mathbold{A}_qb_q - \mathbold{A}_{p - 1}b_p\Bigr\rvert\\
+    & \leq M\Bigl(\sum_{n = p}^{q - 1}\lvert b_n - b_{n + 1}\rvert + b_q +
+      b_p\Bigr)\\
+    & \leq 2Mb_p\\
+    & \leq \epsilon
+  \end{align*}
+  The partial sums form a Cauchy sequence.
+  Thus, \(\sum b_n\mathbold{a}_n\) converges.
+  \par\smallskip
+  \textbf{Theorem} \(\mathbold{3.45}\): If \(\sum\mathbold{a}_n\) converges
+  absolutely, then \(\sum\mathbold{a}_n\) converges.
+  \par\smallskip
+  Let \(c_n = \lvert\mathbold{a}_n\rvert\).
+  Then by theorem \(3.25\), \(\sum\mathbold{a}_n\) converges.
+  \par\smallskip
+  \textbf{Theorem} \(\mathbold{3.47}\): If
+  \(\sum\mathbold{a}_n = \mathbold{A}\) and
+  \(\sum\mathbold{b}_n = \mathbold{B}\), then
+  \(\sum\mathbold{a_n + b_n} = \mathbold{A + B}\) and
+  \(\sum c\mathbold{a}_n = c\mathbold{A}\) for any fixed \(c\).
 \item
   \label{3.16}
   Fix a positive number \(\alpha\).
@@ -733,6 +822,100 @@
     Compare the rapidity of convergence of this process with the one described
     in \cref{3.16}.
   \end{enumerate}
+\item
+  Replace the recursion formula of \cref{3.16} by
+  \[
+  x_{n + 1} = \frac{p - 1}{p}x_n + \frac{\alpha}{p}x_n^{-p + 1}
+  \]
+  where \(p\) is a fixed positive integer, and describe the behavior of the
+  resulting sequences \(\{x_n\}\).
+\item
+  Associate to each sequence \(a = \{\alpha_n\}\), in which \(\alpha_n\) is
+  \(0\) or \(2\), the real number
+  \[
+  x(a) = \sum_{n = 1}^{\infty}\frac{\alpha_n}{3^n}.
+  \]
+  Prove that the set of all \(x(a)\) is precisely the Cantor set described in
+  section \(2.44\).
+\item
+  Suppose \(\{p_n\}\) is a Cauchy sequence in a metric space \(X\), and some
+  subsequence \(\{p_{n_i}\}\) converges to a point \(p\in X\).
+  Prove that the full sequence \(\{p_n\}\) converges to \(p\).
+\item
+  \label{3.21}
+  Prove the following analogue of Theorem \(3.10(b)\): If \(\{E_n\}\) is a
+  sequence of closed nonempty and bounded sets in a \textit{complete} metric
+  space \(X\), if \(E_n\supset E_{n + 1}\), and if
+  \[
+  \lim_{n\to\infty}\operatorname{diam} E_n = 0,
+  \]
+  then \(\bigcap_1^{\infty}E_n\) consists of exactly one point.
+\item
+  Suppose \(X\) is a nonempty complete metric space, and \(\{G_n\}\) is a
+  sequence of dense open subsets of \(X\).
+  Prove Baire's theorem, namely, that \(\bigcap_1^{\infty}G_n\) is not empty.
+  (In fact, it is dense in \(X\).)
+  \textit{Hint: Find a shrinking sequence of neighborhoods \(E_n\) such that
+    \(\bar{E}_n\subset G_n\), and apply \cref{3.21}.}
+\item
+  \label{3.23}
+  Suppose \(\{p_n\}\) and \(\{q_n\}\) are Cauchy sequences in a metric space
+  \(X\).
+  Show that the sequence \(\{d(p_n,q_n)\}\) converges.
+  \textit{Hint: For any \(m,n\)
+    \[
+    d(p_n, q_n)\leq d(p_n, p_m) + d(p_m, q_m) + d(q_m, q_n);
+    \]
+    it follows that
+    \[
+    \lvert d(p_n, q_n) - d(p_m, q_m)\rvert
+    \]
+    is small if \(m\) and \(n\) are large.}
+\item
+  Let \(X\) be a metric space.
+  \begin{enumerate}[label = (\alph*), ref = \theenumi{} (\alph*)]
+  \item
+    Call two Cauchy sequences \(\{p_n\},\{q_n\}\) in \(X\) \textit{equivalent}
+    if
+    \[
+    \lim_{n\to\infty} d(p_n,q_n) = 0.
+    \]
+    Prove that this is an equivalence relation.
+  \item
+    Let \(X^*\) be the set of all equivalence classes so obtained .
+    If \(P,Q\in X^*\), \(\{p_n\}\in P\),
+    \(\{q_n\}\in Q_n\), define
+    \[
+    \Delta(P,Q) = \lim_{n\to\infty} d(p_n, q_n);
+    \]
+    by \cref{3.23}, this limit exists.
+    Show that the number \(\Delta(P,Q)\) is unchanged if \(\{p_n\}\) and
+    \(\{q_n\}\) are replaced by equivalent sequences, and hence \(\Delta\)
+    is a distance function in \(X^*\).
+  \item
+    Prove that the resulting metric space \(X^*\) is complete.
+  \item
+    \label{3.24d}
+    For each \(p\in X\), there is a Cauchy sequence all of whose terms are
+    \(p\); let \(P_p\) be the element of \(X^*\) which contains this sequence.
+    Prove that
+    \[
+    \Delta(P_p, P_q) = d(p, q)
+    \]
+    for all \(p,q\in X\).
+    In other words, the mapping \(\varphi\) defined by \(\varphi(p) = P_p\) is
+    an isometry (that is, a distance-preserving mapping) of \(X\) into \(X^*\).
+  \item
+    Prove that \(\varphi(X)\) is dence in \(X^*\), and that
+    \(\varphi(X) = X^*\) if \(X\) is complete.
+    By \cref{3.24d}, we may identify \(X\) and \(\varphi(X)\) and thus regard
+    \(X\) as embedded in the complete metric space \(X^*\).
+    We call \(X^*\) the \textit{completion} of \(X\).
+  \end{enumerate}
+\item
+  Let \(X\) be the metric space whose points are the rational numbers, with the
+  metric \(d(x,y) = \lvert x - y\rvert\).
+  What is the completion of this space?
 \end{enumerate}
 %%% Local Variables:
 %%% mode: latex

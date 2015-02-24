@@ -89,6 +89,10 @@ INPUT /usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/graphics/dvipsnam.def
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/graphics/dvipsnam.def
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/svgnam.def
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/svgnam.def
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/x11nam.def
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/x11nam.def
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -361,6 +365,15 @@ INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/eulervm/zeurb5.tfm
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/mathpazo/fplmbb.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/palatino/pplb9d.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/vf/adobe/palatino/pplb9d.vf
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/mathpazo/fplmb.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/palatino/pplbj8r.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/vf/public/eulervm/zeurb7.vf
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/amsfonts/euler/eurb7.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
 INPUT RudinSolutions.aux
 INPUT ./RudinSolutions.out
 INPUT ./RudinSolutions.out
@@ -373,6 +386,7 @@ INPUT /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/euler/euex1
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/euler/eurb7.pfb
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb
