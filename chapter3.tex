@@ -922,10 +922,62 @@
   \]
   Prove that the set of all \(x(a)\) is precisely the Cantor set described in
   section \(2.44\).
+  \par\smallskip
+  The cantor set is constructed by taking a segment of unit length \([0,1]\)
+  and removing the middle third, \((1/3,2/3)\).
+  That is, we are left with \([0,1/3] \cup [2/3,1]\) and then doing this ad
+  infinitum.
+  Let's consider \(1/3\) in base three (ternary).
+  \[
+  \frac{1}{3} = 0\cdot 3^1 + 1\cdot\frac{1}{3} + 0\cdot
+  \sum_{n = 2}^{\infty}\frac{1}{3^n} = 0.1
+  \]
+  Well this poses a problem since \(\{\alpha_n\}\) is a sequence of \(0\) or
+  \(2\).
+  Suppose we can write \(0.1\) as \(0.0\bar{2}\) instead. 
+  \[
+  0.0\bar{2} = 2\Bigl(\frac{1}{3^2} + \frac{1}{3^3} + \cdots\Bigr) =
+  2\sum_{n = 2}^{\infty}\frac{1}{3^n} =
+  \frac{2}{9}\sum_{n = 0}^{\infty}\frac{1}{3^n} = \frac{2}{9}\frac{1}{1-1/3} =
+  \frac{1}{3} = 0.1\eqnumtag\label{3.19}
+  \]
+  Now, let's go back to the Cantor set.
+  After the first iteration, in ternary, we removed \((0.1, 0.2)\).
+  That is, we removed all the terms with \(0.1\ldots\) as the first digit but
+  it appears that we kept \(0.1\).
+  From \cref{3.19}, we see that we actually keep
+  \([0, 0.0\bar{2}] \cup [0.2, 0.\bar{2}]\) where \(1 = 0.\bar{2}\) be the
+  same argument.
+  With the second step, we remove all the digits with \(0.01\) as the first
+  digit and keep \(0.01 = 0.00\bar{2}\).
+  Since this continues ad infinitum, we are left with a set that is
+  represented by the ternary expansion
+  \[
+  \sum_{n = 1}^{\infty}\frac{\alpha_n}{3^n}
+  \]
+  where \(\{\alpha_n\}\) contains only \(0\) and \(2\) which is the Cantor set.
 \item
   Suppose \(\{p_n\}\) is a Cauchy sequence in a metric space \(X\), and some
   subsequence \(\{p_{n_i}\}\) converges to a point \(p\in X\).
   Prove that the full sequence \(\{p_n\}\) converges to \(p\).
+  \par\smallskip
+  Since \(\{p_{n_i}\}\) converges, \(\{p_{n_i}\}\) is Cauchy.
+  That is, there exist \(n,m\) such that for \(n,m > N\),
+  \begin{align*}
+    \lvert p_{n_i} - p_{m_i}\rvert
+    & = \lvert p_{n_i} - p - (p_{m_i} - p)\rvert\\
+    & \leq \lvert p_{n_i} - p\rvert + \lvert p_{m_i} - p\rvert
+  \end{align*}
+  Let \(\epsilon > 0\) be given.
+  Now, the subsequence \(\{p_{n_i}\}\) converges so for \(n > N_1\),
+  \(\lvert p_{n_i} - p\rvert < \epsilon/2\).
+  Take \(n,m > \max\{N, N_1\}\) then
+  \[
+  \lvert p_{n_i} - p_{m_i}\rvert < \frac{\epsilon}{2} + \frac{\epsilon}{2}
+  = \epsilon.
+  \]
+  Therefore, every subsequences converges to \(p\) and \(\{p_n\}\to p\) as
+  well.
 \item
   \label{3.21}
   Prove the following analogue of Theorem \(3.10(b)\): If \(\{E_n\}\) is a
