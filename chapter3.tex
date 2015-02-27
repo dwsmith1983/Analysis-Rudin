@@ -792,8 +792,33 @@
   \item
     Prove that \(\{x_n\}\) decrease monotonically and the
     \(\lim x_n = \sqrt{\alpha}\).
+    \par\smallskip
+    If \(\{x_n\}\) decrease monotnically, then \(x_n - x_{n + 1} > 0\) for all
+    \(n\).
+    \begin{align*}
+      x_n - x_{n + 1} & = x_n -
+                        \frac{1}{2}\Bigl(x_n + \frac{\alpha}{x_n}\Bigr)\\
+                      & = \frac{x_n^2 - \alpha}{2x_n}\eqnumtag\label{3.16a}
+    \end{align*}
+    Suppose, on the contrary, that \cref{3.16a} is less than zero.
+    Then \(x_n < \sqrt{\alpha}\) which contradicts the fact that
+    \(x_1 > \sqrt{\alpha}\).
+    Thus, \cref{3.16a} is less then zero and \(\{x_n\}\) decreases
+    monotonically.
+    Now, \(\{x_n\}\) is bounded above by \(\sqrt{\alpha}\) and below by zero so
+    \(\{x_n\}\) converges.
+    Suppose the limit is \(x\).
+    Then
+    \begin{align*}
+      \lim_{n\to\infty}x_n & =
+                             \frac{1}{2}\Bigl(x_n + \frac{\alpha}{x_n}\Bigr)\\
+      x & = \frac{1}{2}\Bigl(x + \frac{\alpha}{x}\Bigr)\\
+      x^2 & = \alpha\\
+      x & = \sqrt{\alpha}
+    \end{align*}
+    Thus, \(\{x_n\}\to\sqrt{\alpha}\).
   \item
-    Put \(\epsilon = x_n - \sqrt{\alpha}\), and show that
+    Put \(\epsilon_n = x_n - \sqrt{\alpha}\), and show that
     \[
     \epsilon_{n + 1} = \frac{\epsilon_n^2}{2x_n} <
     \frac{\epsilon_n^2}{2\sqrt{\alpha}}
@@ -803,14 +828,66 @@
     \epsilon_{n + 1} < \beta\Bigl(\frac{\epsilon_1}{\beta}\Bigr)^{2^n}
     \]
     for \(n = 1,2,\ldots\).
+    \par\smallskip
+    Let \(\epsilon_{n + 1} = x_{n + 1} - \sqrt{\alpha}\).
+    Then
+    \begin{align*}
+      x_{n + 1} - \sqrt{\alpha}
+      & = \frac{1}{2}\Bigl(x_n + \frac{\alpha}{x_n}\Bigr) - \sqrt{\alpha}\\
+      & = \frac{x_n^2 - 2x_n\sqrt{\alpha} + \alpha}{2x_n}\\
+      & = \frac{(x_n - \sqrt{\alpha})^2}{2x_n}\\
+      & = \frac{\epsilon_n^2}{2x_n}
+    \end{align*}
+    Since \(x_n > \sqrt{\alpha}\), \(1/x_n < 1/\sqrt{\alpha}\).
+    Therefore,
+    \[
+    \epsilon_{n + 1} = \frac{\epsilon_n^2}{2x_n} <
+    \frac{\epsilon_n^2}{2\sqrt{\alpha}}\eqnumtag\label{3.16b}
+    \]
+    From \cref{3.16b}, we have that \(\epsilon_{n + 1} < \epsilon_n^2/\beta\).
+    For \(n = 1\), we obtain
+    \[
+    \epsilon_2 < \frac{\epsilon_1^2}{\beta},
+    \]
+    and when \(n = 2\), we have
+    \[
+    \epsilon_3 < \frac{\epsilon_2^2}{\beta} <
+    \frac{\epsilon_1^4}{\beta^2\beta} =
+    \beta\Bigl(\frac{\epsilon_1}{\beta}\Bigr)^4 =
+    \beta\Bigl(\frac{\epsilon_1}{\beta}\Bigr)^{2^{3 - 1}}.
+    \]
+    Assume this is true for \(k < n\).
+    Then \(\epsilon_k < \beta(\epsilon_1/\beta)^{2^{k - 1}}\).
+    \[
+    \epsilon_{k + 1} < \frac{\epsilon_k^2}{\beta} < \frac{\beta^2}{\beta}
+    \biggl(\frac{\epsilon_1^{2^{k - 1}}}{\beta^{2^{k - 1}}}\biggr)^2 =
+    \beta\Bigl(\frac{\epsilon_1}{\beta}\Bigr)^{2^k}
+    \]
+    By the principle of mathematical induction,
+    \(\epsilon_{n + 1} = \beta(\epsilon_1/\beta)^{2^n}\) for
+    \(n\in\mathbb{Z}^+\).
   \item
-    That is a good algorithm for computing square roots, since the recursion
+    This is a good algorithm for computing square roots, since the recursion
     formula is simple and the convergence is extremely rapid.
     For example, if \(\alpha = 3\) and \(x_1 = 2\), show that
     \(\epsilon_1/\beta < \frac{1}{10}\) and that therefore
     \[
     \epsilon_5 < 4\cdot 10^{-16},\qquad\epsilon_6 < 4\cdot 10^{-23}.
     \]
+    \(\epsilon_1 = x_1 - \sqrt{\alpha}\) and \(\beta = 2\sqrt{\alpha}\) so
+    \[
+    \frac{\epsilon_1}{\beta} = \frac{2 - \sqrt{3}}{2\sqrt{3}}\approx 0.077 <
+    \frac{1}{10}
+    \]
+    For \(\epsilon_5\) and \(\epsilon_6\), we have
+    \begin{align*}
+      \epsilon_5 & < \beta\Bigl(\frac{\epsilon_1}{\beta}\Bigr)^{2^k}\\
+                 & \approx 5.69\times 10^{-18}\\
+                 & < 4\cdot 10^{-16}\\
+      \epsilon_6 & < \beta\Bigl(\frac{\epsilon_1}{\beta}\Bigr)^{2^k}\\
+                 & \approx 9.34\times 10^{-36}\\
+                 & < 4\cdot 10^{-23}
+    \end{align*}
   \end{enumerate}
 \item
   Fix \(\alpha > 1\).
