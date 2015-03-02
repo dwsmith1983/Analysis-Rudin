@@ -1,6 +1,7 @@
 \chapter{Numerical Sequences and Series}
+\label{ch3}
 
-\begin{enumerate}
+\begin{exercise}
 \item
   Prove that convergence of \(\{s_n\}\) implies convergence of
   \(\{\lvert s_n\rvert\}\).
@@ -133,7 +134,7 @@
   and since \(c_n = a_n + b_n\), the identity follows.
 \item
   Investigate the behavior (convergence or divergence) of \(\sum a_n\) if
-  \begin{enumerate}[label = (\alph*)]
+  \begin{exercise}[label = (\alph*)]
   \item
     \(a_n = \sqrt{n + 1} - \sqrt{n}\)
     \par\smallskip
@@ -211,7 +212,7 @@
     \]
     and \(\sum_{n = 0}^{\infty}\frac{1}{z^n}\) converges for
     \(\bigl\lvert\frac{1}{z}\bigr\rvert < 1\).
-  \end{enumerate}
+  \end{exercise}
 \item
   Prove that the convergence of \(\sum a_n\) implies the convergence of
   \[
@@ -259,7 +260,7 @@
   so \(\sum a_nb_n\) converges.
 \item
   Find the radius of convergence of each of the following power series:
-  \begin{enumerate}[label = (\alph*)]
+  \begin{exercise}[label = (\alph*)]
   \item
     \(\sum n^3z^n\)
     \par\smallskip
@@ -304,7 +305,7 @@
     \frac{\lvert z\rvert}{3}
     \]
     so \(R = 3\) and \(\lvert z\rvert < 3\) for convergence.
-  \end{enumerate}
+  \end{exercise}
 \item
   Suppose the the coefficients of the power series \(\sum a_nz^n\) are
   integers, infinitely many of which are distinct from zero.
@@ -312,7 +313,7 @@
   \par\smallskip
 \item
   Suppose \(a_n > 0\), \(s_n = a_1 + \cdots + a_n\), and \(\sum a_n\) diverges.
-  \begin{enumerate}[label = (\alph*), ref = \theenumi{} (\alph*)]
+  \begin{exercise}[label = (\alph*), ref = \arabic{exercisei} (\alph*)]
   \item
     Prove that \(\sum\frac{a_n}{1 + a_n}\) diverges.
     \par\smallskip
@@ -419,14 +420,14 @@
     \]
     for \(p > 0\).
     Otherwise, the series diverges to infinity.
-  \end{enumerate}
+  \end{exercise}
 \item
   Suppose \(a_n > 0\) and \(\sum a_n\) converges.
   Put
   \[
   r_n = \sum_{m = n}^{\infty}a_m.
   \]
-  \begin{enumerate}[label = (\alph*)]
+  \begin{exercise}[label = (\alph*)]
   \item
     Prove that
     \[
@@ -473,7 +474,7 @@
       & = 2\sqrt{r_1}
     \end{align*}
     By the comparison test, \(\sum\frac{a_n}{\sqrt{r_n}}\) converges.
-  \end{enumerate}
+  \end{exercise}
 \item
   Prove that the Cauchy product of two absolutely convergent series converges
   absolutely.
@@ -505,7 +506,7 @@
   \sigma_n = \frac{s_0 + \cdots + s_n}{n + 1}
   \]
   for \(n = 0,1,\ldots\).
-  \begin{enumerate}[label = (\alph*), ref = \theenumi{} (\alph*)]
+  \begin{exercise}[label = (\alph*), ref = \arabic{exercisei} (\alph*)]
   \item
     \label{3.12.a}
     If \(\lim s_n = s\), prove that \(\lim\sigma_n = s\).
@@ -656,7 +657,7 @@
     \limsup_{n\to\infty}\lvert s_n - \sigma\rvert\leq M\epsilon.
     \]
     Since \(\epsilon\) was arbitrary, \(\lim s_n = \sigma\).
-  \end{enumerate}
+  \end{exercise}
 \item
   Definition \(3.21\) can be extended to the case in which the \(a_n\) lie in
   some fixed \(\mathbb{R}^k\).
@@ -698,7 +699,7 @@
   \textbf{Theorem} \(\mathbold{3.33}\): Given \(\sum\mathbold{a}_n\), put
   \(\alpha = \limsup_{n\to\infty}\sqrt[n]{\lvert\mathbold{a}_n\vert}\).
   Then
-  \begin{enumerate}[label = (\alph*)]
+  \begin{exercise}[label = (\alph*)]
   \item
     if \(\alpha < 1\), \(\sum\mathbold{a}_n\) converges;
     \par\smallskip
@@ -714,9 +715,9 @@
     Therefore, the series diverges.
   \item
     if \(\alpha = 1\), the test gives no information.
-  \end{enumerate}
+  \end{exercise}
   \textbf{Theorem} \(\mathbold{3.34}\): The series \(\sum\mathbold{a}_n\)
-  \begin{enumerate}[label = (\alph*)]
+  \begin{exercise}[label = (\alph*)]
   \item
     converges if \(\limsup_{n\to\infty}\frac{\lvert\mathbold{a}_{n + 1}\rvert}
     {\lvert\mathbold{a}_n\rvert} < 1\),
@@ -732,9 +733,9 @@
     \par\smallskip
     From the inequality, we get that \(\mathbold{a}_n\) doesn't go to zero.
     Therefore, the series doesn't converge.
-  \end{enumerate}
+  \end{exercise}
   \textbf{Theorem} \(\mathbold{3.42}\): Suppose
-  \begin{enumerate}[label = (\alph*)]
+  \begin{exercise}[label = (\alph*)]
   \item
     the partial sum \(\mathbold{A}_n\) of \(\sum\mathbold{a}_n\) form a bounded
     sequence;
@@ -742,7 +743,7 @@
     \(b_0\geq b_1\geq b_2\geq\cdots\);
   \item
     \(\lim_{n\to\infty}b_n = 0\)
-  \end{enumerate}
+  \end{exercise}
   Then \(\sum b_n\mathbold{a}_n\) converges.
   \par\smallskip
   Choose \(M\) such that \(\lvert\mathbold{A}_n\rvert\leq M\) for all \(n\).
@@ -788,7 +789,7 @@
   \[
   x_{n + 1} = \frac{1}{2}\Bigl(x_n + \frac{\alpha}{x_n}\Bigr).
   \]
-  \begin{enumerate}[label = (\alph*)]
+  \begin{exercise}[label = (\alph*)]
   \item
     Prove that \(\{x_n\}\) decrease monotonically and the
     \(\lim x_n = \sqrt{\alpha}\).
@@ -888,7 +889,7 @@
                  & \approx 9.34\times 10^{-36}\\
                  & < 4\cdot 10^{-23}
     \end{align*}
-  \end{enumerate}
+  \end{exercise}
 \item
   Fix \(\alpha > 1\).
   Take \(x_1 > \sqrt{\alpha}\), and define
@@ -896,7 +897,7 @@
   x_{n + 1} = \frac{\alpha + x_n}{1 + x_n} = x_n +
   \frac{\alpha - x_n^2}{1 + x_n}.
   \]
-  \begin{enumerate}[label = (\alph*)]
+  \begin{exercise}[label = (\alph*)]
   \item
     Prove that \(x_1 > x_3 > x_5 > \cdots\).
   \item
@@ -906,7 +907,7 @@
   \item
     Compare the rapidity of convergence of this process with the one described
     in \cref{3.16}.
-  \end{enumerate}
+  \end{exercise}
 \item
   Replace the recursion formula of \cref{3.16} by
   \[
@@ -1008,9 +1009,28 @@
     \lvert d(p_n, q_n) - d(p_m, q_m)\rvert
     \]
     is small if \(m\) and \(n\) are large.}
+  \par\smallskip
+  Let \(\epsilon > 0\) be given.
+  Since \(\{p_n\}\) and \(\{q_n\}\) are Cauchy, there exist
+  \(n,m > N = \max\{N_1,N_2\}\) such that
+  \[
+  \lvert p_n - p_m\rvert < \frac{\epsilon}{2}\qquad\text{and}\qquad
+  \lvert q_n - q_m\rvert < \frac{\epsilon}{2}
+  \]
+  simultaneously.
+  Then
+  \begin{align*}
+    d(p_n, q_n) & = \lvert p_n - q_m\rvert\\
+                & = \lvert p_n - p_m + p_m - q_m + q_m - q_n\rvert\\
+                & \leq \lvert p_n - p_m\rvert + \lvert p_m - q_m\rvert +
+                  \lvert q_n - q_m\rvert\\
+    d(p_n, q_n) - d(p_m, q_m) & < \epsilon\\
+    \lvert d(p_n, q_n) - d(p_m, q_m)\rvert & < \epsilon
+  \end{align*}
+  Therefore, \(\{d(p_n,q_n)\}\) is Cauchy and hence converges.
 \item
   Let \(X\) be a metric space.
-  \begin{enumerate}[label = (\alph*), ref = \theenumi{} (\alph*)]
+  \begin{exercise}[label = (\alph*), ref = \arabic{exercisei} (\alph*)]
   \item
     Call two Cauchy sequences \(\{p_n\},\{q_n\}\) in \(X\) \textit{equivalent}
     if
@@ -1018,10 +1038,28 @@
     \lim_{n\to\infty} d(p_n,q_n) = 0.
     \]
     Prove that this is an equivalence relation.
+    \par\smallskip
+    Since \(d\) is a distance function on the metric space \(X\), \(d\)
+    satisfies the metric properties.
+    Then \(d(p_n,p_n) = 0\) for all \(n\) since \(d(x,y) = 0\) if \(x = y\).
+    Thus, \(\lim_{n\to\infty}d(p_n,q_n)\) reflexive.
+    The second metric property is that of being symmetric; hence,
+    \(\lim_{n\to\infty}d(p_n,q_n)\) is symmetric.
+    Suppose \(\{p_n\}\sim\{q_n\}\) and \(\{q_n\}\sim\{t_n\}\).
+    Then \(\lim_{n\to\infty}d(p_n,q_n)\) and \(\lim_{n\to\infty}d(q_n,t_n)\)
+    are both zero.
+    Now
+    \begin{align*}
+      \lim_{n\to\infty}d(p_n, t_n) & \leq \lim_{n\to\infty}d(p_n, q_n) +
+                                     \lim_{n\to\infty}d(q_n, t_n)\\
+      \intertext{by the triangle inequality.}
+      \lim_{n\to\infty}d(p_n, t_n) & \leq 0
+    \end{align*}
+    Since \(d(x,y)\geq 0\), \(\lim_{n\to\infty}d(p_n, t_n) = 0\).
+    Thus, \(\lim_{n\to\infty}d(p_n,q_n)\) is transitive.
   \item
     Let \(X^*\) be the set of all equivalence classes so obtained .
-    If \(P,Q\in X^*\), \(\{p_n\}\in P\),
-    \(\{q_n\}\in Q_n\), define
+    If \(P,Q\in X^*\), \(\{p_n\}\in P\), \(\{q_n\}\in Q\), define
     \[
     \Delta(P,Q) = \lim_{n\to\infty} d(p_n, q_n);
     \]
@@ -1029,6 +1067,25 @@
     Show that the number \(\Delta(P,Q)\) is unchanged if \(\{p_n\}\) and
     \(\{q_n\}\) are replaced by equivalent sequences, and hence \(\Delta\)
     is a distance function in \(X^*\).
+    \par\smallskip
+    Let \(\{p_n'\}\) and \(\{q_n'\}\) be equivalent to \(\{p_n\}\) and
+    \(\{q_n\}\), respectively.
+    By \cref{3.23}, we have that
+    \begin{align*}
+      \lim_{n\to\infty}d(p_n', q_n')
+      & \leq \lim_{n\to\infty}d(p_n', p_n) + \lim_{n\to\infty}d(p_n, q_n) +
+        \lim_{n\to\infty}d(q_n', q_n)\\
+      & = \lim_{n\to\infty}d(p_n, q_n)\\
+      & \leq \lim_{n\to\infty}d(p_n, p_n') + \lim_{n\to\infty}d(p_n', q_n') +
+        \lim_{n\to\infty}d(q_n, q_n')\\
+      & = \lim_{n\to\infty}d(p_n', q_n')
+    \end{align*}
+    Therefore, \(\lim_{n\to\infty}d(p_n',q_n') = \lim_{n\to\infty}d(p_n,q_n)\)
+    since
+    \[
+    \lim_{n\to\infty}d(p_n', q_n')\leq\lim_{n\to\infty}d(p_n, q_n)\leq
+    \lim_{n\to\infty}d(p_n', q_n').
+    \]
   \item
     Prove that the resulting metric space \(X^*\) is complete.
   \item
@@ -1048,12 +1105,12 @@
     By \cref{3.24d}, we may identify \(X\) and \(\varphi(X)\) and thus regard
     \(X\) as embedded in the complete metric space \(X^*\).
     We call \(X^*\) the \textit{completion} of \(X\).
-  \end{enumerate}
+  \end{exercise}
 \item
   Let \(X\) be the metric space whose points are the rational numbers, with the
   metric \(d(x,y) = \lvert x - y\rvert\).
   What is the completion of this space?
-\end{enumerate}
+\end{exercise}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: t

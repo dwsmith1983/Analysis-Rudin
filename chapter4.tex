@@ -1,0 +1,51 @@
+\chapter{Continuity}
+
+\begin{exercise}
+\item
+  Suppose \(f\) is a real function defined on \(\mathbb{R}^1\) which satisfies
+  \[
+  \lim_{h\to 0}[f(x + h) - f(x - h)] = 0
+  \]
+  for every \(x\in\mathbb{R}^1\).
+  Does this imply \(f\) is continuous?
+\item
+  If \(f\) is a continuous mapping of a metric space \(X\) into a metric space
+  \(Y\), prove that
+  \[
+  f(\bar{E})\subset\overline{f(E)}
+  \]
+  for every set \(E\subset X\).
+  Show, by example, that \(f(\bar{E})\) can be a proper subset of
+  \(\overline{f(E)}\).
+\item
+  Let \(f\) be a continuous real function on a metric space \(X\).
+  Let \(Z(f)\) (the zero set of \(f\)) be the set of all \(p\in X\) at which
+  \(f(p) = 0\).
+  Prove that \(Z(f)\) is closed.
+\item
+  Let \(f\) and \(g\) be continuous mappings of a metric space \(X\) into a
+  metric space \(Y\), and let \(E\) be a dense subset of \(X\).
+  Prove that \(f(E)\) is dense in \(f(X)\).
+  If \(g(p) = f(p)\) for all \(p\in E\), prove that \(g(p) = f(p)\) for all
+  \(p\in X\).
+  (In other words, a continuous mapping is determined by its values on a dense
+  subset of its domain.)
+\item
+  If \(f\) is a real continuous function defined on a closed set
+  \(E\subset\mathbb{R}^1\), prove that there exist continuous real functions
+  \(g\) on \(\mathbb{R}^1\) such that \(g(x) = f(x)\) for all \(x\in E\).
+  (Such functions \(g\) are called \textit{continuous extensions} of \(f\) from
+  \(E\) to \(\mathbb{R}^1\).)
+  Show that the result becomes false if the word "closed" is omitted.
+  Extend the result to vector valued functions.
+  \textit{Hint: let the graph of \(g\) be a straight line on each of the
+    segments which constitute the complement of \(E\) (compare
+    \cref{2.29}~\cref{ch2}).
+    The result remains true if \(\mathbb{R}^1\) is replaced by any metric
+    space, but the proof is not so simple.}
+\end{exercise}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

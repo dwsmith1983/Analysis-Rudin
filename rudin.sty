@@ -20,6 +20,7 @@
 \usepackage{float}%  http://ctan.org/pkg/float
 \usepackage{standalone}%
 \usepackage{enumitem}%  http://ctan.org/pkg/enumitem
+\usepackage[margin = 0.5in]{geometry}%  http://ctan.org/pkg/geometry
 %\usepackage{graphicx}%  http://ctan.org/pkg/graphicx
 %\usepackage{listings}%  http://ctan.org/pkg/listings
 \usepackage[stretch = 10, verbose = silent, protrusion = 0]{microtype}%
@@ -29,7 +30,6 @@
 %%  
 \usepackage[pdfencoding = auto, psdextra, bookmarksdepth = 4]{hyperref}%
 % http://ctan.org/pkg/hypperref
-\usepackage[margin = 0.5in]{geometry}%  http://ctan.org/pkg/geometry
 \usepackage[noabbrev]{cleveref}%  http://ctan.org/pkg/cleveref
 %  adding examples to cleverref
 \usepackage[all]{hypcap}%  http://ctan.org/pkg/hypcap
@@ -62,3 +62,12 @@
   \tag{\theequation}%
 }
 %
+
+% Rename enumerate from item to exercise
+\newlist{exercise}{enumerate}{75}
+\setlist[exercise]{label*=\arabic*.}
+% adjust cref for label names
+\crefname{exercisei}{exercise}{exercise}
+\Crefname{exercisei}{Exercise}{exercise}
+\crefname{exerciseii}{exercise}{exercise}
+\Crefname{exerciseii}{Exercise}{exercise}

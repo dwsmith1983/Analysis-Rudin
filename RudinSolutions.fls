@@ -159,6 +159,10 @@ INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/filemod/filemod-expmin.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/filemod/filemod-expmin.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/microtype/microtype.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/microtype/microtype.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/microtype/microtype-pdftex.def
@@ -197,8 +201,6 @@ INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
-INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/cleveref/cleveref.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/cleveref/cleveref.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/hypcap.sty
@@ -374,6 +376,8 @@ INPUT /usr/local/texlive/2014/texmf-dist/fonts/vf/public/eulervm/zeurb7.vf
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/amsfonts/euler/eurb7.tfm
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
+INPUT chapter4.tex
+INPUT chapter4.tex
 INPUT RudinSolutions.aux
 INPUT ./RudinSolutions.out
 INPUT ./RudinSolutions.out

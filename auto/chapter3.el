@@ -2,6 +2,7 @@
  "chapter3"
  (lambda ()
    (LaTeX-add-labels
+    "ch3"
     "3.2"
     "3.5.a"
     "3.5.b"
