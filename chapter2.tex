@@ -312,23 +312,21 @@
   therefore, \(A\) is bounded above by two.
   Now, \(A\) is closed and bounded so by the Heine-Borel theorem, \(A\) is
   compact.
-  The limit points of \(A\) are the non-negative rational numbers.
-  Let \(a,b\in\mathbb{Z}^{\geq 0}\) such that \(a/b\in\mathbb{Q}\),
-  \(b\neq 0\), and the \(\gcd(a,b) = 1\) or \(a\) and \(b\) are relatively
-  prime.
-  Let \(x = a/b\).
+  The limit points of \(A\) are the non-negative rational numbers of the form
+  \(1/n\).
+  Let \(n\in\mathbb{Z}^+\).
+  Let \(x = 1/n\).
   Define
   \[
   f(x) =
   \begin{cases}
     0, & x = 0\\
-    1, & x = 1\\
-    2^a(2b + 1), & x = \frac{a}{b}
+    n, & x = \frac{1}{n}
   \end{cases}
   \]
   Clearly, \(f\) is a bijection.
-  Now, \(f\) enumerates \(\{0,1,3,5,6,7,9,\ldots\}\) which is the set
-  \(\mathbb{Z}^{\geq 0}\setminus\{2^n\}\) for \(n\in\mathbb{Z}^+\).
+  Now, \(f\) enumerates \(\{0,1,2,3,4,\ldots\}\) which is the set
+  \(\mathbb{Z}^{\geq 0}\).
   Thus, \(f\) is a bijection to a subset of the integers; therefore, \(A\) is
   a compact set of real numbers whose limit points form a countable set.
 \item
