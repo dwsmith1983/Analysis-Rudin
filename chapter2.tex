@@ -299,12 +299,56 @@
 \item
   Construct a compact set of real numbers whose limit points form a countable
   set.
+  \par\smallskip
+  Let \(A = \{0\}\cup\{1/n\colon n\in\mathbb{Z}^+\}\cup
+  \{1/n + 1/m\colon n,m\in\mathbb{Z}^+\}\).
+  Then \(A' = \{0\}\cup\{1/n\colon n\in\mathbb{Z}^+\}\).
+  Since for each \(n\) and \(m\to\infty\), \(\{1/n + 1/m\}\to 1/n\) and
+  for \(n,m\to\infty\), \(\{1/n + 1/m\}\to 0\).
+  Thus, \(A'\subset A\) and \(A\) is closed.
+  Since \(n,m\mathbb{Z}^+\), the elements of \(A\) are all non-negative so
+  \(A\) is bounded below by zero.
+  The maximum of \(A\) is when \(n = m = 1\) which is \(\max\{A\} = 2\);
+  therefore, \(A\) is bounded above by two.
+  Now, \(A\) is closed and bounded so by the Heine-Borel theorem, \(A\) is
+  compact.
+  The limit points of \(A\) are the non-negative rational numbers.
+  Let \(a,b\in\mathbb{Z}^{\geq 0}\) such that \(a/b\in\mathbb{Q}\),
+  \(b\neq 0\), and the \(\gcd(a,b) = 1\) or \(a\) and \(b\) are relatively
+  prime.
+  Let \(x = a/b\).
+  Define
+  \[
+  f(x) =
+  \begin{cases}
+    0, & x = 0\\
+    1, & x = 1\\
+    2^a(2b + 1), & x = \frac{a}{b}
+  \end{cases}
+  \]
+  Clearly, \(f\) is a bijection.
+  Now, \(f\) enumerates \(\{0,1,3,5,6,7,9,\ldots\}\) which is the set
+  \(\mathbb{Z}^{\geq 0}\setminus\{2^n\}\) for \(n\in\mathbb{Z}^+\).
+  Thus, \(f\) is a bijection to a subset of the integers; therefore, \(A\) is
+  a compact set of real numbers whose limit points form a countable set.
 \item
-  Give an example of an open cover of the segment \((0, 1)\) which has no
+  Give an example of an open cover of the segment \((0,1)\) which has no
   finite subcover.
+  \par\smallskip
+  Let \(K_n = \cup_{n = 1}^{\infty}\bigl(\frac{1}{n},1\bigr)\).
+  Then \(K_n\) is an open cover of \((0,1)\).
+  Suppose there exists a finite \(N > 0\) such that \(\{K_1,\ldots,K_N\}\)
+  covers \((0,1)\).
+  Then \(\cup_{n = 1}^NK_n = \bigl(\frac{1}{N},1\bigr)\) but
+  \(\frac{1}{2N}\notin\cup_{n = 1}^NK_n\).
+  Therefore, \(K_n\) doesn't have a finite subcover of \((0,1)\).
 \item
   Show that Theorem \(2.36\) and its Corollary become false (in \(\mathbb{R}\),
   for example) if the word "compact" is replaced by "closed" or by "bounded".
+  \par\smallskip
+  Theorem \(2.36\): If \(\{K_{\alpha}\}\) is a collection of compact subsets of
+  a metric space \(X\) such that the intersection of every finite subcollection
+  of \(\{K_{\alpha}\}\) is nonempty, then \(\cap K_{\alpha}\) is nonempty.
 \item
   Regard \(\mathbb{Q}\), the set of all rational numbers, as a metric space,
   with \(d(p, q) = \lvert p - q\rvert\).
