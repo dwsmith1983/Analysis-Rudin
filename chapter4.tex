@@ -1,13 +1,38 @@
 \chapter{Continuity}
+\label{ch4}
 
 \begin{exercise}
 \item
   Suppose \(f\) is a real function defined on \(\mathbb{R}^1\) which satisfies
   \[
-  \lim_{h\to 0}[f(x + h) - f(x - h)] = 0
+  \lim_{h\to 0}\bigl[f(x + h) - f(x - h)\bigr] = 0
   \]
   for every \(x\in\mathbb{R}^1\).
   Does this imply \(f\) is continuous?
+  \par\smallskip
+  Consider
+  \[
+  f(x) =
+  \begin{cases}
+    1, & x = 0\\
+    0, & x\neq 0
+  \end{cases}
+  \]
+  Then \(f\) is continuous at zero if for every \(\epsilon > 0\) there exist a
+  \(\delta > 0\) such that \(d_Y\bigl[f(x),f(0)\bigr] < \epsilon\) for all
+  \(x\in\mathbb{R}^1\) for which \(0 < d_X(x,0) < \delta\).
+  For \(x\neq 0\), \(0 < \lvert x - 0\rvert < \delta\).
+  Then \(\lvert f(x) - f(0)\rvert = 1\).
+  Take \(\epsilon = 1/2\) so \(\lvert f(x) - f(0)\rvert > \epsilon\) and \(f\)
+  is not continuous at \(x = 0\).
+  For \(x\neq 0\), \(f(x) = 0\).
+  Now for \(h < \lvert x\rvert\), \(x + h\neq 0\neq x - h\); therefore,
+  \(f(x + h) = f(x - h) = 0\).
+  \[
+  \lim_{h\to 0}\bigl[f(x + h) - f(x - h)\bigr] = 0
+  \]
+  For \(x = 0\) and \(h > 0\), \(f(x + h) = f(h) = f(-h) = f(x - h)\) and again
+  the limit is zero.
 \item
   If \(f\) is a continuous mapping of a metric space \(X\) into a metric space
   \(Y\), prove that

@@ -347,6 +347,32 @@
   Theorem \(2.36\): If \(\{K_{\alpha}\}\) is a collection of compact subsets of
   a metric space \(X\) such that the intersection of every finite subcollection
   of \(\{K_{\alpha}\}\) is nonempty, then \(\cap K_{\alpha}\) is nonempty.
+  \par\smallskip
+  Consider the bounded set \(\{K_{\alpha}\} = (0,1/n)\) and the closed set
+  \(\{K_{\beta}\} = [n,\infty)\).
+  Let \(N > 0\) and finite.
+  Then
+  \begin{align*}
+    \bigcap_{\alpha = 1}^NK_{\alpha} & = \Bigl(0, \frac{1}{N}\Bigr)\\
+    \bigcap_{\beta = 1}^NK_{\alpha} & = [N, \infty)
+  \end{align*}
+  which are both nonempty.
+  If we take the intersection of the entire family of sets, our intersection
+  will be empty since neither zero nor infinity is in their respected set.
+  That is,
+  \begin{align*}
+    \bigcap_{\alpha = 1}^{\infty}K_{\alpha} & = \varnothing\\
+    \bigcap_{\beta = 1}^{\infty}K_{\alpha} & = \varnothing
+  \end{align*}
+  Thus, theorem \(2.36\) is false when compact is replaced by either closed or
+  bounded.
+  \par\smallskip
+  Corollary: If \(\{K_{\alpha}\}\) is a sequence of nonempty compact sets such
+  that \(K_n\supset K_{n + 1}\) for \(n=1,2,\ldots\), then
+  \(\cap_{n = 1}^{\infty}K_n\) is not empty.
+  \par\smallskip
+  Consider the previous family of sets \(\{K_{\alpha}\}\) and
+  \(\{K_{\beta}\}\).
 \item
   Regard \(\mathbb{Q}\), the set of all rational numbers, as a metric space,
   with \(d(p, q) = \lvert p - q\rvert\).
@@ -354,13 +380,42 @@
   Show that \(E\) is closed and bounded in \(\mathbb{Q}\), but that \(E\) is
   not compact.
   Is \(E\) open in \(\mathbb{Q}\)?
+  \par\smallskip
+  The set \(E\) is then
+  \(E = \bigl\{p\in\mathbb{Q}\colon\bigl(-\sqrt{3},-\sqrt{2}\bigr)\cup
+  \bigl(\sqrt{2},\sqrt{3}\bigr)\text{ such that } 2 < p^2 < 3\bigr\}\).
+  Thus, \(E\) is bounded above and below by \(\pm\sqrt{3}\), respectively.
+  (missing closed proof)
+  Suppose \(E\) is compact.
+  Then there exists a sequence \(\{x_n\}\) in \(E\) such that
+  \(\{x_n\}\to\sqrt{2}\).
+  Since \(E\) is assumed to be compact, \(\sqrt{2}\in E\) and \(2 < p^2 < 3\)
+  so \(\sqrt{2}^2 = 2\in E\).
+  We have reached contradiction, since by definition, \(2\not\in E\);
+  therefore, \(E\) is not compact.
+  (missing open yes or no proof)
 \item
-  Let \(E\) be the set of all \(x\in[0, 1]\) whose decimal expansion contains
+  Let \(E\) be the set of all \(x\in[0,1]\) whose decimal expansion contains
   only the digits \(4\) and \(7\).
   Is \(E\) countable?
   Is \(E\) dense in \([0, 1]\)?
   Is \(E\) compact?
   Is \(E\) perfect?
+  \par\smallskip
+  By cantor diagonalization argument, it can be shown that \(E\) is uncontable.
+  Suppose \(E\) is countable and enumerate the elements of \(E\) as
+  \(\{a_1,a_2,\cdots\}\) where \(a_i\) is a decimal with only fours and sevens.
+  Let \(d\) be the decimal representation of of \(i\)-th digit from the
+  \(a_i\)s.
+  Then \(d\not\in E\) but \(d\in[0,1]\).
+  Thus, \(E\) is uncountable.
+  Suppose \(E\subset [0.4,0.8]\) is dense in \([0,1]\).
+  Then every point of \([0,1]\) is a limit point of \(E\).
+  However, \(E\) is closed and bounded so it contains all its limits points.
+  Therefore, \([0,1]\setminus E\) can't be limit points of \(E\) so \(E\)
+  is not dense in \([0,1]\).
+  \(E\) is compact since it is closed and bounded.
+  (missing \(E\) perfect proof)
 \item
   Is there a nonempty perfect set in \(\mathbb{R}\) which contains no rational
   number?
@@ -369,22 +424,71 @@
   \item
     If \(A\) and \(B\) are disjoint closed sets in some metric space \(X\),
     prove that they are separated.
+    \par\smallskip
+    \(A\) and \(B\) being disjoint means that \(A\cap B = \varnothing\).
+    A metric space \(E\) is closed if and only if \(E = \bar{E} = E'\cup E\).
+    Therefore, \(A = \bar{A}\) and \(B = \bar{B}\).
+    Then
+    \begin{align*}
+      A\cap B & = \bar{A}\cap B\\
+              & = A\cap\bar{B}\\
+              & = \varnothing
+    \end{align*}
+    Therefore, \(A\) and \(B\) are separated since
+    \(\bar{A}\cap B = A\cap\bar{B} = \varnothing\).
   \item
+    \label{2.19b}
     Prove the same for disjoint open sets.
+    \par\smallskip
+    Suppose on the contrary that \(A\cap\bar{B}\neq\varnothing\).
+    Then there exists an \(x\in A\cap\bar{B}\).
+    Let \(\epsilon > 0\) be given.
+    Since \(x\) is an interior point of \(A\), there exists a neighborhood such
+    that \(N_{\epsilon}(x)\subset A\).
+    Since \(x\) is a limit point of \(B\), for all neighborhoods of \(x\), we
+    have \(N_{\epsilon}(x)\cap B\neq\varnothing\).
+    Therefore, \(A\cap B\neq\varnothing\) and we have reached a contradiction
+    so disjoint open sets are separated.
   \item
-    \label{19c}
+    \label{2.19c}
     Fix \(p\in X\), \(\delta > 0\), define \(A\) to be the set of all
     \(q\in X\) for which \(d(p, q) < \delta\), define \(B\) similarly, with
     \(>\) in place of \(<\).
     Prove that \(A\) and \(B\) are separated.
+    \par\smallskip
+    Since \(A\) and \(B\) are disjoint open sets, by \cref{2.19b}, \(A\) and
+    \(B\) are separated.
   \item
     Prove that every connected metric space with at least two points is
     uncountable.
-    \textit{Hint: Use \cref{19c}.}
+    \textit{Hint: Use \cref{2.19c}.}
+    \par\smallskip
+    Let \(X\) be a connected metric space and let \(x,y\in X\).
+    Let \(\epsilon > 0\) be given and set \(d(x,y) = \epsilon\).
+    For all \(\delta\in (0, \epsilon)\), there exists a \(z\in X\) such that
+    \(d(x,z) = \delta\).
+    If this wasn't the case, metric space \(X\) would be made of two separated
+    space similar to \cref{2.19c}.
+    Since \((0,\epsilon)\) is an interval of real numbers, by Cantor's
+    diagonalization argument, the interval is uncountable.
+    Since there exists a \(z\in X\) for each \(\delta\), \(X\) is uncountable.
   \end{exercise}
 \item
   Are closures and interiors of connected sets always connected?
   (Look at subsets of \(\mathbb{R}^2\).)
+  \par\smallskip
+  Let \(a > 0\).
+  Let \(E = [-a,a]\times\{0\}\cup (-\infty,-a]\times\mathbb{R}\cup
+  [a,\infty)\times\mathbb{R}\) be our connected set in \(\mathbb{R}^2\).
+  The interior of \(E\) is
+  \(\operatorname{Int}(E) = (-\infty,-a]\times\mathbb{R}\cup
+  [a,\infty)\times\mathbb{R}\).
+  Let \(A = (-\infty,-a]\times\mathbb{R}\) and
+  \(B = [a,\infty)\times\mathbb{R}\).
+  Then the interior of \(E\) is separated since
+  \(A\cap\bar{B} = \bar{A}\cap B = \varnothing\).
+  Therefore, the closures and interiors of connected sets are not always
+  connected.
 \item
   Let \(A\) and \(B\) be separated subsets of some \(\mathbb{R}^k\), suppose
   \(\mathbold{a}\in A\), \(\mathbold{b}\in B\), and define
@@ -404,11 +508,13 @@
     Prove that every convex subset of \(\mathbold{R}^k\) is connected.
   \end{exercise}
 \item
+  \label{2.22}
   A metric space is \textit{separable} if it contains a countable dense subset.
   Show that \(\mathbb{R}^k\) is separable.
   \textit{Hint: Consider the set of points which have only rational
     coordinates}
 \item
+  \label{2.23}
   A collection \(\{V_{\alpha}\}\) of open subsets of \(X\) is said to be a
   \textit{base} for \(X\) if the following is true: For every \(x\in X\) and
   every open set \(G\subset X\) such that \(x\in G\), we have
@@ -419,6 +525,7 @@
   \textit{Hint: Take all neighborhoods with rational radius and center in some
     countable dense subset of \(X\).}
 \item
+  \label{2.24}
   Let \(X\) be a metric space in which every infinite subset has a limit point.
   Prove that \(X\) is separable.
   \textit{Hint: Fix \(\delta > 0\), and pick \(x_1\in X\).}
@@ -437,7 +544,7 @@
 \item
   Let \(X\) be a metric space in which every infinite subset has a limit point.
   Prove that \(X\) is compact.
-  \textit{Hint: By exercise \(23\) and \(24\), \(X\) has a countable base.}
+  \textit{Hint: By \cref{2.23,2.24}, \(X\) has a countable base.}
   It follows that every open cover of \(X\) has a countable subcover
   \(\{G_n\}\), \(n = 1,2,\ldots\)
   If no finite subcollection of \(\{G_n\}\) covers \(X\), then the complement
@@ -446,6 +553,7 @@
   If \(E\) is a set which contains a point from each \(F_n\), consider a limit
   point of \(E\), and obtain a contradiction.
 \item
+  \label{2.27}
   Define a point \(p\) in a metric space \(X\) to be
   \textit{condensation point} of a set \(E\subset X\) if every neighborhood of
   \(p\) contains uncountably many points of \(E\).
@@ -462,12 +570,12 @@
   (possibly empty) perfect set and a set which is at most countable.
   \textit{(Corollary: Every countable close set in \(\mathbb{R}^k\) has
     isolated points.)
-    Hint: Use exercise \(27\).}
+    Hint: Use \cref{2.27}}
 \item
   \label{2.29}
   Prove that every open set in \(\mathbb{R}\) is the union of an at most
   countable collection of disjoints segments.
-  \textit{Hint: Use exercise \(22\).}
+  \textit{Hint: Use \cref{2.22}}
 \item
   Imitate the proof of Theorem \(2.43\) to obtain the following results:
   \par\smallskip
@@ -480,8 +588,8 @@
   \(\bigcap_{n = 1}^{\infty}G_n\) is not empty (in fact, it is dense in
   \(\mathbb{R}^k\)).
   \par\smallskip
-  (This is a special case of Baire's theorem; see exercise \(22\), chapter
-  \(3\), for the general case.)
+  (This is a special case of Baire's theorem; see \cref{3.22}~\cref{ch3}, for
+  the general case.)
 \end{exercise}
 
 %%% Local Variables:
