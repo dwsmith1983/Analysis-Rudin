@@ -1,12 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.19)  5 MAR 2015 13:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.19)  12 MAR 2015 00:34
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**RudinSolutions.tex
+**\input RudinSolutions.tex
 (./RudinSolutions.tex
-LaTeX2e <2014/05/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/koma-script/scrbook.cls
 Document Class: scrbook 2015/02/07 v3.16 KOMA-Script document class (book)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -1363,13 +1361,13 @@ Package rerunfilecheck Info: File `RudinSolutions.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
- 21591 strings out of 493109
- 335015 string characters out of 6135010
+ 21588 strings out of 493109
+ 334992 string characters out of 6135010
  534214 words of memory out of 5000000
- 24238 multiletter control sequences out of 15000+600000
- 59459 words of font info for 280 fonts, out of 8000000 for 9000
+ 24240 multiletter control sequences out of 15000+600000
+ 59201 words of font info for 276 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,12n,118p,381b,2241s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 83i,12n,118p,388b,2241s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/tex
 live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
@@ -1395,10 +1393,10 @@ live/2014/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2014
 /texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-
 dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on RudinSolutions.pdf (33 pages, 314370 bytes).
+Output written on RudinSolutions.pdf (33 pages, 316399 bytes).
 PDF statistics:
- 530 PDF objects out of 1000 (max. 8388607)
- 464 compressed objects within 5 object streams
+ 531 PDF objects out of 1000 (max. 8388607)
+ 465 compressed objects within 5 object streams
  213 named destinations out of 1000 (max. 500000)
  29222 words of extra memory for PDF output out of 29859 (max. 10000000)
 

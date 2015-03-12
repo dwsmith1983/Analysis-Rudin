@@ -142,7 +142,7 @@
   Thus, \(p\) is not a limit point of \(E\).
 \item
   Let \(E^{\circ}\) denote the set of all interior points of a set \(E\).
-  \begin{exercise}[label = (\alph*)]
+  \begin{exercise}[label = (\alph*), ref = \arabic{exercisei}(\alph*)]
   \item
     Prove that \(E^{\circ}\) is always open.
     \par\smallskip
@@ -158,6 +158,7 @@
     Then \(N_{\delta}(y) = d(x,y)\subset E\).
     Thus, \(y\) is interior point and \(E^{\circ}\) is always open.
   \item
+    \label{2.9b}
     Prove that \(E\) is open if and only if \(E^{\circ} = E\).
     \par\smallskip
     Suppose \(E\) is open.
@@ -169,15 +170,26 @@
   \item
     If \(G\subset E\) and \(G\) is open, prove that \(G\subset E^{\circ}\).
     \par\smallskip
-    Since \(G\) is open, \(G = G^{\circ}\).
-    Therefore, \(G = G^{\circ}\subseteq E^{\circ}\subset E\).
+    By \cref{2.9b}, if \(G\) is open, \(G = G^{\circ}\).
+    Therefore, \(G = G^{\circ}\subseteq E^{\circ}\subset E\) as was needed to
+    be shown.
   \item
     Prove that the complement of \(E^{\circ}\) is the closure of the
     complement of \(E\).
   \item
     Do \(E\) and \(\bar{E}\) always have the same interiors?
+    \par\smallskip
+    Let \(E = \mathbb{Q}\).
+    Then \(\bar{E} = \mathbb{R}\) so \(E^{\circ} = \varnothing\) and
+    \(\bar{E}^{\circ} = \mathbb{R}\).
+    Thus, they don't always have the same interiors.
   \item
     Do \(E\) and \(E^{\circ}\) always have the same closures?
+    \par\smallskip
+    Let \(E = \mathbb{Q}\).
+    Then \(E^{\circ} = \varnothing\) so \(\bar{E} = \mathbb{R}\) and
+    \(\bar{E^{\circ}} = \varnothing\).
+    Thus, they don't always have the same closures.
   \end{exercise}
 \item
   Let \(X\) be an infinite set.
@@ -296,6 +308,31 @@
   \(n = 1,2,\ldots\)
   Prove that \(K\) is compact directly from the definition (without using the
   Heine-Borel theorem).
+  \par\smallskip
+  Let \(\{G_{\alpha}\}\) be an open cover of \(K\).
+  Therefore, for each \(\alpha\), \(G_{\alpha}\) is open so
+  \(\cup_{\alpha}G_{\alpha}\).
+  Now, \(0\in K\subset\cup_{\alpha}G_{\alpha}\) so \(0\) exists in some
+  \(G_{\alpha}\).
+  Let \(0\in G_{\alpha_0}\).
+  Since each \(G_{\alpha}\), we can find a neighborhood of \(0\) contained in
+  \(G_{\alpha}\).
+  Let \(\epsilon > 0\).
+  Then \(N_{\epsilon}(0)\subset G_{\alpha}\).
+  Let \(n\geq N\) such that \(n > 1/\epsilon\iff\epsilon > 1/n\).
+  Since \(n < n + 1 < \cdots\), \(\epsilon > 1/n > 1/(n + 1) > \cdots\).
+  We can look at this in terms of a metric \(d\)
+  \[
+  \epsilon > d(0, 1/n) > d[0, 1/(n + 1)] > \cdots
+  \]
+  For all \(n\geq N\), \(1/n\in N_{\epsilon}(0)\subset G_{\alpha_0}\).
+  The only points not in \(G_{\alpha_0}\) are \(\{1,1/2,\ldots,1/(n - 1)\}\).
+  Since each of these points are in \(K\subset G_{\alpha}\), each point exists
+  in some \(G_{\alpha_i}\).
+  Let \(1\in G_{\alpha_1}\), \(1/2\in G_{\alpha_2},\ldots,\)
+  \(G_{\alpha_{n - 1}}\).
+  Thus, \(K\) belongs to a finite cover
+  \(K\subset\bigcup_{i = 0}^{n - 1}G_{\alpha_i}\).
 \item
   Construct a compact set of real numbers whose limit points form a countable
   set.
@@ -333,12 +370,12 @@
   Give an example of an open cover of the segment \((0,1)\) which has no
   finite subcover.
   \par\smallskip
-  Let \(K_n = \cup_{n = 1}^{\infty}\bigl(\frac{1}{n},1\bigr)\).
+  Let \(K_n = \bigcup_{n = 1}^{\infty}\bigl(\frac{1}{n},1\bigr)\).
   Then \(K_n\) is an open cover of \((0,1)\).
   Suppose there exists a finite \(N > 0\) such that \(\{K_1,\ldots,K_N\}\)
   covers \((0,1)\).
-  Then \(\cup_{n = 1}^NK_n = \bigl(\frac{1}{N},1\bigr)\) but
-  \(\frac{1}{2N}\notin\cup_{n = 1}^NK_n\).
+  Then \(\bigcup_{n = 1}^NK_n = \bigl(\frac{1}{N},1\bigr)\) but
+  \(\frac{1}{2N}\notin\bigcup_{n = 1}^NK_n\).
   Therefore, \(K_n\) doesn't have a finite subcover of \((0,1)\).
 \item
   Show that Theorem \(2.36\) and its Corollary become false (in \(\mathbb{R}\),
@@ -369,7 +406,7 @@
   \par\smallskip
   Corollary: If \(\{K_{\alpha}\}\) is a sequence of nonempty compact sets such
   that \(K_n\supset K_{n + 1}\) for \(n=1,2,\ldots\), then
-  \(\cap_{n = 1}^{\infty}K_n\) is not empty.
+  \(\bigcap_{n = 1}^{\infty}K_n\) is not empty.
   \par\smallskip
   Consider the previous family of sets \(\{K_{\alpha}\}\) and
   \(\{K_{\beta}\}\).
