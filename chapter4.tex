@@ -42,11 +42,35 @@
   for every set \(E\subset X\).
   Show, by example, that \(f(\bar{E})\) can be a proper subset of
   \(\overline{f(E)}\).
+  \par\smallskip
+  Let \(E\subset X\) and \(x\in\bar{E}\).
+  Let \(V\) be an open neighborhood of \(f(x)\).
+  Since \(f\) is continuous, \(f^{-1}(V)\) is an open set of \(X\) where
+  \(x\in f^{-1}(V)\).
+  Therefore, \(f^{-1}(V)\) intersects \(E\).
+  Let \(y\in f^{-1}(V)\cap E\).
+  Then
+  \begin{align*}
+    f[f^{-1}(v)\cap E] & = f[f^{-1}(V)]\cap f(E)\\
+                       & = V\cap f(E)
+  \end{align*}
+  so \(f(y)\in V\cap f(E)\).
+  Therefore, \(f(y)\) exist in a neighborhood of \(f(x)\) so \(f(x)\) is an
+  adherent point so \(f(x)\in\overline{f(E)}\).
+  Thus, \(f(\bar{E})\subset\overline{f(E)}\).
 \item
   Let \(f\) be a continuous real function on a metric space \(X\).
   Let \(Z(f)\) (the zero set of \(f\)) be the set of all \(p\in X\) at which
   \(f(p) = 0\).
   Prove that \(Z(f)\) is closed.
+  \par\smallskip
+  Let \(E\) be the set that contains \(f(p) = 0\).
+  The only element in \(E\) is \(0\) so \(E\) is closed.
+  Since \(f\) is continuous, \(f\) and \(f^{-1}\) map closed sets to closed
+  sets.
+  Thus, \(f^{-1}(E)\subset X\) and is closed in \(X\).
+  Now, \(f^{-1}(E)\) are all the points \(p\in X\) such that \(f(p) = 0\) so
+  \(f^{-1}(E) = Z(f)\) and \(Z(f)\) is closed.
 \item
   Let \(f\) and \(g\) be continuous mappings of a metric space \(X\) into a
   metric space \(Y\), and let \(E\) be a dense subset of \(X\).
@@ -68,6 +92,35 @@
     \cref{2.29}~\cref{ch2}).
     The result remains true if \(\mathbb{R}^1\) is replaced by any metric
     space, but the proof is not so simple.}
+\item
+  If \(f\) is defined on \(E\), the \textit{graph} of \(f\) is the set of
+  points \((x,f(x)\), for \(x\in E\).
+  In particular, if \(E\) is a set of real numbers, and \(f\) is real-valued,
+  the graph of \(f\) is a subset of the plane.
+  Suppose \(E\) is compact, and prove that \(f\) is continuous on \(E\) if and
+  only if its graph is compact.
+\item
+  If \(E\subset X\) and if \(f\) is a function defined on \(X\), the
+  \textit{restriction} of \(f\) to \(E\) is the function \(g\) whose domain of
+  definition is \(E\), such that \(g(p) = f(p)\) for \(p\in E\).
+  Define \(f\) and \(g\) on \(\mathbb{R}^2\) by: \(f(0,0) = g(0,0) = 0\),
+  \(f(x,y) = xy^2/(x^2 + y^4)\), \(g(x,y) = xy^2/(x^2 + y^6)\) if
+  \((x,y)\neq 0\).
+  Prove that \(f\) is bounded on \(\mathbb{R}^2\), that \(g\) is unbounded in
+  every neighborhood of \((0,0)\), and that \(f\) is not continuous at
+  \((0,0)\); nevertheless, the restrictions of both \(f\) and \(g\) to every
+  straight line in \(\mathbb{R}^2\) are continuous!
+\item
+  Let \(f\) be a real uniformly continuous function on the bounded set \(E\) in
+  \(\mathbb{R}^1\).
+  Prove that \(f\) is bounded on \(E\).
+  Show that the conclusion is false if boundedness of \(E\) is omitted from the
+  hypothesis.
+\item
+  Show that the requirement in the definition of uniform continuity can be
+  rephrased as follows, in terms of diameters of sets: To every
+  \(\epsilon > 0\) there exists a \(\delta > 0\) such that
+  
 \end{exercise}
 
 %%% Local Variables:

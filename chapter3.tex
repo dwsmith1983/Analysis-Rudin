@@ -311,6 +311,19 @@
   integers, infinitely many of which are distinct from zero.
   Prove that the radius of convergence is at most \(1\).
   \par\smallskip
+  Consider \(\lvert z\rvert > 1\).
+  Then
+  \[
+  \lvert a_nz^n\rvert = \lvert a_n\rvert\lvert z\rvert ^n > \lvert a_n\rvert.
+  \]
+  Since \(a_n\neq 0\) are integers, for each \(n\), \(\lvert a_n\rvert\geq 1\).
+  Therefore,
+  \[
+  1\leq\lvert a_n\rvert < \lvert a_nz^n\rvert
+  \]
+  and the \(\lim_{n\to\infty}\lvert a_nz^n\rvert > 1\) so
+  \(\sum a_nz^n\), for \(\lvert z\rvert > 1\), diverges.
+  Thus, the radius of convergence is at most one.
 \item
   Suppose \(a_n > 0\), \(s_n = a_1 + \cdots + a_n\), and \(\sum a_n\) diverges.
   \begin{exercise}[label = (\alph*), ref = \arabic{exercisei} (\alph*)]
@@ -804,7 +817,7 @@
     Suppose, on the contrary, that \cref{3.16a} is less than zero.
     Then \(x_n < \sqrt{\alpha}\) which contradicts the fact that
     \(x_1 > \sqrt{\alpha}\).
-    Thus, \cref{3.16a} is less then zero and \(\{x_n\}\) decreases
+    Thus, \cref{3.16a} is greater than zero and \(\{x_n\}\) decreases
     monotonically.
     Now, \(\{x_n\}\) is bounded above by \(\sqrt{\alpha}\) and below by zero so
     \(\{x_n\}\) converges.
@@ -915,6 +928,27 @@
   \]
   where \(p\) is a fixed positive integer, and describe the behavior of the
   resulting sequences \(\{x_n\}\).
+  \par\smallskip
+  Let \(x = \lim_{n\to\infty}x_n\).
+  Then
+  \begin{align*}
+    x & = \lim_{n\to\infty}x_{n + 1}\\
+    x & = \frac{p - 1}{p}x + \frac{\alpha}{p}x^{1 - p}\\
+      & = \frac{p - 1 + \alpha x^{-p}}{p}x\\
+    p & = p - 1 + \alpha x^{-p}\\
+    x & = \sqrt[p]{\alpha}
+  \end{align*}
+  Let's consider \(x_n - x_{n + 1}\).
+  Then
+  \begin{align*}
+    x_n - x_{n + 1} & = x_n - \frac{p - 1}{p}x - \frac{\alpha}{p}x^{1 - p}\\
+                    & = x_n\Bigl[\frac{1 - \alpha x_n^p}{p}\Bigr]\\
+                    & = \frac{x_n^p - \alpha}{px_n^{p - 1}}
+  \end{align*}
+  From \cref{3.16}, we have that \(x_1 > \sqrt[p]{\alpha}\).
+  Therefore, \(\frac{x_n^p - \alpha}{px_n^{p - 1}} > 0\); otherwise,
+  \(x_1 < \sqrt[p]{\alpha}\) which would be a contradiction.
+  Thus, \(x_n\) decreases monotonically.
 \item
   Associate to each sequence \(a = \{\alpha_n\}\), in which \(\alpha_n\) is
   \(0\) or \(2\), the real number
@@ -947,7 +981,7 @@
   That is, we removed all the terms with \(0.1\ldots\) as the first digit but
   it appears that we kept \(0.1\).
   From \cref{3.19}, we see that we actually keep
-  \([0, 0.0\bar{2}] \cup [0.2, 0.\bar{2}]\) where \(1 = 0.\bar{2}\) be the
+  \([0, 0.0\bar{2}] \cup [0.2, 0.\bar{2}]\) where \(1 = 0.\bar{2}\) by the
   same argument.
   With the second step, we remove all the digits with \(0.01\) as the first
   digit and keep \(0.01 = 0.00\bar{2}\).

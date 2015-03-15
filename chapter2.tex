@@ -610,9 +610,25 @@
     Hint: Use \cref{2.27}}
 \item
   \label{2.29}
-  Prove that every open set in \(\mathbb{R}\) is the union of an at most
+  Prove that every open set in \(\mathbb{R}^1\) is the union of an at most
   countable collection of disjoints segments.
   \textit{Hint: Use \cref{2.22}}
+  \par\smallskip
+  Since \(\mathbb{R}^1\) contains a countable dense subset, \(\mathbb{R}^1\) is
+  separable by \cref{2.22}
+  This countable dense subset is \(\mathbb{Q}\).
+  Let \(E\subset\mathbb{R}^1\) be open.
+  Now \(E\cap\mathbb{Q}\) is a countable dense subset in \(E\).
+  Pick open intervals in \(E\) around the the rationals in \(E\).
+  Therefore, \(E\) is the union of these intervals which are countable.
+  These intervals, unfortunately, overlap at the \(\inf\) and \(\sup\).
+  Let \(x\in E\cap\mathbb{Q}\).
+  Take the intervals in \(E\) that contain \(x\), \(I_1\).
+  Let \(y\in E\cap\mathbb{Q}\).
+  Again, take the intervals in \(E\) but construct the intervals as
+  \(E\setminus I_1\) that contain \(y\), \(I_2\).
+  Continuing on in this fashion, we obtain a countable collection of disjoint
+  intervals \(\{I_1,I_2,\ldots\}\subset E\) and these intervals cover \(E\)
 \item
   Imitate the proof of Theorem \(2.43\) to obtain the following results:
   \par\smallskip
@@ -627,6 +643,39 @@
   \par\smallskip
   (This is a special case of Baire's theorem; see \cref{3.22}~\cref{ch3}, for
   the general case.)
+  \par\smallskip
+  Suppose on the contrary that \(\mathbb{R}^k = \bigcup_{n = 1}^{\infty}F_n\),
+  where each \(F_n\) is a closed subset of \(\mathbb{R}^k\) and that each
+  \(F_n\) has an empty interior.
+  Let \(V_n = \bigcup_{i = 1}^nF_i\).
+  For each \(n\), \(F_n\)  is closed so \(F_n^c\) is open.
+  Then \(F_1^c\) is open.
+  If \(F_1^c = \varnothing\), then \(F_1 = \mathbb{R}^k\) and
+  \(F_1^{\circ}\neq\varnothing\); therefore, \(F_1^c\neq\varnothing\).
+  Let \(K_1\) be a neighborhood of \(F_1^c\) such that
+  \(\bar{K}_1\cap V_1 = \varnothing\).
+  Similarly, let \(\bar{K}_n\cap V_n = \varnothing\).
+  Let \(K_{n + 1}\) be the neighborhood in
+  \(K_{n + 1}\setminus F_{n + 1}\neq\varnothing\) since
+  \(F_{n + 1}^{\circ}\neq\varnothing\).
+  Shrinking the neighborhood such that \(\bar{K}_{n + 1}\subset K_n\).
+  Now \(\bar{K}_{n + 1}\cap V_{n + 1} = \varnothing\) so
+  \(\bigcap_{n = 1}^{\infty}\bar{K}_n\) is disjoint for all \(F_n\).
+  \par\smallskip
+  Theorem \(2.39\): Let \(k\) be a positive integer.
+  If \(\{I_n\}\) is a sequence of \(k\)-cells such that
+  \(I_n\supset I_{n + 1}\) for \(n = 1,2,\ldots\), then
+  \(\bigcap_1^{\infty}I_n\) is not empty.
+  \par\smallskip
+  Since \(\bar{K}_n\) is compact and \(K_n\supset K_{n + 1}\),
+  \(\bigcap_1^{\infty}\bar{K}_n\neq\varnothing\) by theorem \(2.39\).
+  \[
+  x\in\bigcap_{n = 1}^{\infty}\bar{K}_n\subset
+  \Bigl(\bigcup_{n = 1}^{\infty}F_n\Bigr)^c = \bigl(\mathbb{R}^k\bigr)^c
+  = \varnothing
+  \]
+  and we have reached a contradiction since \(x\not\in\varnothing\).
+  Thus, atleast one \(F_n\) has a nonempty interior.
 \end{exercise}
 
 %%% Local Variables:
