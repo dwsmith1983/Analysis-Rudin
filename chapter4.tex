@@ -80,6 +80,30 @@
   \(p\in X\).
   (In other words, a continuous mapping is determined by its values on a dense
   subset of its domain.)
+  \par\smallskip
+  Let \(y\in f(X)\) and set \(y = f(x)\) for \(x\in X\).
+  Since \(f\) in continuous, for any \(\epsilon > 0\), there exists
+  \(\delta > 0\) such that whenever \(d_X(x,z) < \delta\),
+  \(d_Y[f(x),f(z)] < \epsilon\).
+  Since \(E\) is dense in \(X\), \(z\in E\) for this choice of \(\delta\).
+  Now \(w = f(z)\in f(E)\).
+  Then \(d_Y[f(x),f(z)] = d_Y(y,w) < \epsilon\).
+  Therefore, we have that \(f(E)\) is dense in \(f(X)\) since for any
+  \(y\in f(X)\), and all \(\epsilon > 0\), we have \(w\in f(E)\) such that
+  \(d_Y(y,w) < \epsilon\).
+  Let \(x\in X\) and \(n = 1/\epsilon\) where \(\epsilon > 0\).
+  Let \(\{p_n\}\) be a sequence in \(E\).
+  For \(n > N\), we have \(\epsilon = 1/n\).
+  Then \(d(x,p_n) < 1/n = \epsilon\); therefore, \(\lim_{n\to\infty}p_n = x\).
+  Since \(f\) and \(g\) are continuous, we have
+  \begin{align*}
+    f(x) & = f\Bigl(\lim_{n\to\infty}p_n\Bigr)\\
+         & = \lim_{n\to\infty}f(p_n)\\
+         & = \lim_{n\to\infty}g(p_n)\\
+         & = g\Bigl(\lim_{n\to\infty}p_n\Bigr)\\
+         & = g(x)
+  \end{align*}
+  as was needed to be shown.
 \item
   \label{4.5}
   If \(f\) is a real continuous function defined on a closed set
