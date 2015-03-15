@@ -72,6 +72,7 @@
   Now, \(f^{-1}(E)\) are all the points \(p\in X\) such that \(f(p) = 0\) so
   \(f^{-1}(E) = Z(f)\) and \(Z(f)\) is closed.
 \item
+  \label{4.4}
   Let \(f\) and \(g\) be continuous mappings of a metric space \(X\) into a
   metric space \(Y\), and let \(E\) be a dense subset of \(X\).
   Prove that \(f(E)\) is dense in \(f(X)\).
@@ -80,6 +81,7 @@
   (In other words, a continuous mapping is determined by its values on a dense
   subset of its domain.)
 \item
+  \label{4.5}
   If \(f\) is a real continuous function defined on a closed set
   \(E\subset\mathbb{R}^1\), prove that there exist continuous real functions
   \(g\) on \(\mathbb{R}^1\) such that \(g(x) = f(x)\) for all \(x\in E\).
@@ -117,10 +119,54 @@
   Show that the conclusion is false if boundedness of \(E\) is omitted from the
   hypothesis.
 \item
+  \label{4.9}
   Show that the requirement in the definition of uniform continuity can be
   rephrased as follows, in terms of diameters of sets: To every
   \(\epsilon > 0\) there exists a \(\delta > 0\) such that
-  
+  \(\diam f(E) < \epsilon\) for all \(E\subset X\) with \(\diam E < \delta\).
+\item
+  Complete the details of the following alternate  proof of theorem \(4.19\):
+  If \(f\) is not uniformly continuous, then for some \(\epsilon > 0\) there
+  are sequences \(\{p_n\},\{q_n\}\in X\) such that \(d_X(p_n,q_n)\to 0\) but
+  \(d_Y(f(p_n),f(q_n)) > \epsilon\).
+  Use theorem \(2.37\) to obtain a contradiction.
+\item
+  Suppose \(f\) is a uniformaly continuous mapping of a metric space \(X\)
+  into a metric space \(Y\) and prove that \(\{f(x_n)\}\) is a Cauchy sequence
+  in \(Y\) for every Cauchy sequence \(\{x_n\}\) in \(X\).
+  Use this result to give an alternative proof of the theorem stated in
+  \cref{4.13}
+\item
+  A uniformly continuous function of a uniformly continuous function is
+  uniformly continuous.
+  State this more precisely and prove it.
+\item
+  \label{4.13}
+  Let \(E\) be a dense subset of a metric space \(X\), and let \(f\) be a
+  uniformly continuous \textit{real} function defined on \(E\).
+  Prove that \(f\) has a continuous extension from \(E\) to \(X\)
+  (see \cref{4.5} for terminology).
+  (Uniqueness follows from \cref{4.4})
+  \textit{Hint: For each \(p\in X\) and each positive integer \(n\), let
+    \(V_n(p)\) be the set of all \(q\in E\) with \(d(p,q) < 1/n\).}
+  Use \cref{4.9} to show that the intersection of the closures of the sets
+  \(f(V_1(p)),f(V_2(p)),\ldots\), consists of a single point, say \(g(p)\), of
+  \(\mathbb{R}^1\).
+  Prove that the function \(g\) so defined on \(X\) is the desired extension
+  of \(f\).
+  Could the range space \(\mathbb{R}^1\) be replaced by \(\mathbb{R}^k\)?
+  By any compact metric space?
+  By any complete metric space?
+  By any metric space?
+\item
+  Let \(I = [0,1]\) be the close unit interval.
+  Suppose \(f\) is a continuous mapping of \(I\) into \(I\).
+  Prove that \(f(x) = x\) for at least one \(x\in I\).
+\item
+  Call a mapping of \(X\) into \(Y\) \textit{open} if \(f(V)\) is an open set
+  in \(Y\) whenever \(V\) is an open set in \(X\).
+  Prove that every continuous open mapping of \(\mathbb{R}^1\) into
+  \(\mathbb{R}^1\) is monotonic.
 \end{exercise}
 
 %%% Local Variables:
