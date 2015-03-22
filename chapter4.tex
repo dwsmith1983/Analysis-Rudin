@@ -59,6 +59,7 @@
   adherent point so \(f(x)\in\overline{f(E)}\).
   Thus, \(f(\bar{E})\subset\overline{f(E)}\).
 \item
+  \label{4.3}
   Let \(f\) be a continuous real function on a metric space \(X\).
   Let \(Z(f)\) (the zero set of \(f\)) be the set of all \(p\in X\) at which
   \(f(p) = 0\).
@@ -96,13 +97,10 @@
   For \(n > N\), we have \(\epsilon = 1/n\).
   Then \(d(x,p_n) < 1/n = \epsilon\); therefore, \(\lim_{n\to\infty}p_n = x\).
   Since \(f\) and \(g\) are continuous, we have
-  \begin{align*}
-    f(x) & = f\Bigl(\lim_{n\to\infty}p_n\Bigr)\\
-         & = \lim_{n\to\infty}f(p_n)\\
-         & = \lim_{n\to\infty}g(p_n)\\
-         & = g\Bigl(\lim_{n\to\infty}p_n\Bigr)\\
-         & = g(x)
-  \end{align*}
+  \[
+  f(x) = f\Bigl(\lim_{n\to\infty}p_n\Bigr) = \lim_{n\to\infty}f(p_n)
+  = \lim_{n\to\infty}g(p_n) = g\Bigl(\lim_{n\to\infty}p_n\Bigr) = g(x)
+  \]
   as was needed to be shown.
 \item
   \label{4.5}
@@ -120,7 +118,7 @@
     space, but the proof is not so simple.}
 \item
   If \(f\) is defined on \(E\), the \textit{graph} of \(f\) is the set of
-  points \((x,f(x)\), for \(x\in E\).
+  points \((x,f(x))\), for \(x\in E\).
   In particular, if \(E\) is a set of real numbers, and \(f\) is real-valued,
   the graph of \(f\) is a subset of the plane.
   Suppose \(E\) is compact, and prove that \(f\) is continuous on \(E\) if and
@@ -136,6 +134,64 @@
   every neighborhood of \((0,0)\), and that \(f\) is not continuous at
   \((0,0)\); nevertheless, the restrictions of both \(f\) and \(g\) to every
   straight line in \(\mathbb{R}^2\) are continuous!
+  \par\smallskip
+  If \(f\) is bounded, there exists \(M > 0\) such that
+  \[
+  \Bigl\lvert\frac{xy^2}{x^2 + y^4}\Bigr\rvert\leq M.
+  \]
+  Now, \(x^2,y^4,y^2\geq 0\) for all \(x,y\in\mathbb{R}\) so we have
+  \begin{align*}
+    \frac{\lvert x\rvert y^2}{x^2 + y^4} & \leq M\\
+    \lvert x\rvert y^2 & \leq M(x^2 + y^4)\\
+    0 & \leq x^2 - \lvert x\rvert y^2/M + y^4
+  \end{align*}
+  For \(M = 1/2\), we have \((\lvert x\rvert - y^2)^2\geq 0\) and
+  \[
+  \Bigl\lvert\frac{xy^2}{x^2 + y^4}\Bigr\rvert\leq\frac{1}{2}.
+  \]
+  Thus, \(f\) is bounded.
+  Let \(x_n\) be the sequence \(\{1/n^3\}\) and \(y_n\) be the sequence
+  \(\{1/n\}\).
+  Then \((x_n,y_n)\to (0,0)\) as \(n\to\infty\).
+  \[
+  \lim_{n\to\infty}g(x_n,y_n) = \lim_{n\to\infty}\frac{x_ny_n^2}{x_n^2 + y_n^6}
+  = \lim_{n\to\infty}\frac{1/n^5}{2/n^6} = \lim_{n\to\infty}\frac{n}{2} =
+  \infty
+  \]
+  Therefore, \(g\) is not bounded in a neighborhood of \((0,0)\).
+  For \(f\) to be continuous at \((0,0)\), \(\lim_{x\to p}f(x) = f(p)\) if and
+  only if \(f(p_n)\to f(p)\) for all sequences \(p_n\to p\).
+  Let \(x_n\) and \(y_n\) be the following sequences \(\{1/n^2\}\) and
+  \(\{1/n\}\), respectively.
+  Then \((x_n,y_n)\to (0,0)\) as \(n\to\infty\).
+  \[
+  \lim_{n\to\infty}f(x_n, y_n) = \lim_{n\to\infty}\frac{1/n^4}{2/n^4} =
+  \frac{1}{2}\neq 0
+  \]
+  Thus, \(f\) is not continuous at \((0,0)\).
+  If we restrict both \(f\) and \(g\) to straight lines, we must show \(f\) and
+  \(g\) are continuous at \((0,0)\).
+  The only straight lines that go through \((0,0)\) are \(y = x = 0\) and
+  \(y = mx\) for \(m\in\mathbb{R}\).
+  \begin{align*}
+    \lim_{(x, y)\to (0, y)}f(x, y) & = \frac{0\cdot y^2}{0 + y^4}\\
+                                   & = 0\\
+    \lim_{(x, y)\to (x, 0)}f(x, y) & = \frac{x\cdot 0}{x^2 + 0}\\
+                                   & = 0\\
+    \lim_{(x, y)\to (0, y)}g(x, y) & = \frac{0\cdot y^2}{0 + y^6}\\
+                                   & = 0\\
+    \lim_{(x, y)\to (x, 0)}g(x, y) & = \frac{x\cdot 0}{x^2 + 0}\\
+                                   & = 0\\
+    \lim_{(x, y)\to (x, mx)}f(x, y) & = \frac{m^2x^3}{x^2 + m^4x^4}\\
+                                   & = \frac{m^2x}{1 + m^4x^2}\eqnumtag
+                                     \label{4.7a}\\
+    \lim_{(x, y)\to (x, mx)}g(x, y) & = \frac{m^2x^3}{x^2 + m^6x^6}\\
+                                   & = \frac{m^2x}{1 + m^6x^4}\eqnumtag
+                                     \label{4.7b}\\
+  \end{align*}
+  Then as \(x\to 0\), \cref{4.7a,4.7b} go to zero; thus, when \(f\) and \(g\)
+  are restricted to straight lines, \(f\) and \(g\) are continuous at
+  \((0,0)\).
 \item
   Let \(f\) be a real uniformly continuous function on the bounded set \(E\) in
   \(\mathbb{R}^1\).
@@ -191,6 +247,133 @@
   in \(Y\) whenever \(V\) is an open set in \(X\).
   Prove that every continuous open mapping of \(\mathbb{R}^1\) into
   \(\mathbb{R}^1\) is monotonic.
+\item
+  Let \([x]\) denote the largest integer contained in \(x\), that is, \([x]\)
+  is the integer such that \(x - 1 < [x]\leq x\); and let \((x) = x - [x]\)
+  denote the fractional part of \(x\).
+  What discontinuities do the functions \([x]\) and \((x)\) have?
+\item
+  Let \(f\) be a real function defined on \((a,b)\).
+  Prove that the set of points at which \(f\) has a simple discontinuity is at
+  most countable.
+  \textit{Hint: Let \(E\) be the set on which \(f(x-) < f(x+)\).
+    With each point \(x\) of \(E\), associate a triple \((p,q,r)\) of rational
+    numbers such that}
+  \begin{exercise}[label = (\alph*)]
+  \item
+    \(f(x-) < p < f(x+)\),
+  \item
+    \(a < q < t < x\) implies \(f(t) < p\),
+  \item
+    \(x < t < r < b\) implies \(f(t) > p\).
+  \end{exercise}
+  The set of all such triples is countable.
+  Show that each triple is associated with at most one point of \(E\).
+  Deal similarly with the other possible types of simple discontinuities.
+\item
+  Every rational \(x\) can be written in the form \(x = m/n\), where \(n > 0\),
+  and \(m\) and \(n\) are integers without any common divisor.
+  When \(x = 0\), we take \(n = 1\).
+  Consider the function \(f\) defined on \(\mathbb{R}^1\) by
+  \[
+  f(x) =
+  \begin{cases}
+    0, & x\text{ irrational}\\
+    \frac{1}{n}, & x = \frac{m}{n}
+  \end{cases}
+  \]
+  Prove that \(f\) is continuous at every irrational point, and that \(f\) has
+  a simple discontinuity at every rational point.
+\item
+  Suppose \(f\) is a real function with domain \(\mathbb{R}^1\) which has the
+  intermediate value property: If \(f(a) < c < f(b)\), then \(f(x) = c\) for
+  some \(x\) between \(a\) and \(b\).
+  Suppose also, for every rational \(r\), that the set of all \(x\) with
+  \(f(x) = r\) is closed.
+  Prove that \(f\) is continuous.
+  \textit{Hint: If \(x_n\to x_0\) but \(f(x_n) > r > f(x_0)\) for some \(r\)
+    and all \(n\), then \(f(t_n) = r\) for some \(t_n\) between \(x_0\) and
+    \(x_n\); thus, \(t_n\to x_0\).
+    Find a contradiction.}
+  (N. J. Fine, \textit{Amer. Math. Monthly}, vol. 73, 1966, p. 782.)
+\item
+  If \(E\) is a nonempty subset of a metric space \(X\), define the distance
+  from \(x\in X\) to \(E\) by
+  \[
+  \rho_E(x) = \inf_{z\in E} d(x, z).
+  \]
+  \begin{exercise}[label = (\alph*)]
+  \item
+    Prove that \(\rho_E(x) = 0\) if and only if \(x\in\bar{E}\).
+  \item
+    Prove that \(\rho_E\) is a uniformly continuous function on \(X\), by
+    showing that
+    \[
+    \lvert\rho_E(x) - \rho_E(y)\rvert\leq d(x, y)
+    \]
+    for all \(x\in X\), \(y\in Y\).
+    \textit{Hint: \(\rho_E(x)\leq d(x,z)\leq d(x,y) + d(y,z)\) so that
+      \(\rho_E(x)\leq d(x,y) + \rho_E(y)\).}
+  \end{exercise}
+\item
+  Suppose \(K\) and \(F\) are disjoint sets in a metric space \(X,K\) is
+  compact, \(F\) is closed.
+  Prove that there exists \(\delta > 0\) such that \(d(p,q) > \delta\) if
+  \(p\in K\), \(q\in F\).
+  \textit{Hint: \(\rho_F\) is a continuous positive function on \(K\).}
+  Show that the continuous may fail for two disjoint closed sets if neither is
+  compact.
+\item
+  Let \(A\) and \(B\) be disjoint nonempty closed sets in a metric space \(X\),
+  and define
+  \[
+  f(p) = \frac{\rho_A(p)}{\rho_A(p) + \rho_E(p)}
+  \]
+  for \(p\in X\).
+  Show that \(f\) is a continuous function on \(X\) whose range lies in
+  \([0,1]\), that \(f(p) = 0\)  precisely on \(A\) and \(f(p) = 1\) precisely
+  on \(B\).
+  This establishes a converse of \cref{4.3}: Every closed set \(A\subset X\) is
+  \(Z(f)\) for some continuous real \(f\) on \(X\).
+  Setting
+  \[
+  V = f^{-1}([0, 1/2])\qquad W = f^{-1}([1/2, 1])
+  \]
+  show that \(V\) and \(W\) are open and disjoint, and that \(A\subset V\),
+  \(B\subset W\).
+  (Thus pairs of disjoint closed sets in a metric space can be covered by pairs
+  of disjoint open sets.
+  This property of metric spaces is called \textit{normality}.)
+\item
+  A real-valued function \(f\) defined in \((a,b)\) is said to be
+  \textit{convex} if
+  \[
+  f(\lambda x + (1 - \lambda)y)\leq\lambda f(x) + (1 - \lambda)f(y)
+  \]
+  whenever \(a < x < b\), \(a < y < b\), \(0 < \lambda < 1\).
+  Prove that every convex function is continuous.
+  (For example, if \(f\) is convex, so is \(e^f\).)
+  If \(f\) is convex in \((a,b)\) and if \(a < s < t < u < b\), show that
+  \[
+  \frac{f(t) - f(s)}{t - s}\leq\frac{f(u) - f(s)}{u - s}\leq
+  \frac{f(u) - f(t)}{u - t}.
+  \]
+\item
+  Assume that \(f\) is a continuous real function defined in \((a,b)\) such
+  that
+  \[
+  f\Bigl(\frac{x + y}{2}\Bigr)\leq \frac{f(x) + f(y)}{2}
+  \]
+  for all \(x,y\in (a,b)\).
+  Prove that \(f\) is convex.
+\item
+  If \(A\subset\mathbb{R}^k\) and \(B\subset\mathbb{R}^k\), define \(A + B\) to
+  be the set of all sums \(\mathbold{x + y}\) with \(\mathbold{x}\in A\),
+  \(\mathbold{y}\in B\).
+  \begin{exercise}[label = (\alph*)]
+  \item
+    If \(K\) is compact
+  \end{exercise}
 \end{exercise}
 
 %%% Local Variables:
