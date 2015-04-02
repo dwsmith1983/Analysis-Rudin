@@ -198,6 +198,45 @@
   Prove that \(f\) is bounded on \(E\).
   Show that the conclusion is false if boundedness of \(E\) is omitted from the
   hypothesis.
+  \par\smallskip
+  Since \(E\) is a bounded set in \(\mathbb{R}\), there exist
+  \(M\in\mathbb{R}\) such that for all \(x\in E\),
+  \(\lvert x\rvert\leq M < \infty\).
+  Therefore, \(E\subset [-M,M]\).
+  Since \(f\) is uniformly continuous, for all \(\epsilon > 0\), there exist a
+  \(\delta > 0\) such that \(\lvert x - y\rvert < \delta\) whenever
+  \(\lvert f(x) - f(y)\rvert < \epsilon\) for \(x,y\in E\).
+  Let \(n\) be an integer such that \(1/n < \delta\).
+  Let's construct a cover, \(S\), of \([-M,M]\).
+  \[
+  S = \bigl\{[-M, -M + 1/n], [-M + 1/n, -M + 2/n],\ldots,[M - 2/n, M - 1/n],
+  [M - 1/n, M]\bigr\}
+  \]
+  Let \(E\subset\bigcup_{k = 1}^NI_k\) such that \(I_k\cap E\neq\varnothing\)
+  where \(I_k\) is an interval in \(S\).
+  For each \(k\in[1,N]\), choose \(x_k\in I_k\cap E\).
+  Then for \(x_k,x\in I_k\cap E\), we have
+  \(\lvert x_k - x\rvert > 1/n < \delta\).
+  Therefore,
+  \begin{align*}
+    \lvert f(x_k) - f(x)\rvert
+    & \leq -\lvert f(x_k)\rvert + \lvert f(x)\rvert\\
+    \lvert f(x)\rvert - \lvert f(x_k)\rvert & < \epsilon\\
+    \lvert f(x)\rvert & < \epsilon + \lvert f(x_k)\rvert
+  \end{align*}
+  Let \(S = \max_{1\leq k\leq N}\{1 + f(x_k)\}\).
+  Then for all \(x\in E\), \(\lvert f(x)\rvert\leq S\) so \(f\) is bounded on
+  \(E\).
+  Let \(E = \mathbb{R}\).
+  Since \(f(x)\) is uniformly continuous, for all \(\epsilon > 0\), there exist
+  a \(\delta > 0\) such that \(\lvert x - y\rvert < \delta\) whenever
+  \(\lvert f(x) - f(y)\rvert < \epsilon\).
+  Let \(\delta = \epsilon\) and \(f(x) = x\).
+  Then
+  \[
+  \lvert f(x) - f(y)\rvert = \lvert x - y\rvert < \delta = \epsilon
+  \]
+  but \(f(x) = x\) is not bounded on \(\mathbb{R} = E\).
 \item
   \label{4.9}
   Show that the requirement in the definition of uniform continuity can be
