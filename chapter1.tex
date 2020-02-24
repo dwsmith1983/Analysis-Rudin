@@ -405,8 +405,33 @@
     \]
   \item
     If \(2r = d\), there exactly one such \(\mathbold{z}\).
+    \par\smallskip
+    By the triangle inequality, we have that
+    \[
+      \begin{aligned}
+    	     d &= \lvert\mathbold{x} - \mathbold{y}\rvert\notag \\
+	        &= \lvert\mathbold{x} - \mathbold{y} + \mathbold{z} - \mathbold{z}\rvert\notag \\
+	        &= \lvert\mathbold{x} - \mathbold{z} + \mathbold{z} - \mathbold{y}\rvert\notag \\
+	        & \leq\lvert\mathbold{z} - \mathbold{x}\rvert + \lvert\mathbold{z} - \mathbold{y}\rvert\notag \\
+	        &= 2r\notag
+      \end{aligned}
+    \]
+    Equality holds if and only if \(\lvert\mathbold{x} - \mathbold{y}\rvert = 
+    \lvert\mathbold{z} - \mathbold{x}\rvert + \lvert\mathbold{z} - \mathbold{y}\rvert\).
+    Let \(\mathbold{z} = (\mathbold{x} + \mathbold{y}) / 2\) then we have that
+    \[
+      \begin{aligned}
+         \lvert\mathbold{z} - \mathbold{x}\rvert + \lvert\mathbold{z} - \mathbold{y}\rvert &=
+         \lvert\mathbold{y} / 2 - \mathbold{x} / 2\rvert + \lvert\mathbold{x} / 2 - \mathbold{y} / 2\rvert\notag \\
+         &= 2\lvert\mathbold{x} / 2 - \mathbold{y} / 2\rvert\notag \\
+         &= \lvert\mathbold{x} - \mathbold{y}\rvert\notag
+      \end{aligned}
+    \]
+    Therefore, when \(\mathbold{z}\) is as described, \(d = 2r\).
   \item
     If \(2r < d\), there is no such \(\mathbold{z}\)
+    Again, here we can use the triangle inequality from \(b\).
+    We have that \(d\leq 2r\) so \(d\not> 2r\) so no solution exists.
   \end{exercise}
   How must these statements be modified if \(k\) is \(2\) or \(1\)?
 \item
