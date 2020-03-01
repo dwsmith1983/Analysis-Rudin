@@ -437,7 +437,23 @@
   Similarly, we can take \(x^2 > 3\) to show again \(z\in N_{r_2}(x)\) leads to \(z\not\in E\).
   Thus, \(E\) must contain its limits points and \(E\) is closed in \(\mathbb{Q}\).
   \par\smallskip
-  Compact
+  Let \(\{U_n\}\) be a collection of open covers defined as
+  \begin{gather}
+  	U_n = \mathbb{Q}\cap\big\{(-\sqrt{3 - 1/n}, -\sqrt{2 + 1/n}) \cup (\sqrt{2 + 1/n}, \sqrt{3 - 1/n})\big\},
+	\qquad n\ge 3\notag\\
+	2 + \frac{1}{n} < x^2 < 3 - \frac{1}{n}\notag
+  \end{gather}
+  Let \(\{U_n\}_{n\in I}\) be a finite sub collection.
+  Let \(N = \max_{n\in I}\{n\}\).
+  We know that \(\mathbb{Q}\) is dense in \(\mathbb{R}\) from Theorem \(1.20\) on page \(9\).
+  Therefore, there exist a rational \(m\) in 
+  \[
+  	3 - \frac{1}{N} < m^2 < 3
+  \]
+  so \(m\in E\) but \(m\not\in \{U_n\}_{n\in I}\).
+  We dont have a finite collection covering \(E\) so \(E\) is not compact.
+  \par\smallskip
+  Let \(x\in E\subset\mathbb{Q}\) where \(2 < x^2 < 3\).
 \item
   Let \(E\) be the set of all \(x\in[0,1]\) whose decimal expansion contains
   only the digits \(4\) and \(7\).
