@@ -53,9 +53,9 @@
   Let \(A_0 = \{1/n\mid n\in\mathbb{Z}^+\}\),
   \(A_1 = \{1 + 1/n\mid n\in\mathbb{Z}^+\}\), and
   \(A_2 = \{2 + 1/n\mid n\in\mathbb{Z}^+\}\).
-  Then the limit point of \(A_1\) is \(0\), the limit point of \(A_2\) is
+  Then the limit point of \(A_0\) is \(0\), the limit point of \(A_1\) is
   \(1\), and the limit point of \(A_2\) is \(2\).
-  Let \(S = A_1\cup A_2\cup A_3\).
+  Let \(S = A_0\cup A_1\cup A_2\).
   Now \(S\) is bounded below by zero and above by three with limit points
   \(0,1,2\).
 \item
@@ -81,15 +81,13 @@
   Since \(E'\) is closed, \(x\) isn't a limit point of \(E'\).
   Let \(M_r(x)\) be a neighborhood of \(x\) such that
   \(M\cap E' = \varnothing\).
-  Let \(V = N\cap M\) so \(U\) is a neighborhood of \(x\).
-  Therefore, \(V\) is a neighborhood of \(x\).
+  Let \(V = N\cap M\) where \(V\) is a neighborhood of \(x\).
   Now
-  \(V\cap\bar{E} = (V\cap E)\cup (V\cap E') = \{x\}\cup\varnothing = \{x\}\) so
-  \(x\) is not a limit point of \(\bar{E}\) so \(x\in E'\) and is a limit point
+  \(V\cap\bar{E} = (V\cap E)\cup (V\cap E') = \{x\}\cup\varnothing = \{x\}\); therefore,
+  \(x\) is a limit point of \(\bar{E}\) so \(x\in E'\) and is a limit point
   of \(E\).
-  No.
-  Consider \(E = \{\frac{1}{n}\mid n\in\mathbb{Z}^+\}\).
-  Then \(E' = \{0\}\) and the limit point of \(E'\) is \(\varnothing\).
+  No, consider \(E = \{\frac{1}{n}\mid n\in\mathbb{Z}^+\}\).
+  Then \(E' = \{0\}\) and \((E')^c\) is \(\varnothing\).
 \item
   Let \(A_1, A_2, \ldots\) be subsets of a metric space.
   \begin{exercise}[label = (\alph*), ref = \arabic{exercisei} (\alph*)]
@@ -310,12 +308,11 @@
   Heine-Borel theorem).
   \par\smallskip
   Let \(\{G_{\alpha}\}\) be an open cover of \(K\).
-  Therefore, for each \(\alpha\), \(G_{\alpha}\) is open so
-  \(\cup_{\alpha}G_{\alpha}\).
+  Therefore, for each \(\alpha\), \(G_{\alpha}\) is open.
   Now, \(0\in K\subset\cup_{\alpha}G_{\alpha}\) so \(0\) exists in some
   \(G_{\alpha}\).
   Let \(0\in G_{\alpha_0}\).
-  Since each \(G_{\alpha}\), we can find a neighborhood of \(0\) contained in
+  For each \(G_{\alpha}\), we can find a neighborhood of \(0\) contained in
   \(G_{\alpha}\).
   Let \(\epsilon > 0\).
   Then \(N_{\epsilon}(0)\subset G_{\alpha}\).
@@ -343,7 +340,7 @@
   Since for each \(n\) and \(m\to\infty\), \(\{1/n + 1/m\}\to 1/n\) and
   for \(n,m\to\infty\), \(\{1/n + 1/m\}\to 0\).
   Thus, \(A'\subset A\) and \(A\) is closed.
-  Since \(n,m\mathbb{Z}^+\), the elements of \(A\) are all non-negative so
+  Since \(n,m\in\mathbb{Z}^+\), the elements of \(A\) are all non-negative so
   \(A\) is bounded below by zero.
   The maximum of \(A\) is when \(n = m = 1\) which is \(\max\{A\} = 2\);
   therefore, \(A\) is bounded above by two.
@@ -391,7 +388,7 @@
   Then
   \begin{align*}
     \bigcap_{\alpha = 1}^NK_{\alpha} & = \Bigl(0, \frac{1}{N}\Bigr)\\
-    \bigcap_{\beta = 1}^NK_{\alpha} & = [N, \infty)
+    \bigcap_{\beta = 1}^NK_{\beta} & = [N, \infty)
   \end{align*}
   which are both nonempty.
   If we take the intersection of the entire family of sets, our intersection
@@ -399,7 +396,7 @@
   That is,
   \begin{align*}
     \bigcap_{\alpha = 1}^{\infty}K_{\alpha} & = \varnothing\\
-    \bigcap_{\beta = 1}^{\infty}K_{\alpha} & = \varnothing
+    \bigcap_{\beta = 1}^{\infty}K_{\beta} & = \varnothing
   \end{align*}
   Thus, theorem \(2.36\) is false when compact is replaced by either closed or
   bounded.
@@ -421,16 +418,26 @@
   The set \(E\) is then
   \(E = \bigl\{p\in\mathbb{Q}\colon\bigl(-\sqrt{3},-\sqrt{2}\bigr)\cup
   \bigl(\sqrt{2},\sqrt{3}\bigr)\text{ such that } 2 < p^2 < 3\bigr\}\).
-  Thus, \(E\) is bounded above and below by \(\pm\sqrt{3}\), respectively.
-  (missing closed proof)
-  Suppose \(E\) is compact.
-  Then there exists a sequence \(\{x_n\}\) in \(E\) such that
-  \(\{x_n\}\to\sqrt{2}\).
-  Since \(E\) is assumed to be compact, \(\sqrt{2}\in E\) and \(2 < p^2 < 3\)
-  so \(\sqrt{2}^2 = 2\in E\).
-  We have reached contradiction, since by definition, \(2\not\in E\);
-  therefore, \(E\) is not compact.
-  (missing open yes or no proof)
+  For all \(p\in E\), \(1 < p\) and \(p < 2\); thus, \(E\) is bounded in \(\mathbb{Q}\).
+  \par\smallskip
+  Let \(x\in\mathbb{Q}\) be a limit point of \(E\).
+  If \(x^2 < 2\), then \(\pm x < \sqrt{2}\iff\lvert x\rvert < \sqrt{2}\iff 0 < \sqrt{2} - \lvert x\rvert = r_1\).
+  Let \(z\in N_{r_1}(x)\).
+  \[
+  	\begin{aligned}
+		\lvert z\rvert &= \lvert z + x - x\rvert\\
+		&= \lvert -(x - z) + \lvert x\rvert\\
+		&\leq\lvert x - z\rvert + \lvert x\rvert\\
+		&< r_1 + \lvert x\rvert\\
+		&= \sqrt{2}
+	\end{aligned}
+  \]
+  Therefore, \(z^2 < 2\) and \(z\not\in E\).
+  A contradiction since a neighborhood of a limit point \(E\) must contain a point of \(E\).
+  Similarly, we can take \(x^2 > 3\) to show again \(z\in N_{r_2}(x)\) leads to \(z\not\in E\).
+  Thus, \(E\) must contain its limits points and \(E\) is closed in \(\mathbb{Q}\).
+  \par\smallskip
+  Compact
 \item
   Let \(E\) be the set of all \(x\in[0,1]\) whose decimal expansion contains
   only the digits \(4\) and \(7\).
