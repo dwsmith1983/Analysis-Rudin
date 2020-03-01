@@ -454,6 +454,19 @@
   We dont have a finite collection covering \(E\) so \(E\) is not compact.
   \par\smallskip
   Let \(x\in E\subset\mathbb{Q}\) where \(2 < x^2 < 3\).
+  Take \(\varepsilon > 0\) such that \(\varepsilon = \min\{\sqrt{3} - \lvert x\rvert, \lvert x\rvert - \sqrt{2}\}\).
+  Define \(N_r(x)\) a neighborhood in \(\mathbb{Q}\) such that for \(z\in\mathbb{Q}\) we have
+  \(\lvert z - x\rvert < r\).
+  From the triangle inequality, we have that
+  \[
+  	\begin{aligned}
+		\lvert z\rvert &\leq \lvert z - x\rvert + \lvert x\rvert\\
+		&< \sqrt{3}\\
+		\lvert z\rvert &\geq \lvert x\rvert - \lvert z - x\rvert\\
+		&> \sqrt{2}
+	\end{aligned}
+  \]
+  so \(N_r(x)\subset E\) and \(E\) is open.
 \item
   Let \(E\) be the set of all \(x\in[0,1]\) whose decimal expansion contains
   only the digits \(4\) and \(7\).
