@@ -1,0 +1,8 @@
+/auto
+
+*.aux
+*.log
+*.out
+*.gz
+*.synctex
+*.DS_Store
