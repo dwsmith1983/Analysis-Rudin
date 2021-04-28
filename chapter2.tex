@@ -128,8 +128,8 @@
   Answer the same question for closed sets of \(\mathbb{R}^2\).
   \par\smallskip
   Let \(x\in E\).
-  Let \(\epsilon > 0\) be given.
-  Let \(N_{\epsilon}(x)\) be a neighborhood about \(x\) of radius \(\epsilon\).
+  Let \(\varepsilon > 0\) be given.
+  Let \(N_{\varepsilon}(x)\) be a neighborhood about \(x\) of radius \(\varepsilon\).
   Now \(N\cap E\subset\mathbb{R}^2\) and the intersection of a finite number of
   open sets is open.
   Therefore, \(N\cap E\) open neighborhood about \(x\).
@@ -144,15 +144,15 @@
   \item
     Prove that \(E^{\circ}\) is always open.
     \par\smallskip
-    Let \(x\in E^{\circ}\) and \(\epsilon > 0\).
-    There exists \(y\in E\) such that \(d(x,y) < \epsilon\).
-    Let \(r = \epsilon - d(x,y) > 0\).
-    If \(d(z,y) < r = \epsilon - d(x,y)\), then \(d(z,y) + d(x,y) < \epsilon\).
-    By the triangle inequality, \(d(x,z)\leq d(z,y) + d(x,y) < \epsilon\).
+    Let \(x\in E^{\circ}\) and \(\varepsilon > 0\).
+    There exists \(y\in E\) such that \(d(x,y) < \varepsilon\).
+    Let \(r = \varepsilon - d(x,y) > 0\).
+    If \(d(z,y) < r = \varepsilon - d(x,y)\), then \(d(z,y) + d(x,y) < \varepsilon\).
+    By the triangle inequality, \(d(x,z)\leq d(z,y) + d(x,y) < \varepsilon\).
     Therefore, \(z\in E\).
     Now, \(y\in E^{\circ}\) if there is a neighborhood of \(y\) such that
     \(N_{\delta}(y)\subset E\).
-    Let \(\delta < \epsilon/2\).
+    Let \(\delta < \varepsilon/2\).
     Then \(N_{\delta}(y) = d(x,y)\subset E\).
     Thus, \(y\) is interior point and \(E^{\circ}\) is always open.
   \item
@@ -314,15 +314,15 @@
   Let \(0\in G_{\alpha_0}\).
   For each \(G_{\alpha}\), we can find a neighborhood of \(0\) contained in
   \(G_{\alpha}\).
-  Let \(\epsilon > 0\).
-  Then \(N_{\epsilon}(0)\subset G_{\alpha}\).
-  Let \(n\geq N\) such that \(n > 1/\epsilon\iff\epsilon > 1/n\).
-  Since \(n < n + 1 < \cdots\), \(\epsilon > 1/n > 1/(n + 1) > \cdots\).
+  Let \(\varepsilon > 0\).
+  Then \(N_{\varepsilon}(0)\subset G_{\alpha}\).
+  Let \(n\geq N\) such that \(n > 1/\varepsilon\iff\varepsilon > 1/n\).
+  Since \(n < n + 1 < \cdots\), \(\varepsilon > 1/n > 1/(n + 1) > \cdots\).
   We can look at this in terms of a metric \(d\)
   \[
-  \epsilon > d(0, 1/n) > d[0, 1/(n + 1)] > \cdots
+  \varepsilon > d(0, 1/n) > d[0, 1/(n + 1)] > \cdots
   \]
-  For all \(n\geq N\), \(1/n\in N_{\epsilon}(0)\subset G_{\alpha_0}\).
+  For all \(n\geq N\), \(1/n\in N_{\varepsilon}(0)\subset G_{\alpha_0}\).
   The only points not in \(G_{\alpha_0}\) are \(\{1,1/2,\ldots,1/(n - 1)\}\).
   Since each of these points are in \(K\subset G_{\alpha}\), each point exists
   in some \(G_{\alpha_i}\).
@@ -515,11 +515,11 @@
     \par\smallskip
     Suppose on the contrary that \(A\cap\bar{B}\neq\varnothing\).
     Then there exists an \(x\in A\cap\bar{B}\).
-    Let \(\epsilon > 0\) be given.
+    Let \(\varepsilon > 0\) be given.
     Since \(x\) is an interior point of \(A\), there exists a neighborhood such
-    that \(N_{\epsilon}(x)\subset A\).
+    that \(N_{\varepsilon}(x)\subset A\).
     Since \(x\) is a limit point of \(B\), for all neighborhoods of \(x\), we
-    have \(N_{\epsilon}(x)\cap B\neq\varnothing\).
+    have \(N_{\varepsilon}(x)\cap B\neq\varnothing\).
     Therefore, \(A\cap B\neq\varnothing\) and we have reached a contradiction
     so disjoint open sets are separated.
   \item
@@ -537,12 +537,12 @@
     \textit{Hint: Use \cref{2.19c}.}
     \par\smallskip
     Let \(X\) be a connected metric space and let \(x,y\in X\).
-    Let \(\epsilon > 0\) be given and set \(d(x,y) = \epsilon\).
-    For all \(\delta\in (0, \epsilon)\), there exists a \(z\in X\) such that
+    Let \(\varepsilon > 0\) be given and set \(d(x,y) = \varepsilon\).
+    For all \(\delta\in (0, \varepsilon)\), there exists a \(z\in X\) such that
     \(d(x,z) = \delta\).
     If this wasn't the case, metric space \(X\) would be made of two separated
     space similar to \cref{2.19c}.
-    Since \((0,\epsilon)\) is an interval of real numbers, by Cantor's
+    Since \((0,\varepsilon)\) is an interval of real numbers, by Cantor's
     diagonalization argument, the interval is uncountable.
     Since there exists a \(z\in X\) for each \(\delta\), \(X\) is uncountable.
   \end{exercise}

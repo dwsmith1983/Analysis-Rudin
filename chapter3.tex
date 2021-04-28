@@ -8,8 +8,8 @@
   Is the converse true?
   \par\smallskip
   Since \(\{s_n\}\) converges, it is Cauchy.
-  Let \(\epsilon > 0\) be given.
-  There exist \(n,m > N\) such that \(\lvert s_n - s_m\rvert < \epsilon\) since
+  Let \(\varepsilon > 0\) be given.
+  There exist \(n,m > N\) such that \(\lvert s_n - s_m\rvert < \varepsilon\) since
   \(\{s_n\}\) is Cauchy.
   \begin{align*}
     \lvert s_n\rvert & = \lvert s_n - s_m + s_m\rvert\\
@@ -22,26 +22,26 @@
   so
   \[
   \bigl\lvert\lvert s_n\rvert - \lvert s_m\rvert\bigr\rvert\leq
-  \lvert s_n - s_m\rvert < \epsilon.
+  \lvert s_n - s_m\rvert < \varepsilon.
   \]
   No.
   Consider the sequence \(\{s_n\} = (-1)^n\).
-  Let \(\epsilon = 1\).
+  Let \(\varepsilon = 1\).
   If \(\{s_n\}\) converges, it will converge to \(\pm 1\).
   WLOG assume \(s_n\to 1\).
   Let \(n > N\) such that \(n\) is odd.
   \[
-  \lvert (-1)^n - 1\rvert = \lvert -1 - 1\rvert = 2\not < \epsilon
+  \lvert (-1)^n - 1\rvert = \lvert -1 - 1\rvert = 2\not < \varepsilon
   \]
   Therefore, the sequence \(\{s_n\}\) doesn't converge.
   However, \(\{\lvert s_n\rvert\}\) does converge to \(1\).
-  Let \(\epsilon > 0\) given.
+  Let \(\varepsilon > 0\) given.
   There exist an \(n > N\) such that
-  \(\bigl\lvert\lvert (-1)^n\rvert - 1\bigr\rvert < \epsilon\).
+  \(\bigl\lvert\lvert (-1)^n\rvert - 1\bigr\rvert < \varepsilon\).
   For any \(n > N\), \((-1)^n = \pm 1\) and \(\lvert \pm 1\rvert = 1\).
   \[
   \bigl\lvert\lvert (-1)^n\rvert - 1\bigr\rvert =
-  \lvert 1 - 1\rvert = 0 < \epsilon
+  \lvert 1 - 1\rvert = 0 < \varepsilon
   \]
 \item
   Caclulate \(\lim_{n\to\infty}\sqrt{n^2 + n} - n\).
@@ -110,12 +110,12 @@
   \par\smallskip
   Let \(\lim_{n\to\infty}\sup a_n = a\), \(\lim_{n\to\infty}\sup b_n = b\), and
   \(\lim_{n\to\infty}\sup (a_n + b_n) = c\) where \(a_n + b_n = c_n\).
-  Let \(\epsilon > 0\) be given.
+  Let \(\varepsilon > 0\) be given.
   Then there exist \(N_1,N_2\in\mathbb{Z}^+\) such that for \(n\geq N_1\) and
   \(n\geq N_2\)
   \begin{align*}
-    \lvert a_n - a\rvert & < \frac{\epsilon}{2}\\
-    \lvert b_n - b\rvert & < \frac{\epsilon}{2}
+    \lvert a_n - a\rvert & < \frac{\varepsilon}{2}\\
+    \lvert b_n - b\rvert & < \frac{\varepsilon}{2}
   \end{align*}
   Let \(N = \max\{N_1,N_2\}\).
   Then when \(n\geq N\),
@@ -124,8 +124,8 @@
                            \eqnumtag\label{3.5.a}\\
                          & \leq \lvert a_n - a\rvert + \lvert b_n - b\rvert
                            \eqnumtag\label{3.5.b}\\
-                         & < \frac{\epsilon}{2} + \frac{\epsilon}{2}\\
-                         & = \epsilon
+                         & < \frac{\varepsilon}{2} + \frac{\varepsilon}{2}\\
+                         & = \varepsilon
   \end{align*}
   From \cref{3.5.a,3.5.b}, we have that
   \[
@@ -241,21 +241,21 @@
   By theorem \(3.14\), we know that monotonic bounded sequences converge.
   Let \(\{b_n\}\to M\) for some number \(M < \infty\) or
   \(\lvert b_n\rvert\leq M\).
-  Since \(\sum a_n\) converges, for a given \(\epsilon > 0\) and \(k\geq N\),
+  Since \(\sum a_n\) converges, for a given \(\varepsilon > 0\) and \(k\geq N\),
   \(m\geq k\geq N\) implies that
   \[
   \Bigl\lvert\sum_{n = k}^ma_n\Bigr\rvert\leq\sum_{n = k}^m\lvert a_n\rvert\leq
-  \epsilon.
+  \varepsilon.
   \]
-  Take \(\epsilon = \frac{\epsilon}{M}\).
+  Take \(\varepsilon = \frac{\varepsilon}{M}\).
   Then
   \[
   \Bigl\lvert\sum a_nb_n\Bigr\rvert\leq\sum\lvert a_n\rvert\lvert b_n\rvert\leq
   \sum\lvert a_n\rvert M.
   \]
-  Since \(\sum\lvert a_n\rvert\leq\epsilon/M\), the result follows; that is,
+  Since \(\sum\lvert a_n\rvert\leq\varepsilon/M\), the result follows; that is,
   \[
-  \sum\lvert a_n\rvert M\leq\epsilon
+  \sum\lvert a_n\rvert M\leq\varepsilon
   \]
   so \(\sum a_nb_n\) converges.
 \item
@@ -363,15 +363,15 @@
     \sum\frac{a_n}{s_n} = \frac{a_1}{a_1} + \frac{a_2}{a_1 + a_2} + \cdots
     + \frac{a_n}{\sum a_n} + \cdots
     \]
-    Let \(\epsilon > 0\) be given.
+    Let \(\varepsilon > 0\) be given.
     Then
     \[
-    \Bigl\lvert 1 - \frac{s_N}{s_{N + k}}\Bigr\rvert > \epsilon
+    \Bigl\lvert 1 - \frac{s_N}{s_{N + k}}\Bigr\rvert > \varepsilon
     \]
     since for \(k\) sufficiently large, \(s_{N + k}\to\infty\).
     That is, \(\lvert 1 - s_N/s_{N + k}\rvert\) can be made larger than
     \(1/2\).
-    Take \(\epsilon = 0.1\) and the series falls to converge.
+    Take \(\varepsilon = 0.1\) and the series fails to converge.
   \item
     Prove that
     \[
@@ -483,7 +483,7 @@
         % & = 2\sqrt{r_1} - 
         % \biggl(\lim_{N\to\infty}\sum_{m = N + 1}^{\infty}a_m\biggr)^{1/2}\\
       \intertext{Since \(\sum a_n\) converges, \(\sum_{m = N + 1}^{\infty}a_n\)
-      can be made less than \(\epsilon > 0\).}
+      can be made less than \(\varepsilon > 0\).}
       & = 2\sqrt{r_1}
     \end{align*}
     By the comparison test, \(\sum\frac{a_n}{\sqrt{r_n}}\) converges.
@@ -493,7 +493,7 @@
   absolutely.
   \par\smallskip
   Let \(\sum a_n\) and \(\sum b_n\) be two absolutely convergent series.
-  Then \(\sum\lvert a_n\rvert < M\) and \(\sum\lvert b_n\rvert < n\).
+  Then \(\sum\lvert a_n\rvert < M\) and \(\sum\lvert b_n\rvert < N\).
   Let \(c_n = \sum_k^ma_kb_{n - k}\).
   \begin{align*}
     \sum_{n = 0}^m\lvert c_n\rvert
@@ -524,9 +524,9 @@
     \label{3.12.a}
     If \(\lim s_n = s\), prove that \(\lim\sigma_n = s\).
     \par\smallskip
-    Since \(\{s_n\}\to s\), for \(\epsilon > 0\), there exists \(n > N\) such
-    that \(\lvert s_n - s\rvert < \epsilon/2\).
-    Let \(N_0 = \max\Bigl\{N,\frac{4(N + 1)\lvert s\rvert}{\epsilon}\Bigr\}\).
+    Since \(\{s_n\}\to s\), for \(\varepsilon > 0\), there exists \(n > N\) such
+    that \(\lvert s_n - s\rvert < \varepsilon/2\).
+    Let \(N_0 = \max\Bigl\{N,\frac{4(N + 1)\lvert s\rvert}{\varepsilon}\Bigr\}\).
     For \(n > N_0\),
     \begin{align*}
       \lvert\sigma_n - s\rvert
@@ -536,10 +536,10 @@
         \Bigl\lvert\frac{s_{N + 1} - s + \cdots + s_n - s}{n + 1}\Bigr\rvert\\
       & < \frac{m_1}{n + 1}\lvert s_N - s\rvert + \frac{m_2}{n + 1}
         \lvert s_n - s\rvert\\
-      \intertext{where \(m_1,m_s < n + 1\)}
+      \intertext{where \(m_1,m_2 < n + 1\)}
       & < \lvert s_N - s\rvert + \lvert s_n - s\rvert\\
-      & < \frac{\epsilon}{2} + \frac{\epsilon}{2}\\
-      & = \epsilon
+      & < \frac{\varepsilon}{2} + \frac{\varepsilon}{2}\\
+      & = \varepsilon
     \end{align*}
     Thus, \(\lim\sigma_n = s\).
   \item
@@ -658,18 +658,18 @@
     \lvert s_n - s_i\rvert\leq\frac{(n - i)M}{i + 1}\leq
     \frac{(n - m - 1)M}{m + 2}.
     \]
-    Fix \(\epsilon > 0\) and associate with each \(n\) the integer \(m\) that
+    Fix \(\varepsilon > 0\) and associate with each \(n\) the integer \(m\) that
     satifies
     \[
-    m\leq\frac{n - \epsilon}{1 + \epsilon} < m + 1
+    m\leq\frac{n - \varepsilon}{1 + \varepsilon} < m + 1
     \]
-    Then \((m + 1)/(n - m)\leq 1/\epsilon\) and
-    \(\lvert s_n - s_i\rvert < M\epsilon\).
+    Then \((m + 1)/(n - m)\leq 1/\varepsilon\) and
+    \(\lvert s_n - s_i\rvert < M\varepsilon\).
     Hence
     \[
-    \limsup_{n\to\infty}\lvert s_n - \sigma\rvert\leq M\epsilon.
+    \limsup_{n\to\infty}\lvert s_n - \sigma\rvert\leq M\varepsilon.
     \]
-    Since \(\epsilon\) was arbitrary, \(\lim s_n = \sigma\).
+    Since \(\varepsilon\) was arbitrary, \(\lim s_n = \sigma\).
   \end{exercise}
 \item
   Definition \(3.21\) can be extended to the case in which the \(a_n\) lie in
@@ -680,9 +680,9 @@
   (Only slight modifications are required in any of the proofs.)
   \par\smallskip
   \textbf{Theorem} \(\mathbold{3.22}\): \(\sum\mathbold{a}_n\) converges if
-  and only if for every \(\epsilon > 0\) there is an integer \(N\) such that
+  and only if for every \(\varepsilon > 0\) there is an integer \(N\) such that
   \[
-  \Bigl\lvert\sum_{k = n}^m\mathbold{a}_k\Bigr\rvert\leq\epsilon
+  \Bigl\lvert\sum_{k = n}^m\mathbold{a}_k\Bigr\rvert\leq\varepsilon
   \]
   if \(m\geq n\geq N\).
   \par\smallskip
@@ -735,8 +735,8 @@
     converges if \(\limsup_{n\to\infty}\frac{\lvert\mathbold{a}_{n + 1}\rvert}
     {\lvert\mathbold{a}_n\rvert} < 1\),
     \par\smallskip
-    The limes superior inequality means that for some \(\epsilon > 0\) and
-    constant \(M\), \(\lvert\mathbold{a}_n\rvert M\epsilon ^n\).
+    The limes superior inequality means that for some \(\varepsilon > 0\) and
+    constant \(M\), \(\lvert\mathbold{a}_n\rvert M\varepsilon ^n\).
     Thus, \(\sum\mathbold{a}_n\) converges absolutely so series converges by
     theorem \(3.25\).
   \item
@@ -760,8 +760,8 @@
   Then \(\sum b_n\mathbold{a}_n\) converges.
   \par\smallskip
   Choose \(M\) such that \(\lvert\mathbold{A}_n\rvert\leq M\) for all \(n\).
-  Given \(\epsilon > 0\), there is an integer \(N\) such that
-  \(b_N\leq\frac{\epsilon}{2M}\).
+  Given \(\varepsilon > 0\), there is an integer \(N\) such that
+  \(b_N\leq\frac{\varepsilon}{2M}\).
   For \(N\leq p\leq q\), we have
   \begin{align*}
     \Bigl\lvert\sum_{n = p}^q\mathbold{a}_nb_n\Bigr\rvert
@@ -770,7 +770,7 @@
     & \leq M\Bigl(\sum_{n = p}^{q - 1}\lvert b_n - b_{n + 1}\rvert + b_q +
       b_p\Bigr)\\
     & \leq 2Mb_p\\
-    & \leq \epsilon
+    & \leq \varepsilon
   \end{align*}
   The partial sums form a Cauchy sequence.
   Thus, \(\sum b_n\mathbold{a}_n\) converges.
@@ -832,73 +832,73 @@
     \end{align*}
     Thus, \(\{x_n\}\to\sqrt{\alpha}\).
   \item
-    Put \(\epsilon_n = x_n - \sqrt{\alpha}\), and show that
+    Put \(\varepsilon_n = x_n - \sqrt{\alpha}\), and show that
     \[
-    \epsilon_{n + 1} = \frac{\epsilon_n^2}{2x_n} <
-    \frac{\epsilon_n^2}{2\sqrt{\alpha}}
+    \varepsilon_{n + 1} = \frac{\varepsilon_n^2}{2x_n} <
+    \frac{\varepsilon_n^2}{2\sqrt{\alpha}}
     \]
     so that, setting \(\beta = 2\sqrt{\alpha}\),
     \[
-    \epsilon_{n + 1} < \beta\Bigl(\frac{\epsilon_1}{\beta}\Bigr)^{2^n}
+    \varepsilon_{n + 1} < \beta\Bigl(\frac{\varepsilon_1}{\beta}\Bigr)^{2^n}
     \]
     for \(n = 1,2,\ldots\).
     \par\smallskip
-    Let \(\epsilon_{n + 1} = x_{n + 1} - \sqrt{\alpha}\).
+    Let \(\varepsilon_{n + 1} = x_{n + 1} - \sqrt{\alpha}\).
     Then
     \begin{align*}
       x_{n + 1} - \sqrt{\alpha}
       & = \frac{1}{2}\Bigl(x_n + \frac{\alpha}{x_n}\Bigr) - \sqrt{\alpha}\\
       & = \frac{x_n^2 - 2x_n\sqrt{\alpha} + \alpha}{2x_n}\\
       & = \frac{(x_n - \sqrt{\alpha})^2}{2x_n}\\
-      & = \frac{\epsilon_n^2}{2x_n}
+      & = \frac{\varepsilon_n^2}{2x_n}
     \end{align*}
     Since \(x_n > \sqrt{\alpha}\), \(1/x_n < 1/\sqrt{\alpha}\).
     Therefore,
     \[
-    \epsilon_{n + 1} = \frac{\epsilon_n^2}{2x_n} <
-    \frac{\epsilon_n^2}{2\sqrt{\alpha}}\eqnumtag\label{3.16b}
+    \varepsilon_{n + 1} = \frac{\varepsilon_n^2}{2x_n} <
+    \frac{\varepsilon_n^2}{2\sqrt{\alpha}}\eqnumtag\label{3.16b}
     \]
-    From \cref{3.16b}, we have that \(\epsilon_{n + 1} < \epsilon_n^2/\beta\).
+    From \cref{3.16b}, we have that \(\varepsilon_{n + 1} < \varepsilon_n^2/\beta\).
     For \(n = 1\), we obtain
     \[
-    \epsilon_2 < \frac{\epsilon_1^2}{\beta},
+    \varepsilon_2 < \frac{\varepsilon_1^2}{\beta},
     \]
     and when \(n = 2\), we have
     \[
-    \epsilon_3 < \frac{\epsilon_2^2}{\beta} <
-    \frac{\epsilon_1^4}{\beta^2\beta} =
-    \beta\Bigl(\frac{\epsilon_1}{\beta}\Bigr)^4 =
-    \beta\Bigl(\frac{\epsilon_1}{\beta}\Bigr)^{2^{3 - 1}}.
+    \varepsilon_3 < \frac{\varepsilon_2^2}{\beta} <
+    \frac{\varepsilon_1^4}{\beta^2\beta} =
+    \beta\Bigl(\frac{\varepsilon_1}{\beta}\Bigr)^4 =
+    \beta\Bigl(\frac{\varepsilon_1}{\beta}\Bigr)^{2^{3 - 1}}.
     \]
     Assume this is true for \(k < n\).
-    Then \(\epsilon_k < \beta(\epsilon_1/\beta)^{2^{k - 1}}\).
+    Then \(\varepsilon_k < \beta(\varepsilon_1/\beta)^{2^{k - 1}}\).
     \[
-    \epsilon_{k + 1} < \frac{\epsilon_k^2}{\beta} < \frac{\beta^2}{\beta}
-    \biggl(\frac{\epsilon_1^{2^{k - 1}}}{\beta^{2^{k - 1}}}\biggr)^2 =
-    \beta\Bigl(\frac{\epsilon_1}{\beta}\Bigr)^{2^k}
+    \varepsilon_{k + 1} < \frac{\varepsilon_k^2}{\beta} < \frac{\beta^2}{\beta}
+    \biggl(\frac{\varepsilon_1^{2^{k - 1}}}{\beta^{2^{k - 1}}}\biggr)^2 =
+    \beta\Bigl(\frac{\varepsilon_1}{\beta}\Bigr)^{2^k}
     \]
     By the principle of mathematical induction,
-    \(\epsilon_{n + 1} = \beta(\epsilon_1/\beta)^{2^n}\) for
+    \(\varepsilon_{n + 1} = \beta(\varepsilon_1/\beta)^{2^n}\) for
     \(n\in\mathbb{Z}^+\).
   \item
     This is a good algorithm for computing square roots, since the recursion
     formula is simple and the convergence is extremely rapid.
     For example, if \(\alpha = 3\) and \(x_1 = 2\), show that
-    \(\epsilon_1/\beta < \frac{1}{10}\) and that therefore
+    \(\varepsilon_1/\beta < \frac{1}{10}\) and that therefore
     \[
-    \epsilon_5 < 4\cdot 10^{-16},\qquad\epsilon_6 < 4\cdot 10^{-23}.
+    \varepsilon_5 < 4\cdot 10^{-16},\qquad\varepsilon_6 < 4\cdot 10^{-23}.
     \]
-    \(\epsilon_1 = x_1 - \sqrt{\alpha}\) and \(\beta = 2\sqrt{\alpha}\) so
+    \(\varepsilon_1 = x_1 - \sqrt{\alpha}\) and \(\beta = 2\sqrt{\alpha}\) so
     \[
-    \frac{\epsilon_1}{\beta} = \frac{2 - \sqrt{3}}{2\sqrt{3}}\approx 0.077 <
+    \frac{\varepsilon_1}{\beta} = \frac{2 - \sqrt{3}}{2\sqrt{3}}\approx 0.077 <
     \frac{1}{10}
     \]
-    For \(\epsilon_5\) and \(\epsilon_6\), we have
+    For \(\varepsilon_5\) and \(\varepsilon_6\), we have
     \begin{align*}
-      \epsilon_5 & < \beta\Bigl(\frac{\epsilon_1}{\beta}\Bigr)^{2^k}\\
+      \varepsilon_5 & < \beta\Bigl(\frac{\varepsilon_1}{\beta}\Bigr)^{2^k}\\
                  & \approx 5.69\times 10^{-18}\\
                  & < 4\cdot 10^{-16}\\
-      \epsilon_6 & < \beta\Bigl(\frac{\epsilon_1}{\beta}\Bigr)^{2^k}\\
+      \varepsilon_6 & < \beta\Bigl(\frac{\varepsilon_1}{\beta}\Bigr)^{2^k}\\
                  & \approx 9.34\times 10^{-36}\\
                  & < 4\cdot 10^{-23}
     \end{align*}
@@ -1003,13 +1003,13 @@
     & = \lvert p_{n_i} - p - (p_{m_i} - p)\rvert\\
     & \leq \lvert p_{n_i} - p\rvert + \lvert p_{m_i} - p\rvert
   \end{align*}
-  Let \(\epsilon > 0\) be given.
+  Let \(\varepsilon > 0\) be given.
   Now, the subsequence \(\{p_{n_i}\}\) converges so for \(n > N_1\),
-  \(\lvert p_{n_i} - p\rvert < \epsilon/2\).
+  \(\lvert p_{n_i} - p\rvert < \varepsilon/2\).
   Take \(n,m > \max\{N, N_1\}\) then
   \[
-  \lvert p_{n_i} - p_{m_i}\rvert < \frac{\epsilon}{2} + \frac{\epsilon}{2}
-  = \epsilon.
+  \lvert p_{n_i} - p_{m_i}\rvert < \frac{\varepsilon}{2} + \frac{\varepsilon}{2}
+  = \varepsilon.
   \]
   Therefore, every subsequences converges to \(p\) and \(\{p_n\}\to p\) as
   well.
@@ -1039,12 +1039,12 @@
   For all \(n\), pick an \(x_n\in E_n\).
   Then the sequence \(\{x_n,x_{n + 1},\ldots\}\in E_n\) since
   \(E_n\supset E_{n + 1}\supset\cdots\).
-  Since the diameter converges to zero, for any \(\epsilon > 0\), there exists
-  \(n > N\) such that \(\lvert\operatorname{diam}E_n - 0\rvert < \epsilon\).
+  Since the diameter converges to zero, for any \(\varepsilon > 0\), there exists
+  \(n > N\) such that \(\lvert\operatorname{diam}E_n - 0\rvert < \varepsilon\).
   Let \(n,m > N\).
   \[
   \lvert x_n - x_m\rvert\leq\operatorname{diam}\{x_n, x_{n + 1},\ldots\}\leq
-  \operatorname{diam}E_n < \epsilon
+  \operatorname{diam}E_n < \varepsilon
   \]
   Therefore, \(\{x_n\}\) is Cauchy in a complete metric space so
   \(\{x_n\}\to x\) for \(x\in X\).
@@ -1060,29 +1060,29 @@
     \(\bar{E}_n\subset G_n\), and apply \cref{3.21}.}
   \par\smallskip
   \textbf{Lemma:} We say a set \(E\subset X\) is dense in a metric space
-  \(X\) if and only if \(N_{\epsilon}\cap E\neq\varnothing\) for every
-  neighborhood \(N_{\epsilon}\in X\) given \(\epsilon > 0\).
+  \(X\) if and only if \(N_{\varepsilon}\cap E\neq\varnothing\) for every
+  neighborhood \(N_{\varepsilon}\in X\) given \(\varepsilon > 0\).
   \par\smallskip
   Suppose \(E\subset X\) is dense.
   Since \(E\) is dense in \(X\), \(E\cup E' = \bar{E} = X\).
-  Let \(N_{\epsilon}\) be a neighborhood of \(X\).
-  For \(x\in N_{\epsilon}\),
+  Let \(N_{\varepsilon}\) be a neighborhood of \(X\).
+  For \(x\in N_{\varepsilon}\),
   \begin{enumerate}[label = \roman*.]
   \item
-    we have \(x\in E\), then \(x\in N_{\epsilon}\cap E\); therefore,
-    \(N_{\epsilon}\cap E\neq\varnothing\), or
+    we have \(x\in E\), then \(x\in N_{\varepsilon}\cap E\); therefore,
+    \(N_{\varepsilon}\cap E\neq\varnothing\), or
   \item
     we have \(x\in E'\) but \(x\not\in E\).
     By definition of \(x\) being a limit point, there exist a
-    \(y\in N_{\epsilon}\) where \(x\neq y\) such that \(y\in E\) so
-    \(N_{\epsilon}\cap E\neq\varnothing\).
+    \(y\in N_{\varepsilon}\) where \(x\neq y\) such that \(y\in E\) so
+    \(N_{\varepsilon}\cap E\neq\varnothing\).
   \end{enumerate}
-  Suppose \(N_{\epsilon}\cap E\neq\varnothing\) for every neighborhood
-  \(N_{\epsilon}\subset X\).
+  Suppose \(N_{\varepsilon}\cap E\neq\varnothing\) for every neighborhood
+  \(N_{\varepsilon}\subset X\).
   Let \(x\in X\).
   If \(x\in E\), the proof is complete so assume \(x\not\in E\).
-  By the hypothesis, \(N_{\epsilon}\cap E\neq\varnothing\).
-  The there exists \(y\in N_{\epsilon}\cap E\).
+  By the hypothesis, \(N_{\varepsilon}\cap E\neq\varnothing\).
+  The there exists \(y\in N_{\varepsilon}\cap E\).
   Since \(x\not\in E\), \(y\neq x\).
   Thus, \(x\) is a limit point of \(E\) so \(x\in E'\) so \(X = E\cup E'\) and
   \(E\subset X\) is dense in \(X\).
@@ -1119,12 +1119,12 @@
     \]
     is small if \(m\) and \(n\) are large.}
   \par\smallskip
-  Let \(\epsilon > 0\) be given.
+  Let \(\varepsilon > 0\) be given.
   Since \(\{p_n\}\) and \(\{q_n\}\) are Cauchy, there exist
   \(n,m > N = \max\{N_1,N_2\}\) such that
   \[
-  \lvert p_n - p_m\rvert < \frac{\epsilon}{2}\qquad\text{and}\qquad
-  \lvert q_n - q_m\rvert < \frac{\epsilon}{2}
+  \lvert p_n - p_m\rvert < \frac{\varepsilon}{2}\qquad\text{and}\qquad
+  \lvert q_n - q_m\rvert < \frac{\varepsilon}{2}
   \]
   simultaneously.
   Then
@@ -1133,8 +1133,8 @@
                 & = \lvert p_n - p_m + p_m - q_m + q_m - q_n\rvert\\
                 & \leq \lvert p_n - p_m\rvert + \lvert p_m - q_m\rvert +
                   \lvert q_n - q_m\rvert\\
-    d(p_n, q_n) - d(p_m, q_m) & < \epsilon\\
-    \lvert d(p_n, q_n) - d(p_m, q_m)\rvert & < \epsilon
+    d(p_n, q_n) - d(p_m, q_m) & < \varepsilon\\
+    \lvert d(p_n, q_n) - d(p_m, q_m)\rvert & < \varepsilon
   \end{align*}
   Therefore, \(\{d(p_n,q_n)\}\) is Cauchy and hence converges.
 \item

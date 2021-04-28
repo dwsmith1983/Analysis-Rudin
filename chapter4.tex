@@ -18,12 +18,12 @@
     0, & x\neq 0
   \end{cases}
   \]
-  Then \(f\) is continuous at zero if for every \(\epsilon > 0\) there exist a
-  \(\delta > 0\) such that \(d_Y\bigl[f(x),f(0)\bigr] < \epsilon\) for all
+  Then \(f\) is continuous at zero if for every \(\varepsilon > 0\) there exist a
+  \(\delta > 0\) such that \(d_Y\bigl[f(x),f(0)\bigr] < \varepsilon\) for all
   \(x\in\mathbb{R}^1\) for which \(0 < d_X(x,0) < \delta\).
   For \(x\neq 0\), \(0 < \lvert x - 0\rvert < \delta\).
   Then \(\lvert f(x) - f(0)\rvert = 1\).
-  Take \(\epsilon = 1/2\) so \(\lvert f(x) - f(0)\rvert > \epsilon\) and \(f\)
+  Take \(\varepsilon = 1/2\) so \(\lvert f(x) - f(0)\rvert > \varepsilon\) and \(f\)
   is not continuous at \(x = 0\).
   For \(x\neq 0\), \(f(x) = 0\).
   Now for \(h < \lvert x\rvert\), \(x + h\neq 0\neq x - h\); therefore,
@@ -83,19 +83,19 @@
   subset of its domain.)
   \par\smallskip
   Let \(y\in f(X)\) and set \(y = f(x)\) for \(x\in X\).
-  Since \(f\) in continuous, for any \(\epsilon > 0\), there exists
+  Since \(f\) in continuous, for any \(\varepsilon > 0\), there exists
   \(\delta > 0\) such that whenever \(d_X(x,z) < \delta\),
-  \(d_Y[f(x),f(z)] < \epsilon\).
+  \(d_Y[f(x),f(z)] < \varepsilon\).
   Since \(E\) is dense in \(X\), \(z\in E\) for this choice of \(\delta\).
   Now \(w = f(z)\in f(E)\).
-  Then \(d_Y[f(x),f(z)] = d_Y(y,w) < \epsilon\).
+  Then \(d_Y[f(x),f(z)] = d_Y(y,w) < \varepsilon\).
   Therefore, we have that \(f(E)\) is dense in \(f(X)\) since for any
-  \(y\in f(X)\), and all \(\epsilon > 0\), we have \(w\in f(E)\) such that
-  \(d_Y(y,w) < \epsilon\).
-  Let \(x\in X\) and \(n = 1/\epsilon\) where \(\epsilon > 0\).
+  \(y\in f(X)\), and all \(\varepsilon > 0\), we have \(w\in f(E)\) such that
+  \(d_Y(y,w) < \varepsilon\).
+  Let \(x\in X\) and \(n = 1/\varepsilon\) where \(\varepsilon > 0\).
   Let \(\{p_n\}\) be a sequence in \(E\).
-  For \(n > N\), we have \(\epsilon = 1/n\).
-  Then \(d(x,p_n) < 1/n = \epsilon\); therefore, \(\lim_{n\to\infty}p_n = x\).
+  For \(n > N\), we have \(\varepsilon = 1/n\).
+  Then \(d(x,p_n) < 1/n = \varepsilon\); therefore, \(\lim_{n\to\infty}p_n = x\).
   Since \(f\) and \(g\) are continuous, we have
   \[
   f(x) = f\Bigl(\lim_{n\to\infty}p_n\Bigr) = \lim_{n\to\infty}f(p_n)
@@ -203,9 +203,9 @@
   \(M\in\mathbb{R}\) such that for all \(x\in E\),
   \(\lvert x\rvert\leq M < \infty\).
   Therefore, \(E\subset [-M,M]\).
-  Since \(f\) is uniformly continuous, for all \(\epsilon > 0\), there exist a
+  Since \(f\) is uniformly continuous, for all \(\varepsilon > 0\), there exist a
   \(\delta > 0\) such that \(\lvert x - y\rvert < \delta\) whenever
-  \(\lvert f(x) - f(y)\rvert < \epsilon\) for \(x,y\in E\).
+  \(\lvert f(x) - f(y)\rvert < \varepsilon\) for \(x,y\in E\).
   Let \(n\) be an integer such that \(1/n < \delta\).
   Let's construct a cover, \(S\), of \([-M,M]\).
   \[
@@ -221,34 +221,36 @@
   \begin{align*}
     \lvert f(x_k) - f(x)\rvert
     & \leq -\lvert f(x_k)\rvert + \lvert f(x)\rvert\\
-    \lvert f(x)\rvert - \lvert f(x_k)\rvert & < \epsilon\\
-    \lvert f(x)\rvert & < \epsilon + \lvert f(x_k)\rvert
+    \lvert f(x)\rvert - \lvert f(x_k)\rvert & < \varepsilon\\
+    \lvert f(x)\rvert & < \varepsilon + \lvert f(x_k)\rvert
   \end{align*}
   Let \(S = \max_{1\leq k\leq N}\{1 + f(x_k)\}\).
   Then for all \(x\in E\), \(\lvert f(x)\rvert\leq S\) so \(f\) is bounded on
   \(E\).
   \par\smallskip
   Let \(E = \mathbb{R}\).
-  Since \(f(x)\) is uniformly continuous, for all \(\epsilon > 0\), there exist
+  Since \(f(x)\) is uniformly continuous, for all \(\varepsilon > 0\), there exist
   a \(\delta > 0\) such that \(\lvert x - y\rvert < \delta\) whenever
-  \(\lvert f(x) - f(y)\rvert < \epsilon\).
-  Let \(\delta = \epsilon\) and \(f(x) = x\).
+  \(\lvert f(x) - f(y)\rvert < \varepsilon\).
+  Let \(\delta = \varepsilon\) and \(f(x) = x\).
   Then
   \[
-  \lvert f(x) - f(y)\rvert = \lvert x - y\rvert < \delta = \epsilon
+  \lvert f(x) - f(y)\rvert = \lvert x - y\rvert < \delta = \varepsilon
   \]
   but \(f(x) = x\) is not bounded on \(\mathbb{R} = E\).
 \item
   \label{4.9}
   Show that the requirement in the definition of uniform continuity can be
   rephrased as follows, in terms of diameters of sets: To every
-  \(\epsilon > 0\) there exists a \(\delta > 0\) such that
-  \(\diam f(E) < \epsilon\) for all \(E\subset X\) with \(\diam E < \delta\).
+  \(\varepsilon > 0\) there exists a \(\delta > 0\) such that
+  \(\diam f(E) < \varepsilon\) for all \(E\subset X\) with \(\diam E < \delta\).
+  \par\smallskip
+  Suppose \(f\) is continuous. Given and \(\varepsilon\)
 \item
   Complete the details of the following alternate  proof of theorem \(4.19\):
-  If \(f\) is not uniformly continuous, then for some \(\epsilon > 0\) there
+  If \(f\) is not uniformly continuous, then for some \(\varepsilon > 0\) there
   are sequences \(\{p_n\},\{q_n\}\in X\) such that \(d_X(p_n,q_n)\to 0\) but
-  \(d_Y(f(p_n),f(q_n)) > \epsilon\).
+  \(d_Y(f(p_n),f(q_n)) > \varepsilon\).
   Use theorem \(2.37\) to obtain a contradiction.
 \item
   Suppose \(f\) is a uniformaly continuous mapping of a metric space \(X\)
