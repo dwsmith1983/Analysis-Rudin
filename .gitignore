@@ -9,4 +9,6 @@
 *.fdb_latexmk
 *.toc
 *.synctex
+
 *.DS_Store
+*.Rhistory
