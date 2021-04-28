@@ -4,5 +4,9 @@
 *.log
 *.out
 *.gz
+*.fls
+*.synctex.gz
+*.fdb_latexmk
+*.toc
 *.synctex
 *.DS_Store
