@@ -12,3 +12,29 @@ Therefore, since \(m^2 = 2n^2\), \(m^2\) is even and \(m\) is even. Since \(m\) 
 \(m^2 = 4a^2\) and \(m^2\) is divisible by \(4\). Now that the left hand side of \cref{eq:1.1} is divisible by 
 \(4\) so is the right hand side. Thus, we have reached a contradiction since this would imply both \(m\) and \(n\) 
 are even.
+\par\smallskip
+Another common way to prove this is to use the Fundamental Theorem of Arithmetic.
+\begin{Theorems}{Fundamental Theorem of Arithmetic}{}
+	Also known as the Unique Prime Factorization Theorem states that for every \(z\in\mathbb{Z}^+\) either is prime
+	or can be expressed as the product of prime numbers and that this representation is unique up to the order of
+	the factors.
+\end{Theorems}
+\noindent
+Again, suppose \(p = m / n\) where \(m, n\in\mathbb{Z}\) are co-prime. From \cref{eq:1.1}, we have
+\[
+	2n^2 = m^2.
+\]
+By the FTA, both \(n\) and \(m\) can be expressed as unique product of prime factors. Let \(p_i\) be the ith prime 
+for \(n\) and \(q_i\) be the ith prime for \(b\) where \(\alpha_i\) is ith power of \(n\) and \(\beta_i\) is the ith power 
+\(m\). Then
+\begin{align}
+	n^2 &= p_1^{2\alpha_1}\cdot  p_2^{2\alpha_2}\cdots  p_k^{2\alpha_k}\notag\\
+	m^2 &= q_1^{2\beta_1}\cdot  q_2^{2\beta_2}\cdots  q_l^{2\beta_l}\notag
+\end{align}
+Let \(p_j\) and \(q_j\) be the representation of prime factorization of \(2\). Then we have
+\begin{alignat}{2}
+	2\cdot 2^{2\alpha_j} &= 2^{2\beta_j}\notag\\
+	2^{2\alpha_j + 1} &= 2^{2\beta_j}\label{eq:1.2}
+\end{alignat}
+From \cref{eq:1.2}, we have \(2\alpha_j + 1\) must equal \(2\beta_j\) but this cannot be the case since 
+\(2\alpha_j + 1\) is clearly odd and \(2\beta_j\) is even. Thus, we have reached a contradiction and \(p\) is irrational.
