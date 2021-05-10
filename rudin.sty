@@ -74,6 +74,15 @@
 \crefname{exerciseii}{exercise}{exercise}
 \Crefname{exerciseii}{Exercise}{exercise}
 
+% Rename enumerate from item to exercise
+\newlist{example}{enumerate}{75}
+\setlist[example]{label*=1.\arabic*.}
+% adjust cref for label names
+\crefname{examplei}{example}{example}
+\Crefname{examplei}{Example}{example}
+\crefname{exampleii}{example}{example}
+\Crefname{exampleii}{Example}{example}
+
 % declare diam operator
 \DeclareMathOperator{\diam}{diam}
 
